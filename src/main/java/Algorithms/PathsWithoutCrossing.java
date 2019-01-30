@@ -4,12 +4,16 @@ package Algorithms;
 public class PathsWithoutCrossing {
 
     /**
-     * @param numberOfPoints
-     * @return
+     * Returns number of possible paths through two points without crossings.
+     *
+     * @param numberOfPoints number of points on circle; must be even, otherwise method will return 0
+     * @return number of possible paths without crossings
+     * @author Oleh Volchkov
      */
     public static int countPaths(int numberOfPoints) {
 
         if (numberOfPoints % 2 != 0) {
+
             return 0;
         }
 
@@ -17,8 +21,10 @@ public class PathsWithoutCrossing {
     }
 
     /**
-     * @param n
-     * @return
+     * Returns n-th Catalan number.
+     *
+     * @param n sequence number of Catalan number we need to calculate
+     * @return n-th Catalan number
      */
     public static int catalanNumber(int n) {
 
