@@ -1,10 +1,10 @@
-package painting;
+import Algorithms.PaintingTheFence;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PaintingTheFenceTest {
 
-    @org.junit.Test
+    @org.junit.jupiter.api.Test
     public void paintingTheFenceTest() {
 
         int n = 2;
