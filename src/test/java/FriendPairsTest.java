@@ -7,9 +7,13 @@ public class FriendPairsTest {
     @org.junit.jupiter.api.Test
     void countWaysToPairTest() {
 
-        int testInput = 3;
-        int expectedOutput = 4;
+        int testInputA = 3;
+        int expectedOutputA = 4;
 
-        assertEquals(expectedOutput, FriendPairs.countWaysToPair(testInput));
+        int testInputB = 2;
+        int expectedOutputB = 2;
+
+        assertEquals(expectedOutputA, FriendPairs.countWaysToPair(testInputA));
+        assertEquals(expectedOutputB, FriendPairs.countWaysToPair(testInputB));
     }
 }
