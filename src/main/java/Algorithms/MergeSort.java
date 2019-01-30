@@ -1,4 +1,4 @@
-package merge;
+package Algorithms;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -8,6 +8,13 @@ import java.util.Scanner;
  */
 public class MergeSort {
 
+    /**
+     * Return the length of the array
+     *
+     * @param scanner For input data
+     * @return The length of the array
+     * @author Valentyn Yarmoshyk
+     */
     public static int lengthOfArray(Scanner scanner) {
         System.out.print("How much elements: ");
 
@@ -21,6 +28,12 @@ public class MergeSort {
         return length;
     }
 
+    /**
+     * The main method that start the programm
+     *
+     * @param scanner For input data
+     * @author Valentyn Yarmoshyk
+     */
     public static void start(Scanner scanner) {
 
         int[] array = writeArray(scanner);
@@ -29,6 +42,13 @@ public class MergeSort {
 
     }
 
+    /**
+     * Return the array that you wrote
+     *
+     * @param scanner For input data
+     * @return An array
+     * @author Valentyn Yarmoshyk
+     */
     public static int[] writeArray(Scanner scanner) {
 
         int length = lengthOfArray(scanner);
@@ -53,6 +73,13 @@ public class MergeSort {
         return array;
     }
 
+    /**
+     * Realise the merge sort
+     *
+     * @param array An array you want to sort
+     * @return Sorted array
+     * @author Valentyn Yarmoshyk
+     */
     public static int[] mergeSort(int[] array) {
 
         if (array.length <= 1) {
@@ -76,9 +103,7 @@ public class MergeSort {
             right[j] = array[midpoint + j];
         }
 
-        System.out.println("Left: " + Arrays.toString(left));
         left = mergeSort(left);
-        System.out.println("Right: " + Arrays.toString(right));
         right = mergeSort(right);
 
         int[] result = new int[array.length];
