@@ -9,7 +9,11 @@ public class PathsWithoutCrossing {
      */
     public static int countPaths(int numberOfPoints) {
 
-        return 0;
+        if (numberOfPoints % 2 != 0) {
+            return 0;
+        }
+
+        return catalanNumber(numberOfPoints / 2);
     }
 
     /**
