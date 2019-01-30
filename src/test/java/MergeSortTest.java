@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MergeSortTest {
 
-
     @org.junit.jupiter.api.Test
     void mergeSort() {
 

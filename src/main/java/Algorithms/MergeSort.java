@@ -4,7 +4,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
+ * Class thar sorts the array by an algorithm Merge Sort
  *
+ * @version 1.0
+ * @author Valentyn Yarmoshyk
  */
 public class MergeSort {
 
@@ -43,7 +46,7 @@ public class MergeSort {
     }
 
     /**
-     * Return the array that you wrote
+     * Return the array that you entered
      *
      * @param scanner For input data
      * @return An array
