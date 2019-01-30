@@ -1,23 +1,17 @@
-package merge;
+import Algorithms.MergeSort;
 
-import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 class MergeSortTest {
 
-//    @Test
-//    void lengthOfArray() {
-//
-//        assertEquals(8, MergeSort.lengthOfArray(new Scanner(System.in)));
-//
-//    }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void mergeSort() {
 
         int[] expectedArray = {1, 2, 3, 4};
         int[] inputArray = {3, 1 , 2, 4};
-        Assert.assertArrayEquals(expectedArray, MergeSort.mergeSort(inputArray));
+
+        assertArrayEquals(expectedArray, MergeSort.mergeSort(inputArray));
 
     }
 }
