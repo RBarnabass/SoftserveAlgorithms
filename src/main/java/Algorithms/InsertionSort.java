@@ -4,7 +4,7 @@ package Algorithms;
  * Class that sorts the array by an algorithm Insertion Sort
  *
  * @version 1.0
- * @autor Vdovychyn Ostap
+ * @author Ostap Vdovychyn
  */
 public class InsertionSort {
     /**
@@ -13,9 +13,6 @@ public class InsertionSort {
      * @return sorted array
      */
     public static int[] doInsertionSort(int[] array) {
-        /**
-         * temporary variable
-         */
         int temp;
         for (int i = 1; i < array.length; i++) {
             for (int j = i; j > 0; j--) {
