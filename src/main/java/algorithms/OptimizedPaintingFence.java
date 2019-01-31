@@ -1,18 +1,21 @@
 package algorithms;
 
+import strategy.AlgorithmStrategy;
+
+import java.util.Scanner;
+
 /**
  * Optimized painting fence algorithm with one variable instead of a table
  *
  * @author Andrii Senchakevych
  */
-
-public class OptimizedPaintingFence {
+public class OptimizedPaintingFence implements AlgorithmStrategy {
 
     /**
      * Returns number of ways of painting the fence such that at most 2 adjacent posts have the same color
      *
-     * @param n numbers of posts
-     * @param k numbers of colors
+     * @param n n numbers of posts
+     * @param k n numbers of colors
      * @return number of ways of painting the fence
      */
     public static long optimizedPaintingFence(int n, int k) {
@@ -29,5 +32,18 @@ public class OptimizedPaintingFence {
         }
 
         return total;
+    }
+
+    public void execute(Scanner sc) {
+
+        int n;
+        int k;
+
+        System.out.println("Enter numbers of posts");
+        n = sc.nextInt();
+        System.out.println("Enter numbers of colors");
+        k = sc.nextInt();
+        System.out.println("Number of ways is " + optimizedPaintingFence(n, k));
+
     }
 }
