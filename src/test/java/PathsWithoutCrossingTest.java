@@ -1,4 +1,4 @@
-import Algorithms.PathsWithoutCrossing;
+import algorithms.PathsWithoutCrossing;
 
 import static org.junit.jupiter.api.Assertions.*;
 

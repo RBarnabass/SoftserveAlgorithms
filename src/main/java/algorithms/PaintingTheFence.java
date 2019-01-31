@@ -1,4 +1,4 @@
-package Algorithms;
+package algorithms;
 
 /**
  * Class that realized logic of the ways for painting the fence

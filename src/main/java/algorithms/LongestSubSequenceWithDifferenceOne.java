@@ -1,4 +1,4 @@
-package Algorithms;
+package algorithms;
 
 /**
  * This class search the longest sequence difference one in the maximum sub sequence.
