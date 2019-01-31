@@ -22,7 +22,7 @@ public class LongestSubSequenceWithDifferenceOne {
      * @param rowArray this is a given array.
      * @return         length of the greatest sequence.
      */
-    public int get(int[] rowArray) {
+    public int getTheLongestOne(int[] rowArray) {
 
         if (rowArray == null) {
             return 0;
