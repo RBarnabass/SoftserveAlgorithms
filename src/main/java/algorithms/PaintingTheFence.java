@@ -1,12 +1,16 @@
 package algorithms;
 
+import strategy.AlgorithmStrategy;
+
+import java.util.Scanner;
+
 /**
  * Class that realized logic of the ways for painting the fence
  *
  * @version 1.0
  * @author Valentyn Yarmoshyk
  */
-public class PaintingTheFence {
+public class PaintingTheFence implements AlgorithmStrategy {
 
     /**
      * Return the number of the ways for painting the fence
@@ -34,4 +38,23 @@ public class PaintingTheFence {
         return variant[n-1];
     }
 
+    public void execute(Scanner sc) {
+
+        System.out.print("Enter the number of posts: ");
+        while(!sc.hasNextInt()){
+            System.out.println("Integer, please!");
+            sc.nextLine();
+        }
+        int posts = sc.nextInt();
+
+        System.out.print("Enter the number of colors: ");
+        while(!sc.hasNextInt()){
+            System.out.println("Integer, please!");
+            sc.nextLine();
+        }
+        int colors = sc.nextInt();
+
+        System.out.println("Different ways for painting the fence: " + paintingTheFence(posts, colors));
+
+    }
 }

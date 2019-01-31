@@ -1,9 +1,15 @@
 package algorithms;
 
-import java.util.ArrayList;
-import java.util.List;
+import strategy.AlgorithmStrategy;
 
-public class CoutingSort {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
+import static utilities.util.writeArray;
+
+public class CoutingSort implements AlgorithmStrategy {
 
     public static int[] countingSort(int[] array) {
 
@@ -52,4 +58,11 @@ public class CoutingSort {
     }
 
 
+    public void execute(Scanner sc) {
+
+        int[] array = writeArray(sc);
+        array = countingSort(array);
+        System.out.println("Your array after Counter Sort: " + Arrays.toString(array));
+
+    }
 }
