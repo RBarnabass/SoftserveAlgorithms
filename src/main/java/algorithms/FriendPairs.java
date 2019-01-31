@@ -1,6 +1,24 @@
 package algorithms;
 
-public class FriendPairs {
+import strategy.AlgorithmStrategy;
+
+import java.util.Scanner;
+
+public class FriendPairs implements AlgorithmStrategy {
+
+    public void execute(Scanner sc) {
+
+        System.out.println("Enter amount of friends: ");
+
+        int friends = sc.nextInt();
+        int ways = countWaysToPair(friends);
+
+        StringBuilder result = new StringBuilder()
+                .append("There is ").append(ways)
+                .append(" number of ways to pair for given amount of friends.");
+
+        System.out.println(result);
+    }
 
     /**
      * Returns count of possible ways to pair/stay alone for given amount of friends.
