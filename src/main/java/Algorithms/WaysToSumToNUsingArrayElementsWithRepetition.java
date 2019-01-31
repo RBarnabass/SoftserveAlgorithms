@@ -8,7 +8,7 @@ public class WaysToSumToNUsingArrayElementsWithRepetition {
     /**
      * Return number which show how many ways we have to represent one number with a given array of numbers
      *
-     * @param arr    Input array, elements in the array will be added
+     * @param arr    Input array, elements in the array will be counting
      * @param number Input number which has to be represented
      * @return count[number] of possible ways we have to represent one number with a given array of numbers
      * @author Ostap Vdovychyn
