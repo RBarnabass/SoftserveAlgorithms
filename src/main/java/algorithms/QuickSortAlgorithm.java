@@ -1,4 +1,4 @@
-package Algorithms;
+package algorithms;
 
 /**
  * QuickSort algorithm for array of numbers

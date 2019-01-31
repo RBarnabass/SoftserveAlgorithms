@@ -1,4 +1,4 @@
-import Algorithms.LongestSubSequenceWithDifferenceOne;
+import algorithms.LongestSubSequenceWithDifferenceOne;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

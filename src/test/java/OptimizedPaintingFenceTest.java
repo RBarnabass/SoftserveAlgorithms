@@ -1,4 +1,4 @@
-import Algorithms.OptimizedPaintingFence;
+import algorithms.OptimizedPaintingFence;
 
 import static org.junit.jupiter.api.Assertions.*;
 

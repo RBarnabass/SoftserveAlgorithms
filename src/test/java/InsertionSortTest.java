@@ -1,4 +1,4 @@
-import Algorithms.InsertionSort;
+import algorithms.InsertionSort;
 
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

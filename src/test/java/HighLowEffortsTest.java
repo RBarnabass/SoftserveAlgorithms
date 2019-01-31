@@ -1,4 +1,4 @@
-import Algorithms.HighLowEfforts;
+import algorithms.HighLowEfforts;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,4 +1,4 @@
-import Algorithms.InterestingRow;
+import algorithms.InterestingRow;
 
 import static org.junit.jupiter.api.Assertions.*;
 

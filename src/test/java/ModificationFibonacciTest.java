@@ -1,4 +1,4 @@
-import Algorithms.ModificationFibonacci;
+import algorithms.ModificationFibonacci;
 
 import static org.junit.jupiter.api.Assertions.*;
 
