@@ -1,7 +1,25 @@
 package algorithms;
 
 
-public class PathsWithoutCrossing {
+import strategy.AlgorithmStrategy;
+
+import java.util.Scanner;
+
+public class PathsWithoutCrossing implements AlgorithmStrategy {
+
+    public void execute(Scanner sc) {
+
+        System.out.println("Enter number of points on circle: ");
+
+        int numberOfPoints = sc.nextInt();
+        int paths = countPaths(numberOfPoints);
+
+        StringBuilder result = new StringBuilder()
+                .append("There is ").append(paths)
+                .append(" number of possible paths through two points without crossings.");
+
+        System.out.println(result);
+    }
 
     /**
      * Returns number of possible paths through two points without crossings.
