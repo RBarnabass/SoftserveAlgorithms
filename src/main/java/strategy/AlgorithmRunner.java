@@ -1,5 +1,7 @@
 package strategy;
 
+import java.util.Scanner;
+
 public class AlgorithmRunner {
 
     private AlgorithmStrategy strategy;
@@ -8,7 +10,7 @@ public class AlgorithmRunner {
         this.strategy = strategy;
     }
 
-    public void run() {
-        strategy.execute();
+    public void run(Scanner sc) {
+        strategy.execute(sc);
     }
 }

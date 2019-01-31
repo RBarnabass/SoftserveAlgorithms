@@ -6,9 +6,7 @@ import java.util.Scanner;
 
 public class WaysToCoverDistance implements AlgorithmStrategy {
 
-    public void execute() {
-
-        Scanner sc = new Scanner(System.in);
+    public void execute(Scanner sc) {
 
         System.out.println("Enter distance to cover: ");
 
