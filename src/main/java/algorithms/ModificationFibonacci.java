@@ -1,6 +1,15 @@
-package Algorithms;
+package algorithms;
 
-public class ModificationFibonacci {
+import strategy.AlgorithmStrategy;
+
+import java.util.Scanner;
+
+/**
+ * Modification Fibonacci sequence
+ *
+ * @author Andrii Senchakevych
+ */
+public class ModificationFibonacci implements AlgorithmStrategy {
 
     private static int[] mmfib = new int[10000];
 
@@ -54,4 +63,11 @@ public class ModificationFibonacci {
 
     }
 
+    public void execute(Scanner sc) {
+
+        int n;
+        System.out.println("Enter position ");
+        n = sc.nextInt();
+        System.out.println("Member of position n is " + modificationFibonacci(n));
+    }
 }
