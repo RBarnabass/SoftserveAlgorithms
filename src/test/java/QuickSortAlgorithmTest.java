@@ -1,4 +1,4 @@
-import Algorithms.QuickSortAlgorithm;
+import algorithms.QuickSortAlgorithm;
 
 import static org.junit.jupiter.api.Assertions.*;
 

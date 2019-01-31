@@ -1,4 +1,4 @@
-import Algorithms.FriendPairs;
+import algorithms.FriendPairs;
 
 import static org.junit.jupiter.api.Assertions.*;
 

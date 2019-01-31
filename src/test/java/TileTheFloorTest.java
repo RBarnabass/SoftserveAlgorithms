@@ -1,4 +1,4 @@
-import Algorithms.TileTheFloor;
+import algorithms.TileTheFloor;
 
 import static org.junit.jupiter.api.Assertions.*;
 
