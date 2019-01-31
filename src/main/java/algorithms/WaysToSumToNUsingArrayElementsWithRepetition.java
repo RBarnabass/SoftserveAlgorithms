@@ -1,10 +1,16 @@
 package algorithms;
 
+import strategy.AlgorithmStrategy;
+
+import java.util.Scanner;
+
+import static utilities.util.writeArray;
+
 /**
  * @author Ostap Vdovychyn
  * @version 1.0
  */
-public class WaysToSumToNUsingArrayElementsWithRepetition {
+public class WaysToSumToNUsingArrayElementsWithRepetition implements AlgorithmStrategy {
     /**
      * Return number which show how many ways we have to represent one number with a given array of numbers
      *
@@ -26,4 +32,19 @@ public class WaysToSumToNUsingArrayElementsWithRepetition {
 
         return count[number];
     }
+
+    public void execute(Scanner scanner) {
+
+        System.out.println("Enter the number which has to be represented: ");
+        int number = scanner.nextInt();
+        System.out.println("Enter array which will be counting ");
+        int[] array = writeArray(scanner);
+        int ways = waysToCount(array, number);
+        StringBuilder result = new StringBuilder()
+                .append("There is ").append(ways)
+                .append(" ways we have to represent one number with a given array of numbers ");
+
+        System.out.println(result);
+    }
+
 }
