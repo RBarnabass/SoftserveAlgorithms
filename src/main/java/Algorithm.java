@@ -1,4 +1,4 @@
-public enum AlgorithmsEnum {
+public enum Algorithm {
     COUNT_WAYS_OF_SUM,
     COUNTING_SORT,
     FIBONACCI,
