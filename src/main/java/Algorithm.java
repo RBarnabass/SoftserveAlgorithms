@@ -16,5 +16,5 @@ public enum Algorithm {
     QUICK_SORT,
     TILE_THE_FLOOR,
     WAYS_TO_COVER_DISTANCE,
-    WAYS_TO_SUM_TO_N
+    WAYS_TO_SUM_TO_N;
 }
