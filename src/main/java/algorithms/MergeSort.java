@@ -1,5 +1,7 @@
 package Algorithms;
 
+import strategy.AlgorithmStrategy;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -9,7 +11,7 @@ import java.util.Scanner;
  * @version 1.0
  * @author Valentyn Yarmoshyk
  */
-public class MergeSort {
+public class MergeSort implements AlgorithmStrategy {
 
     /**
      * Return the length of the array
@@ -29,20 +31,6 @@ public class MergeSort {
         System.out.println("The length of yout array is " + length);
 
         return length;
-    }
-
-    /**
-     * The main method that start the programm
-     *
-     * @param scanner For input data
-     * @author Valentyn Yarmoshyk
-     */
-    public static void start(Scanner scanner) {
-
-        int[] array = writeArray(scanner);
-        array = mergeSort(array);
-        System.out.println("Your array after sorting: " + Arrays.toString(array));
-
     }
 
     /**
@@ -106,7 +94,9 @@ public class MergeSort {
             right[j] = array[midpoint + j];
         }
 
+        System.out.println("Left: " + Arrays.toString(left));
         left = mergeSort(left);
+        System.out.println("Right: " + Arrays.toString(right));
         right = mergeSort(right);
 
         int[] result = new int[array.length];
@@ -148,6 +138,12 @@ public class MergeSort {
 
     }
 
+    public void execute(Scanner sc) {
 
+        int[] array = writeArray(sc);
+        array = mergeSort(array);
+        System.out.println("Your array after sorting: " + Arrays.toString(array));
+
+    }
 }
 
