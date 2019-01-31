@@ -1,4 +1,4 @@
-import Algorithms.CoutingSort;
+import algorithms.CoutingSort;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CoutingSortTest {

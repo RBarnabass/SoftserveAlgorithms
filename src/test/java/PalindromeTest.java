@@ -1,4 +1,4 @@
-import Algorithms.Palindrome;
+import algorithms.Palindrome;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

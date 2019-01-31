@@ -1,4 +1,4 @@
-import Algorithms.WaysToSumToNUsingArrayElementsWithRepetition;
+import algorithms.WaysToSumToNUsingArrayElementsWithRepetition;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

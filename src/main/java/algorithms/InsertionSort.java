@@ -1,4 +1,4 @@
-package Algorithms;
+package algorithms;
 
 /**
  * Class that sorts the array by an algorithm Insertion Sort

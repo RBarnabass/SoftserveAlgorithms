@@ -1,4 +1,4 @@
-package Algorithms;
+package algorithms;
 
 /**
  * Optimized painting fence algorithm with one variable instead of a table

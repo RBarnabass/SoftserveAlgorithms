@@ -1,4 +1,4 @@
-import Algorithms.PaintingTheFence;
+import algorithms.PaintingTheFence;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

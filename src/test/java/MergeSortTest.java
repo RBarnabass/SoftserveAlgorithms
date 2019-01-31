@@ -1,4 +1,4 @@
-import Algorithms.MergeSort;
+import algorithms.MergeSort;
 
 import static org.junit.jupiter.api.Assertions.*;
 
