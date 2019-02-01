@@ -24,10 +24,9 @@ public class CountWaysOfSum implements IAlgorithmStrategy {
 
     /**
      * Asks user to enter positive integer and prints result
-     *
-     * @param sc Scanner
      */
-    public void execute(Scanner sc) {
+    public void execute() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Please, enter positive integer: ");
 
         int n = sc.nextInt();

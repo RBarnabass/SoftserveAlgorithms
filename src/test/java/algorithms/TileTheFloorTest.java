@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.InputMismatchException;
 
-import static java.awt.Component.isInstanceOf;
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -36,5 +35,15 @@ class TileTheFloorTest {
         assertEquals(numOfWays2, TileTheFloor.countWays(n2, m2));
         assertEquals(numOfWays3, TileTheFloor.countWays(n3, m3));
         assertEquals(numOfWays4, TileTheFloor.countWays(n4, m4));
+    }
+
+    @Test
+    void inputMismatchTest(){
+        assertThrows(InputMismatchException.class, () -> TileTheFloor.countWays(0, -1));
+    }
+
+    @Test
+    void arrayOutOfBound(){
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> TileTheFloor.countWays(-1, -1));
     }
 }

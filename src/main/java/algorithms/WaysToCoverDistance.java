@@ -1,9 +1,7 @@
 package algorithms;
 
 import strategy.IAlgorithmStrategy;
-
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import utilities.UserInputValidator;
 
 /**
  * Counting possible ways of covering given distance in 3 steps using dynamic programming.
@@ -20,7 +18,7 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
 
         System.out.println("Enter distance to cover: ");
 
-        int distance = getUserInput();
+        int distance = UserInputValidator.getUserInput(1, Integer.MAX_VALUE, "Incorrect input. Please, provide integer value that bigger than 0:");
 
         int ways = calculateWays(distance);
 
@@ -29,32 +27,6 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
                 .append(" number of ways for covering given distance.");
 
         System.out.println(result);
-    }
-
-    /**
-     * Get correct input from user.
-     *
-     * @return distance from user input
-     */
-    private int getUserInput() {
-
-        Scanner sc = new Scanner(System.in);
-
-        int distance = -1;
-
-        try {
-            distance = sc.nextInt();
-
-            if(distance < 1) {
-                throw new InputMismatchException();
-            }
-        } catch (InputMismatchException e) {
-
-            System.out.println("Incorrect input. Please, provide integer value that bigger than 0");
-            getUserInput();
-        }
-
-        return distance;
     }
 
     /**

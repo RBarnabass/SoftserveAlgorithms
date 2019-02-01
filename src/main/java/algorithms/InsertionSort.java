@@ -3,8 +3,8 @@ package algorithms;
 import strategy.IAlgorithmStrategy;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
+import static utilities.util.lengthOfArray;
 import static utilities.util.writeArray;
 
 /**
@@ -35,8 +35,8 @@ public class InsertionSort implements IAlgorithmStrategy {
     }
 
     public void execute() {
-        Scanner scanner = new Scanner(System.in);
-        int[] array = writeArray(scanner);
+        lengthOfArray();
+        int[] array = writeArray();
         array = doInsertionSort(array);
         System.out.println("Your array after Insertion Sort: " + Arrays.toString(array));
 

@@ -1,11 +1,10 @@
 package algorithms;
 
-import algorithms.QuickSortAlgorithm;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class QuickSortAlgorithmTest {
+class QuickSortTest {
 
     @Test
     void sortArray() {
@@ -19,9 +18,9 @@ class QuickSortAlgorithmTest {
         int[] outputArray3 = {-8, 1, 2, 3, 4, 5};
         int[] inputArray3 = {4, 3, 2, -8, 5, 1};
 
-        assertArrayEquals(outputArray1, QuickSortAlgorithm.quickSort(inputArray1));
-        assertArrayEquals(outputArray2, QuickSortAlgorithm.quickSort(inputArray2));
-        assertArrayEquals(outputArray3, QuickSortAlgorithm.quickSort(inputArray3));
+        assertArrayEquals(outputArray1, QuickSort.quickSort(inputArray1));
+        assertArrayEquals(outputArray2, QuickSort.quickSort(inputArray2));
+        assertArrayEquals(outputArray3, QuickSort.quickSort(inputArray3));
 
     }
 }
