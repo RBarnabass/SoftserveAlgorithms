@@ -14,16 +14,16 @@ public class Starter {
         boolean playing = true;
         new Initializer();
         Menu menu = new Menu();
-        // menu.hello();
+        menu.hello();
 
         while (playing) {
 
             menu.showAlgorithmList();
-            playing = get();
+            playing = isContinue();
         }
     }
 
-    private boolean get() {
+    private boolean isContinue() {
 
         int input = getInput();
 

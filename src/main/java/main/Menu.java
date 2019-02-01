@@ -3,26 +3,19 @@ package main;
 public class Menu {
 
     private final Algorithm[] values = Algorithm.values();
+    private String list;
 
-    // todo: only used
     public void showAlgorithmList() {
 
         System.out.println("Choose your algorithm please:");
         System.out.println();
 
-        for (int i = 1; i < values.length; i++) {
-            System.out.println(" " + i + " - " + values[i].name().replaceAll("_", " "));
+        if (list == null) {
+            list = getList();
         }
 
+        System.out.println(list);
         System.out.println(" 0 - " + values[0]);
-    }
-
-    public void showMainMenu() {
-
-        System.out.println(" 1 - Choose algorithm");
-        System.out.println(" 2 - Lock algorithm");
-        System.out.println(" 3 - Unlock algorithm");
-        System.out.println(" 0 - Exit");
     }
 
     public void hello() {
@@ -43,9 +36,14 @@ public class Menu {
         System.out.println();
     }
 
-    public void tryAgain() {
+    private String getList() {
 
-        System.out.println("Do you like to try again?");
-        System.out.println("Y/N");
+        StringBuilder builder = new StringBuilder();
+
+        for (int i = 1; i < values.length; i++) {
+            builder.append(" ").append(i).append(" - ").append(values[i].name().replaceAll("_", " ")).append("\n");
+        }
+
+        return builder.toString();
     }
 }
