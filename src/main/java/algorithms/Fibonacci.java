@@ -34,10 +34,10 @@ public class Fibonacci implements IAlgorithmStrategy {
                 Scanner sc = new Scanner(System.in);
                 System.out.println("Please enter a position for a number in Fibonacci sequence you want to know");
                 int number = sc.nextInt();
-                if (number > 0) {
+                if (number > 0 && number<=45) {
                     System.out.println(findFibonacciMember(number));
                 } else {
-                    System.out.println("Please enter number that >0");
+                    System.out.println("Please enter number that >0 and <=45");
                 }
             } catch (InputMismatchException e) {
                 System.out.println(e);
