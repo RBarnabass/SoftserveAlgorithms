@@ -1,6 +1,10 @@
 package algorithms;
 
-public class Palindrome {
+import strategy.AlgorithmStrategy;
+
+import java.util.Scanner;
+
+public class Palindrome implements AlgorithmStrategy {
 
     /**
      * Returns the length of the longest palindromic subsequence of a sequence.
@@ -35,6 +39,18 @@ public class Palindrome {
         return (number1 > number2) ? number1 : number2;
     }
 
+    /**
+     * Asks user to enter string and prints result
+     *
+     * @param sc Scanner
+     */
+    public void execute(Scanner sc) {
+        System.out.println("Please, enter String with length no more than 100: ");
+
+        String input = sc.nextLine();
+        int palindromeLength = getLongestPalindrome(input, 0, input.length() - 1);
+        System.out.println("The length of the longest palindrome subsequence is: " + palindromeLength);
+    }
 }
 
 
