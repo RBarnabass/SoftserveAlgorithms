@@ -1,10 +1,10 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Scanner;
 
-public class Palindrome implements AlgorithmStrategy {
+public class Palindrome implements IAlgorithmStrategy {
 
     /**
      * Returns the length of the longest palindromic subsequence of a sequence.

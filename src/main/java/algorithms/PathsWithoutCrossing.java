@@ -1,11 +1,11 @@
 package algorithms;
 
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Scanner;
 
-public class PathsWithoutCrossing implements AlgorithmStrategy {
+public class PathsWithoutCrossing implements IAlgorithmStrategy {
 
     public void execute(Scanner sc) {
 

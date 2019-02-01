@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class AlgorithmRunner {
 
-    private AlgorithmStrategy strategy;
+    private IAlgorithmStrategy strategy;
 
-    public void changeStrategy(AlgorithmStrategy strategy) {
+    public void changeStrategy(IAlgorithmStrategy strategy) {
         this.strategy = strategy;
     }
 

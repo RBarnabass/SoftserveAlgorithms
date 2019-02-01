@@ -2,6 +2,6 @@ package strategy;
 
 import java.util.Scanner;
 
-public interface AlgorithmStrategy {
+public interface IAlgorithmStrategy {
     void execute(Scanner sc);
 }

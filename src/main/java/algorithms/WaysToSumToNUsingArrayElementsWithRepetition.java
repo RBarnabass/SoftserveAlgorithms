@@ -1,6 +1,6 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ import static utilities.util.writeArray;
  * @author Ostap Vdovychyn
  * @version 1.0
  */
-public class WaysToSumToNUsingArrayElementsWithRepetition implements AlgorithmStrategy {
+public class WaysToSumToNUsingArrayElementsWithRepetition implements IAlgorithmStrategy {
     /**
      * Return number which show how many ways we have to represent one number with a given array of numbers
      *

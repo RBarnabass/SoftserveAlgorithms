@@ -1,6 +1,6 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 import static utilities.util.writeArray;
 
-public class CoutingSort implements AlgorithmStrategy {
+public class CoutingSort implements IAlgorithmStrategy {
 
     public static int[] countingSort(int[] array) {
 

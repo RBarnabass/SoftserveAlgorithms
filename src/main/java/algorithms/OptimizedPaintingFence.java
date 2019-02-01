@@ -1,6 +1,6 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Andrii Senchakevych
  */
-public class OptimizedPaintingFence implements AlgorithmStrategy {
+public class OptimizedPaintingFence implements IAlgorithmStrategy {
 
     /**
      * Returns number of ways of painting the fence such that at most 2 adjacent posts have the same color

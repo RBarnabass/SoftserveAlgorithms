@@ -1,6 +1,6 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -13,7 +13,7 @@ import static utilities.util.writeArray;
  * @version 1.0
  * @author Valentyn Yarmoshyk
  */
-public class MergeSort implements AlgorithmStrategy {
+public class MergeSort implements IAlgorithmStrategy {
 
     /**
      * Realise the merge sort

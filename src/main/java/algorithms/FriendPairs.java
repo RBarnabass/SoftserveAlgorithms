@@ -1,10 +1,10 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Scanner;
 
-public class FriendPairs implements AlgorithmStrategy {
+public class FriendPairs implements IAlgorithmStrategy {
 
     public void execute(Scanner sc) {
 

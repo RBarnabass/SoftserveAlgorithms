@@ -1,6 +1,6 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -13,7 +13,7 @@ import static utilities.util.writeArray;
  * @author Ostap Vdovychyn
  * @version 1.0
  */
-public class InsertionSort implements AlgorithmStrategy {
+public class InsertionSort implements IAlgorithmStrategy {
     /**
      * Realise Insertion sort
      *

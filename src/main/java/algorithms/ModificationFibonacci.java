@@ -1,6 +1,6 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Andrii Senchakevych
  */
-public class ModificationFibonacci implements AlgorithmStrategy {
+public class ModificationFibonacci implements IAlgorithmStrategy {
 
     private static int[] mmfib = new int[10000];
 

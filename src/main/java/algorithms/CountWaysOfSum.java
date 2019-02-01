@@ -1,10 +1,10 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Scanner;
 
-public class CountWaysOfSum implements AlgorithmStrategy {
+public class CountWaysOfSum implements IAlgorithmStrategy {
     /**
      * Returns how many ways is possible to calculate n with positive integers.
      *
