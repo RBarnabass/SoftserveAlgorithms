@@ -1,11 +1,14 @@
 package algorithms;
 
+import strategy.IAlgorithmStrategy;
+import utilities.util;
+
 /**
  * This class search the longest sequence difference one in the maximum sub sequence.
  * @version 1.0
  * @author Roman Berezhnov
  */
-public class LongestSubSequenceWithDifferenceOne {
+public class LongestSubSequenceWithDifferenceOne implements IAlgorithmStrategy {
 
     /**
      * This array holds all sequences.
@@ -81,5 +84,11 @@ public class LongestSubSequenceWithDifferenceOne {
                 }
             }
         }
+    }
+
+    @Override
+    public void execute() {
+        int[] array = util.writeArray();
+        getTheLongestOne(array);
     }
 }

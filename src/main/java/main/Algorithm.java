@@ -1,4 +1,9 @@
+package main;
+
 public enum Algorithm {
+
+    EXIT,
+    BUCKET_SORT,
     COUNT_WAYS_OF_SUM,
     COUNTING_SORT,
     FIBONACCI,
@@ -17,4 +22,14 @@ public enum Algorithm {
     TILE_THE_FLOOR,
     WAYS_TO_COVER_DISTANCE,
     WAYS_TO_SUM_TO_N;
+
+    public static Algorithm getAlgorithmName(int index) {
+
+        for (Algorithm algorithms: Algorithm.values()) {
+            if (index == (algorithms.ordinal())) {
+                return algorithms;
+            }
+        }
+        return EXIT;
+    }
 }
