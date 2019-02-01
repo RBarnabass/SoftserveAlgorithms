@@ -1,6 +1,6 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -12,7 +12,7 @@ import static utilities.util.writeArray;
  *
  * @author Arsen Markiv
  */
-public class QuickSortAlgorithm implements AlgorithmStrategy {
+public class QuickSortAlgorithm implements IAlgorithmStrategy {
 
     public void execute(Scanner sc) {
         int[] array = writeArray(sc);

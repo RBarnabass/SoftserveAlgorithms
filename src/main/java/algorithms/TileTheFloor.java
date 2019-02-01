@@ -1,6 +1,6 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Scanner;
 
@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author Arsen
  *
  */
-public class TileTheFloor implements AlgorithmStrategy {
+public class TileTheFloor implements IAlgorithmStrategy {
 
     /**
      * Method for count ways to tile the floor
