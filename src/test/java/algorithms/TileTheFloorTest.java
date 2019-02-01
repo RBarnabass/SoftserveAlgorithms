@@ -2,9 +2,6 @@ package algorithms;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.InputMismatchException;
-
-import static java.awt.Component.isInstanceOf;
 import static org.junit.jupiter.api.Assertions.*;
 
 
