@@ -12,7 +12,7 @@ import static utilities.util.writeArray;
  *
  * @author Arsen Markiv
  */
-public class QuickSortAlgorithm implements IAlgorithmStrategy {
+public class QuickSort implements IAlgorithmStrategy {
 
     public void execute() {
         Scanner sc = new Scanner(System.in);
