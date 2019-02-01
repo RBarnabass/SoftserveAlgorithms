@@ -6,11 +6,15 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 class InsertionSortTest {
 
     @org.junit.jupiter.api.Test
-    void doInsertionSortTest(){
+    void doInsertionSortTest() {
 
-        int[] inputArray = {52, 10, 6, 40};
-        int[] expectedArray = {6, 10, 40, 52};
+        int[] inputArrayA = {52, 10, 6, 40};
+        int[] expectedArrayA = {6, 10, 40, 52};
 
-        assertArrayEquals(expectedArray, InsertionSort.doInsertionSort(inputArray));
+        int[] inputArrayB = {21, 10, 7, 20};
+        int[] expectedArrayB = {7, 10, 20, 21};
+
+        assertArrayEquals(expectedArrayA, InsertionSort.doInsertionSort(inputArrayA));
+        assertArrayEquals(expectedArrayB, InsertionSort.doInsertionSort(inputArrayB));
     }
 }
