@@ -19,7 +19,7 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
         System.out.println("Enter distance to cover: ");
 
         int minimalDistanceValue = 1;
-        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0"
+        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
         int distance = UserInputValidator.getUserInput(minimalDistanceValue, Integer.MAX_VALUE, incorrectInputMessage);
 
         int ways = calculateWays(distance);
