@@ -40,7 +40,7 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
 
         Scanner sc = new Scanner(System.in);
 
-        int distance = -1;
+        int distance;
 
         try {
             distance = sc.nextInt();
@@ -50,8 +50,8 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
             }
         } catch (InputMismatchException e) {
 
-            System.out.println("Incorrect input. Please, provide integer value that bigger than 0");
-            getUserInput();
+            System.out.println("Incorrect input. Please, provide integer value that bigger than 0:");
+            distance = getUserInput();
         }
 
         return distance;

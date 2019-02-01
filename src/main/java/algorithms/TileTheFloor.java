@@ -20,7 +20,7 @@ public class TileTheFloor implements IAlgorithmStrategy {
      * @param m second measure parameter of floor and tile
      * @return return count of ways to tile the floor
      */
-    public static int countWays(int n, int m) {
+    static int countWays(int n, int m) {
 
         int count[] = new int[n + 1];
         count[0] = 0;
@@ -41,17 +41,17 @@ public class TileTheFloor implements IAlgorithmStrategy {
     public void execute() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter n: ");
-        isIntNumber(sc);
+        numberBiggerThenOne(sc);
         int n = sc.nextInt();
 
         System.out.print("Enter m: ");
-        isIntNumber(sc);
+        numberBiggerThenOne(sc);
         int m = sc.nextInt();
 
         System.out.println("Number of ways = " + countWays(n, m));
     }
 
-    private static void isIntNumber(Scanner sc) {
+    private static void numberBiggerThenOne(Scanner sc) {
         try {
             if (!sc.hasNextInt() || sc.nextInt() < 2) {
                 throw new InputMismatchException();

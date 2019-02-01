@@ -1,6 +1,5 @@
 package algorithms;
 
-import algorithms.QuickSort;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

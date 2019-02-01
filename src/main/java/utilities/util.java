@@ -14,7 +14,7 @@ public class util {
     public static int enterPositiveNumber() {
         Scanner scanner = new Scanner(System.in);
         int number;
-        System.out.println("Number must be Integer type and more than 1");
+        System.out.println("Number must be Integer type and more than 0");
         int counter = 0;
         do {
             if (counter > 0) {
@@ -29,6 +29,28 @@ public class util {
             }
             number = scanner.nextInt();
         } while (number <= 0);
+
+        return number;
+    }
+
+    public static int enterNumberMoreThan(int k) {
+        Scanner scanner = new Scanner(System.in);
+        int number;
+        System.out.println("Number must be Integer type and more than " + k + ": ");
+        int counter = 0;
+        do {
+            if (counter > 0) {
+                System.out.println("Enter the correct value, please!");
+            }
+            counter++;
+            while (!scanner.hasNextInt()) {
+
+                System.out.println("Enter the correct value, please!");
+                scanner.next();
+
+            }
+            number = scanner.nextInt();
+        } while (number <= k);
 
         return number;
     }

@@ -38,7 +38,7 @@ public class WaysToSumToNUsingArrayElementsWithRepetition implements IAlgorithmS
         System.out.println("The number must be non-negative");
         int number = nonNegativeNumber(scanner);
         System.out.println("Enter array which will be counting ");
-        int[] array = writeArray(scanner);
+        int[] array = writeArray();
         int ways = waysToCount(array, number);
         StringBuilder result = new StringBuilder()
                 .append("There is ").append(ways)
