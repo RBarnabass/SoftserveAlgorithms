@@ -4,6 +4,9 @@ import strategy.IAlgorithmStrategy;
 
 import java.util.Scanner;
 
+import static utilities.UserInputValidator.getUserInput;
+import static utilities.util.enterPositiveNumber;
+
 /**
  * Optimized painting fence algorithm with one variable instead of a table
  *
@@ -38,12 +41,17 @@ public class OptimizedPaintingFence implements IAlgorithmStrategy {
 
         int n;
         int k;
-        Scanner sc = new Scanner(System.in);
 
+        String errorMessage = "Number must be positive integer and less than 101";
+        int lowerBound = 0;
+        int upperBound = 100;
         System.out.println("Enter numbers of posts");
-        n = sc.nextInt();
+        n = getUserInput(lowerBound, upperBound, errorMessage);
         System.out.println("Enter numbers of colors");
-        k = sc.nextInt();
+
+        upperBound = 10;
+        errorMessage = "Number must be positive integer and less than 11";
+        k = getUserInput(lowerBound, upperBound, errorMessage);
         System.out.println("Number of ways is " + optimizedPaintingFence(n, k));
 
     }
