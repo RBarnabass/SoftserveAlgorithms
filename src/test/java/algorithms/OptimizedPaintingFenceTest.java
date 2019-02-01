@@ -16,4 +16,11 @@ public class OptimizedPaintingFenceTest {
         assertEquals(testOutput, OptimizedPaintingFence.optimizedPaintingFence(testInputN, testInputK));
     }
 
+    @org.junit.jupiter.api.Test
+    void executeTest(){
+
+        OptimizedPaintingFence op = new OptimizedPaintingFence();
+        op.execute();
+    }
+
 }

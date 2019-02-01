@@ -2,6 +2,8 @@ package algorithms;
 
 import algorithms.ModificationFibonacci;
 
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ModificationFibonacciTest {
@@ -25,6 +27,13 @@ class ModificationFibonacciTest {
         assertEquals(testOutputA, ModificationFibonacci.mmodificationFibonacci(testInputA));
         assertEquals(testOutputB, ModificationFibonacci.modificationFibonacci(testInputB));
         assertEquals(testOutputC, ModificationFibonacci.modificationFibonacci(testInputC));
+    }
+
+    @org.junit.jupiter.api.Test
+    void executeTest(){
+
+        ModificationFibonacci mf = new ModificationFibonacci();
+        mf.execute();
     }
 
 }

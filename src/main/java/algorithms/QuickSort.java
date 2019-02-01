@@ -12,9 +12,10 @@ import static utilities.util.writeArray;
  *
  * @author Arsen Markiv
  */
-public class QuickSortAlgorithm implements IAlgorithmStrategy {
+public class QuickSort implements IAlgorithmStrategy {
 
-    public void execute(Scanner sc) {
+    public void execute() {
+        Scanner sc = new Scanner(System.in);
         int[] array = writeArray(sc);
         array = quickSort(array);
         System.out.println("Your array after sorting: " + Arrays.toString(array));

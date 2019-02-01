@@ -2,7 +2,7 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Modification Fibonacci sequence
@@ -63,11 +63,23 @@ public class ModificationFibonacci implements IAlgorithmStrategy {
 
     }
 
-    public void execute(Scanner sc) {
+    public void execute() {
 
         int n;
-        System.out.println("Enter position ");
-        n = sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter position: ");
+        do {
+            try {
+                n = sc.nextInt();
+                if (n <= 0) {
+                    throw new InputMismatchException();
+                }
+                break;
+            } catch (InputMismatchException ex) {
+                System.out.println("That's not a position number of Modification Fibonacci sequence!");
+            }
+        } while (true);
+
         System.out.println("Member of position n is " + modificationFibonacci(n));
     }
 }

@@ -42,15 +42,18 @@ public class Palindrome implements IAlgorithmStrategy {
     /**
      * Asks user to enter string and prints result
      *
-     * @param sc Scanner
      */
-    public void execute(Scanner sc) {
+
+    public void execute() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Please, enter String with length no more than 100: ");
 
         String input = sc.nextLine();
         int palindromeLength = getLongestPalindrome(input, 0, input.length() - 1);
         System.out.println("The length of the longest palindrome subsequence is: " + palindromeLength);
     }
+
+
 }
 
 
