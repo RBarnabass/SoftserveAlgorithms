@@ -1,3 +1,5 @@
+package algorithms;
+
 import algorithms.CountWaysOfSum;
 import org.junit.jupiter.api.Test;
 

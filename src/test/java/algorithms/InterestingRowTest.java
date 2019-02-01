@@ -1,3 +1,5 @@
+package algorithms;
+
 import algorithms.InterestingRow;
 
 import static org.junit.jupiter.api.Assertions.*;

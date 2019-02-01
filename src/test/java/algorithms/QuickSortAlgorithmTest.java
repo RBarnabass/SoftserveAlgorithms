@@ -1,3 +1,5 @@
+package algorithms;
+
 import algorithms.QuickSortAlgorithm;
 import org.junit.jupiter.api.Test;
 

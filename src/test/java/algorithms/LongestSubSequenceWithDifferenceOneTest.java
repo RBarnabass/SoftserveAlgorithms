@@ -1,3 +1,5 @@
+package algorithms;
+
 import algorithms.LongestSubSequenceWithDifferenceOne;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
