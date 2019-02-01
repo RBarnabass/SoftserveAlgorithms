@@ -21,7 +21,6 @@ public class TileTheFloor implements IAlgorithmStrategy {
      * @return return count of ways to tile the floor
      */
     static int countWays(int n, int m) {
-
         int count[] = new int[n + 1];
         count[0] = 0;
 
@@ -57,6 +56,9 @@ public class TileTheFloor implements IAlgorithmStrategy {
                 throw new InputMismatchException();
             }
         } catch (InputMismatchException e) {
+            System.out.println("Please type integer value bigger then 1");
+            sc.nextLine();
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Please type integer value bigger then 1");
             sc.nextLine();
         }
