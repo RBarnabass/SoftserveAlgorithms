@@ -1,13 +1,16 @@
 package algorithms;
 
-import algorithms.TileTheFloor;
+import org.junit.jupiter.api.Test;
 
+import java.util.InputMismatchException;
+
+import static java.awt.Component.isInstanceOf;
 import static org.junit.jupiter.api.Assertions.*;
 
 
 class TileTheFloorTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void tileTheFloor() {
 
         int n1 = 4;
@@ -26,10 +29,12 @@ class TileTheFloorTest {
         int m4 = 4;
         int numOfWays4 = 5;
 
+        int n5 = -1;
+        int m5 = 1;
+
         assertEquals(numOfWays1, TileTheFloor.countWays(n1, m1));
         assertEquals(numOfWays2, TileTheFloor.countWays(n2, m2));
         assertEquals(numOfWays3, TileTheFloor.countWays(n3, m3));
         assertEquals(numOfWays4, TileTheFloor.countWays(n4, m4));
     }
-
 }

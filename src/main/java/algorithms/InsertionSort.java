@@ -34,8 +34,8 @@ public class InsertionSort implements IAlgorithmStrategy {
         return array;
     }
 
-    public void execute(Scanner scanner) {
-
+    public void execute() {
+        Scanner scanner = new Scanner(System.in);
         int[] array = writeArray(scanner);
         array = doInsertionSort(array);
         System.out.println("Your array after Insertion Sort: " + Arrays.toString(array));
