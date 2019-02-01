@@ -3,7 +3,6 @@ package algorithms;
 import strategy.IAlgorithmStrategy;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 import static utilities.util.writeArray;
 
@@ -15,8 +14,7 @@ import static utilities.util.writeArray;
 public class QuickSort implements IAlgorithmStrategy {
 
     public void execute() {
-        Scanner sc = new Scanner(System.in);
-        int[] array = writeArray(sc);
+        int[] array = writeArray();
         array = quickSort(array);
         System.out.println("Your array after sorting: " + Arrays.toString(array));
     }
