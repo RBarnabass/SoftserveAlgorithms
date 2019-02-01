@@ -20,7 +20,7 @@ public class TileTheFloor implements IAlgorithmStrategy {
      * @param m second measure parameter of floor and tile
      * @return return count of ways to tile the floor
      */
-    public static int countWays(int n, int m) {
+    static int countWays(int n, int m) {
 
         int count[] = new int[n + 1];
         count[0] = 0;
