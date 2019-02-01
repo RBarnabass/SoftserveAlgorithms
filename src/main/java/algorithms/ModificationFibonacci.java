@@ -4,6 +4,8 @@ import strategy.IAlgorithmStrategy;
 
 import java.util.*;
 
+import static utilities.UserInputValidator.getUserInput;
+
 /**
  * Modification Fibonacci sequence
  *
@@ -66,20 +68,14 @@ public class ModificationFibonacci implements IAlgorithmStrategy {
     public void execute() {
 
         int n;
-        Scanner sc = new Scanner(System.in);
         System.out.println("Enter position: ");
-        do {
-            try {
-                n = sc.nextInt();
-                if (n <= 0) {
-                    throw new InputMismatchException();
-                }
-                break;
-            } catch (InputMismatchException ex) {
-                System.out.println("That's not a position number of Modification Fibonacci sequence!");
-            }
-        } while (true);
-
-        System.out.println("Member of position n is " + modificationFibonacci(n));
+        String errorMessage = "That's not a position number of Modification Fibonacci sequence!" +
+                "\n" +
+                "Or input value is too long, try again!";
+        int lowerBound = 1;
+        int upperBound = 200;
+        n = getUserInput(lowerBound, upperBound, errorMessage);
+        System.out.println("Member Modification Fibonacci sequence of position " + n + " is " + modificationFibonacci(n));
     }
+
 }

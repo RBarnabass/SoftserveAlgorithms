@@ -2,6 +2,7 @@ package algorithms;
 
 
 import strategy.IAlgorithmStrategy;
+import utilities.UserInputValidator;
 
 import java.util.Scanner;
 
@@ -21,7 +22,9 @@ public class PathsWithoutCrossing implements IAlgorithmStrategy {
 
         System.out.println("Enter number of points on circle: ");
 
-        int numberOfPoints = sc.nextInt();
+        int minimalFriendsCount = 1;
+        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
+        int numberOfPoints = UserInputValidator.getUserInput(minimalFriendsCount, Integer.MAX_VALUE, incorrectInputMessage);
         int paths = countPaths(numberOfPoints);
 
         StringBuilder result = new StringBuilder()

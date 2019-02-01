@@ -1,6 +1,7 @@
 package algorithms;
 
 import strategy.IAlgorithmStrategy;
+import utilities.UserInputValidator;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -22,7 +23,9 @@ public class FriendPairs implements IAlgorithmStrategy {
 
         System.out.println("Enter amount of friends: ");
 
-        int friendsCount = getUserInput();
+        int minimalFriendsCount = 1;
+        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than -1";
+        int friendsCount = UserInputValidator.getUserInput(minimalFriendsCount, Integer.MAX_VALUE, incorrectInputMessage);
         int ways = countWaysToPair(friendsCount);
 
         StringBuilder result = new StringBuilder()
