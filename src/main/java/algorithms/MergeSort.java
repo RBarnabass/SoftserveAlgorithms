@@ -4,7 +4,7 @@ import strategy.IAlgorithmStrategy;
 
 import java.util.Arrays;
 
-import static utilities.util.writeArray;
+import static utilities.Util.writeArray;
 
 /**
  * Class that sorts the array by an algorithm Merge Sort
@@ -39,7 +39,7 @@ public class MergeSort implements IAlgorithmStrategy {
         for (int i = 0; i < midpoint; i++) {
             left[i] = array[i];
         }
-        for (int j = 0; j < midpoint; j++) {
+        for (int j = 0; j < right.length; j++) {
             right[j] = array[midpoint + j];
         }
 
