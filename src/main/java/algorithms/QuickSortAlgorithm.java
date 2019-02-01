@@ -1,11 +1,24 @@
 package algorithms;
 
+import strategy.AlgorithmStrategy;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+import static utilities.util.writeArray;
+
 /**
  * QuickSort algorithm for array of numbers
  *
  * @author Arsen Markiv
  */
-public class QuickSortAlgorithm {
+public class QuickSortAlgorithm implements AlgorithmStrategy {
+
+    public void execute(Scanner sc) {
+        int[] array = writeArray(sc);
+        array = quickSort(array);
+        System.out.println("Your array after sorting: " + Arrays.toString(array));
+    }
 
     /**
      * Returns array sorted by Quick Sort algorithm

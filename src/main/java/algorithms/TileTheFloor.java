@@ -1,6 +1,18 @@
 package algorithms;
 
-public class TileTheFloor {
+import strategy.AlgorithmStrategy;
+
+import java.util.Scanner;
+
+
+/**
+ * Count ways to tile the floor with given measures
+ *
+ *
+ * @author Arsen
+ *
+ */
+public class TileTheFloor implements AlgorithmStrategy {
 
     /**
      * Method for count ways to tile the floor
@@ -25,5 +37,24 @@ public class TileTheFloor {
             }
         }
         return count[n];
+    }
+
+    public void execute(Scanner sc) {
+        System.out.print("Enter n: ");
+        isIntNumber(sc);
+        int n = sc.nextInt();
+
+        System.out.print("Enter m: ");
+        isIntNumber(sc);
+        int m = sc.nextInt();
+
+        System.out.println("Number of ways = " + countWays(n, m));
+    }
+
+    private static void isIntNumber(Scanner sc) {
+        while (!sc.hasNextInt()) {
+            System.out.println("Int, please!");
+            sc.nextLine();
+        }
     }
 }
