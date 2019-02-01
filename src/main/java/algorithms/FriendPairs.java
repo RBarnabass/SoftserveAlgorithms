@@ -4,8 +4,18 @@ import strategy.IAlgorithmStrategy;
 
 import java.util.Scanner;
 
+/**
+ * Counting number of possible ways to pair for given amount of friends using dynamic programming.
+ *
+ * @author Oleh Volchkov
+ */
 public class FriendPairs implements IAlgorithmStrategy {
 
+    /**
+     * Runner method for execution of algorithm.
+     *
+     * @param sc scanner provided for user input
+     */
     public void execute(Scanner sc) {
 
         System.out.println("Enter amount of friends: ");
@@ -25,7 +35,6 @@ public class FriendPairs implements IAlgorithmStrategy {
      *
      * @param numberOfFriends amount of friends to cover
      * @return count of possible ways to pair
-     * @author Oleh Volchkov
      */
     public static int countWaysToPair(int numberOfFriends) {
 
