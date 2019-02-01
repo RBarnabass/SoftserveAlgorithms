@@ -8,7 +8,7 @@ import java.util.Scanner;
 import static utilities.util.writeArray;
 
 /**
- * Class thar sorts the array by an algorithm Merge Sort
+ * Class that sorts the array by an algorithm Merge Sort
  *
  * @version 1.0
  * @author Valentyn Yarmoshyk
@@ -20,7 +20,6 @@ public class MergeSort implements AlgorithmStrategy {
      *
      * @param array An array you want to sort
      * @return Sorted array
-     * @author Valentyn Yarmoshyk
      */
     public static int[] mergeSort(int[] array) {
 

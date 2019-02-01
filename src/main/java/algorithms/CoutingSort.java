@@ -9,8 +9,20 @@ import java.util.Scanner;
 
 import static utilities.util.writeArray;
 
+/**
+ * Class that sorts the array by an algorithm of Counter Sort
+ *
+ * @version 1.0
+ * @author Valentyn Yarmoshyk
+ */
 public class CoutingSort implements AlgorithmStrategy {
 
+    /**
+     * Realise Counter Sort
+     *
+     * @param array An array you want to sort
+     * @return Sorted array
+     */
     public static int[] countingSort(int[] array) {
 
         int min = array[0];
