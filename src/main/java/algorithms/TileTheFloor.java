@@ -2,15 +2,14 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
 /**
  * Count ways to tile the floor with given measures
  *
- *
  * @author Arsen
- *
  */
 public class TileTheFloor implements IAlgorithmStrategy {
 
@@ -39,7 +38,8 @@ public class TileTheFloor implements IAlgorithmStrategy {
         return count[n];
     }
 
-    public void execute(Scanner sc) {
+    public void execute() {
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter n: ");
         isIntNumber(sc);
         int n = sc.nextInt();
@@ -52,8 +52,12 @@ public class TileTheFloor implements IAlgorithmStrategy {
     }
 
     private static void isIntNumber(Scanner sc) {
-        while (!sc.hasNextInt()) {
-            System.out.println("Int, please!");
+        try {
+            if (!sc.hasNextInt() || sc.nextInt() < 2) {
+                throw new InputMismatchException();
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Please type integer value bigger then 1");
             sc.nextLine();
         }
     }
