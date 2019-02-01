@@ -20,9 +20,14 @@ class TileTheFloorTest {
         int m3 = 4;
         int numOfWays3 = 14;
 
+        int n4 = 7;
+        int m4 = 4;
+        int numOfWays4 = 5;
+
         assertEquals(numOfWays1, TileTheFloor.countWays(n1, m1));
         assertEquals(numOfWays2, TileTheFloor.countWays(n2, m2));
         assertEquals(numOfWays3, TileTheFloor.countWays(n3, m3));
+        assertEquals(numOfWays4, TileTheFloor.countWays(n4, m4));
     }
 
 }
