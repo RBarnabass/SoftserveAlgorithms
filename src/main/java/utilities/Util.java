@@ -3,14 +3,14 @@ package utilities;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class util {
+public class Util {
+
     /**
-     * Return the length of the array
+     * Ipput a positive number
      *
-     * @return The length of the array
+     * @return A positive number
      * @author Valentyn Yarmoshyk
      */
-
     public static int enterPositiveNumber() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Number must be Integer type and more than 0");
@@ -33,6 +33,12 @@ public class util {
         return number;
     }
 
+    /**
+     * Return the length of the array
+     *
+     * @return The length of the array
+     * @author Valentyn Yarmoshyk
+     */
     public static int lengthOfArray() {
         System.out.println("How much elements? ");
         int length = enterPositiveNumber();
@@ -67,7 +73,6 @@ public class util {
 
         }
         System.out.println("Your array: " + Arrays.toString(array));
-        scanner.close();
         return array;
     }
 }
