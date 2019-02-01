@@ -2,7 +2,7 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
-import static utilities.util.enterPositiveNumber;
+import static utilities.Util.enterPositiveNumber;
 
 /**
  * Class that realized logic of the ways for painting the fence
