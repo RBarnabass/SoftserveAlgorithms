@@ -1,14 +1,22 @@
 package algorithms;
 
+import strategy.IAlgorithmStrategy;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+import static utilities.util.writeArray;
+
 /**
  * Class that sorts the array by an algorithm Insertion Sort
  *
- * @version 1.0
  * @author Ostap Vdovychyn
+ * @version 1.0
  */
-public class InsertionSort {
+public class InsertionSort implements IAlgorithmStrategy {
     /**
-     *  Realise Insertion sort
+     * Realise Insertion sort
+     *
      * @param array expected array
      * @return sorted array
      */
@@ -24,5 +32,13 @@ public class InsertionSort {
             }
         }
         return array;
+    }
+
+    public void execute(Scanner scanner) {
+
+        int[] array = writeArray(scanner);
+        array = doInsertionSort(array);
+        System.out.println("Your array after Insertion Sort: " + Arrays.toString(array));
+
     }
 }

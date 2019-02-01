@@ -1,5 +1,6 @@
-import algorithms.CoutingSort;
-import static org.junit.jupiter.api.Assertions.*;
+package algorithms;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class CoutingSortTest {
 

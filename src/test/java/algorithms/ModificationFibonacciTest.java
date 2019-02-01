@@ -1,3 +1,5 @@
+package algorithms;
+
 import algorithms.ModificationFibonacci;
 
 import static org.junit.jupiter.api.Assertions.*;

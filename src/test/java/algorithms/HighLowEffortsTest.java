@@ -1,3 +1,5 @@
+package algorithms;
+
 import algorithms.HighLowEfforts;
 
 import static org.junit.jupiter.api.Assertions.*;

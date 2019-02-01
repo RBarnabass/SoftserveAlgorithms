@@ -1,6 +1,6 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @version 1.0
  * @author Valentyn Yarmoshyk
  */
-public class PaintingTheFence implements AlgorithmStrategy {
+public class PaintingTheFence implements IAlgorithmStrategy {
 
     /**
      * Return the number of the ways for painting the fence
@@ -38,8 +38,8 @@ public class PaintingTheFence implements AlgorithmStrategy {
         return variant[n-1];
     }
 
-    public void execute(Scanner sc) {
-
+    public void execute() {
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of posts: ");
         while(!sc.hasNextInt()){
             System.out.println("Integer, please!");
@@ -55,6 +55,6 @@ public class PaintingTheFence implements AlgorithmStrategy {
         int colors = sc.nextInt();
 
         System.out.println("Different ways for painting the fence: " + paintingTheFence(posts, colors));
-
+        sc.close();
     }
 }

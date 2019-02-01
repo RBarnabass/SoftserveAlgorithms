@@ -1,14 +1,41 @@
 package algorithms;
 
 
-public class PathsWithoutCrossing {
+import strategy.IAlgorithmStrategy;
+
+import java.util.Scanner;
+
+/**
+ * Counting number of possible paths through 2 points without crossings using dynamic programming.
+ *
+ * @author Oleh Volchkov
+ */
+public class PathsWithoutCrossing implements IAlgorithmStrategy {
+
+    /**
+     * Runner method for execution of algorithm.
+     *
+     * @param sc scanner provided for user input
+     */
+    public void execute(Scanner sc) {
+
+        System.out.println("Enter number of points on circle: ");
+
+        int numberOfPoints = sc.nextInt();
+        int paths = countPaths(numberOfPoints);
+
+        StringBuilder result = new StringBuilder()
+                .append("There is ").append(paths)
+                .append(" number of possible paths through two points without crossings.");
+
+        System.out.println(result);
+    }
 
     /**
      * Returns number of possible paths through two points without crossings.
      *
      * @param numberOfPoints number of points on circle; must be even, otherwise method will return 0
      * @return number of possible paths without crossings
-     * @author Oleh Volchkov
      */
     public static int countPaths(int numberOfPoints) {
 

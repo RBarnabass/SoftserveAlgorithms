@@ -1,11 +1,21 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Scanner;
 
-public class WaysToCoverDistance implements AlgorithmStrategy {
+/**
+ * Counting possible ways of covering given distance in 3 steps using dynamic programming.
+ *
+ * @author Oleh Volchkov
+ */
+public class WaysToCoverDistance implements IAlgorithmStrategy {
 
+    /**
+     * Runner method for execution of algorithm.
+     *
+     * @param sc scanner provided for user input
+     */
     public void execute(Scanner sc) {
 
         System.out.println("Enter distance to cover: ");
@@ -25,7 +35,6 @@ public class WaysToCoverDistance implements AlgorithmStrategy {
      *
      * @param distance distance to cover
      * @return number of possible ways to cover the distance
-     * @author Oleh Volchkov
      */
     public static int calculateWays(int distance) {
 

@@ -1,9 +1,8 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 import static utilities.util.writeArray;
 
@@ -13,7 +12,7 @@ import static utilities.util.writeArray;
  * @version 1.0
  * @author Valentyn Yarmoshyk
  */
-public class MergeSort implements AlgorithmStrategy {
+public class MergeSort implements IAlgorithmStrategy {
 
     /**
      * Realise the merge sort
@@ -88,9 +87,8 @@ public class MergeSort implements AlgorithmStrategy {
 
     }
 
-    public void execute(Scanner sc) {
-
-        int[] array = writeArray(sc);
+    public void execute() {
+        int[] array = writeArray();
         array = mergeSort(array);
         System.out.println("Your array after sorting: " + Arrays.toString(array));
 

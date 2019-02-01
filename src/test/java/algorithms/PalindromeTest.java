@@ -1,3 +1,5 @@
+package algorithms;
+
 import algorithms.Palindrome;
 import org.junit.jupiter.api.Test;
 

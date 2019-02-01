@@ -1,6 +1,10 @@
 package algorithms;
 
-public class CountWaysOfSum {
+import strategy.IAlgorithmStrategy;
+
+import java.util.Scanner;
+
+public class CountWaysOfSum implements IAlgorithmStrategy {
     /**
      * Returns how many ways is possible to calculate n with positive integers.
      *
@@ -16,5 +20,24 @@ public class CountWaysOfSum {
             }
         }
         return ways[n];
+    }
+
+    /**
+     * Asks user to enter positive integer and prints result
+     *
+     * @param sc Scanner
+     */
+    public void execute(Scanner sc) {
+        System.out.println("Please, enter positive integer: ");
+
+        int n = sc.nextInt();
+        int result = countWays(n);
+        if (n == 1) {
+            System.out.println("There no possible way to calculate " + n + " with positive integers.");
+        } else if (n == 2) {
+            System.out.println("There is " + result + " possible way to calculate " + n + " with positive integers.");
+        } else {
+            System.out.println("There are " + result + " possible ways to calculate " + n + " with positive integers.");
+        }
     }
 }

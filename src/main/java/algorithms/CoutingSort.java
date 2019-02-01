@@ -1,11 +1,10 @@
 package algorithms;
 
-import strategy.AlgorithmStrategy;
+import strategy.IAlgorithmStrategy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 import static utilities.util.writeArray;
 
@@ -15,7 +14,7 @@ import static utilities.util.writeArray;
  * @version 1.0
  * @author Valentyn Yarmoshyk
  */
-public class CoutingSort implements AlgorithmStrategy {
+public class CoutingSort implements IAlgorithmStrategy {
 
     /**
      * Realise Counter Sort
@@ -69,10 +68,8 @@ public class CoutingSort implements AlgorithmStrategy {
         return resultArray;
     }
 
-
-    public void execute(Scanner sc) {
-
-        int[] array = writeArray(sc);
+    public void execute() {
+        int[] array = writeArray();
         array = countingSort(array);
         System.out.println("Your array after Counter Sort: " + Arrays.toString(array));
 

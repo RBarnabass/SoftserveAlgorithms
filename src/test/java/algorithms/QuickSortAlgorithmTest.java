@@ -1,10 +1,13 @@
+package algorithms;
+
 import algorithms.QuickSortAlgorithm;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class QuickSortAlgorithmTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void sortArray() {
 
         int[] outputArray1 = {1, 6, 12, 32, 34, 43, 54, 342};
