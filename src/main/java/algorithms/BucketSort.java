@@ -1,6 +1,7 @@
 package algorithms;
 
 import strategy.IAlgorithmStrategy;
+import utilities.util;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -143,9 +144,8 @@ public class BucketSort implements IAlgorithmStrategy {
 
     @Override
     public void execute() {
-
-        System.out.println("Enter ");
-
+        int[] array = util.writeArray();
+        bucketSort(array);
     }
 
     /**
