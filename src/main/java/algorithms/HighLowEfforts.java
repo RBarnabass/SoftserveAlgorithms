@@ -1,6 +1,19 @@
 package algorithms;
 
-public class HighLowEfforts {
+import strategy.IAlgorithmStrategy;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+import static utilities.util.enterPositiveNumber;
+import static utilities.util.writeArray;
+
+/**
+ * Class that returns maximum amount of cost you can perform
+ *
+ * @author Nazar Mavko
+ */
+public class HighLowEfforts implements IAlgorithmStrategy {
 
     /**
      * Returns the member of position in Fibonacci sequence
@@ -9,7 +22,6 @@ public class HighLowEfforts {
      * @param low          the cost of low effort work
      * @param high         the cost of high effort work
      * @return maximum amount of cost you can perform
-     * @author Nazar Mavko
      */
     public static int findMaximumAmount(int[] high, int[] low, int numberOfDays) {
         if (numberOfDays <= 0)
@@ -18,4 +30,18 @@ public class HighLowEfforts {
     }
 
 
+    public void execute() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter high array");
+        int[] high = writeArray();
+
+        System.out.println("Enter low array");
+        int[] low = writeArray();
+
+        System.out.println("Please enter number of days");
+        int numberOfDays = enterPositiveNumber();
+
+        System.out.println(findMaximumAmount(high, low, numberOfDays));
+
+    }
 }
