@@ -29,11 +29,4 @@ class ModificationFibonacciTest {
         assertEquals(testOutputC, ModificationFibonacci.modificationFibonacci(testInputC));
     }
 
-    @org.junit.jupiter.api.Test
-    void executeTest(){
-
-        ModificationFibonacci mf = new ModificationFibonacci();
-        mf.execute();
-    }
-
 }
