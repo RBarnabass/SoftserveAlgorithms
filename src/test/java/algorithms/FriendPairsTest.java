@@ -15,7 +15,11 @@ public class FriendPairsTest {
         int testInputB = 2;
         int expectedOutputB = 2;
 
+        int testInputC = 1;
+        int expectedOutputC = 1;
+
         assertEquals(expectedOutputA, FriendPairs.countWaysToPair(testInputA));
         assertEquals(expectedOutputB, FriendPairs.countWaysToPair(testInputB));
+        assertEquals(expectedOutputC, FriendPairs.countWaysToPair(testInputC));
     }
 }
