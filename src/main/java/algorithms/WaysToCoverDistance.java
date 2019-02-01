@@ -40,7 +40,7 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
 
         Scanner sc = new Scanner(System.in);
 
-        int distance = -1;
+        int distance;
 
         try {
             distance = sc.nextInt();
