@@ -10,26 +10,33 @@ public class util {
      * @return The length of the array
      * @author Valentyn Yarmoshyk
      */
-    public static int lengthOfArray() {
+
+    public static int enterPositiveNumber() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("How much elements? ");
+        int number;
         System.out.println("Number must be Integer type and more than 1");
-        int length;
         int counter = 0;
-        do{
-            if(counter > 0){
-                System.out.println("Enter the correct value!");
+        do {
+            if (counter > 0) {
+                System.out.println("Enter the correct value, please!");
             }
             counter++;
-            while(!scanner.hasNextInt()){
+            while (!scanner.hasNextInt()) {
 
-                System.out.println("Enter the correct value!");
+                System.out.println("Enter the correct value, please!");
                 scanner.next();
 
             }
-            length = scanner.nextInt();
-        }while(length <= 0);
-        System.out.println("The length of your array is " + length);
+            number = scanner.nextInt();
+        } while (number <= 0);
+
+        return number;
+    }
+
+    public static int lengthOfArray() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How much elements? ");
+        int length = enterPositiveNumber();
         return length;
     }
 
