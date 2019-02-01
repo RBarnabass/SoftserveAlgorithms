@@ -13,6 +13,10 @@ import static utilities.util.writeArray;
  */
 public class QuickSort implements IAlgorithmStrategy {
 
+
+    /**
+     * Execute current class
+     */
     public void execute() {
         int[] array = writeArray();
         array = quickSort(array);
