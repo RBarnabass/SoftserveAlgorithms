@@ -3,9 +3,6 @@ package algorithms;
 import strategy.IAlgorithmStrategy;
 import utilities.UserInputValidator;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
 
 /**
  * Count ways to tile the floor with given measures
@@ -39,27 +36,15 @@ public class TileTheFloor implements IAlgorithmStrategy {
     }
 
     public void execute() {
-        Scanner sc = new Scanner(System.in);
+        final int minValue = 1;
+        String errorMessage = "Please type integer value bigger then 1";
+
         System.out.print("Enter n: ");
-        int n = sc.nextInt(UserInputValidator.getUserInput(1, Integer.MAX_VALUE, "Please type integer value bigger then 1"));
+        int n = UserInputValidator.getUserInput(minValue, Integer.MAX_VALUE, errorMessage);
 
         System.out.print("Enter m: ");
-        int m = sc.nextInt(UserInputValidator.getUserInput(1, Integer.MAX_VALUE, "Please type integer value bigger then 1"));
+        int m = UserInputValidator.getUserInput(minValue, Integer.MAX_VALUE, errorMessage);
 
         System.out.println("Number of ways = " + countWays(n, m));
-    }
-
-    private static void numberBiggerThenOne(Scanner sc) {
-        try {
-            if (!sc.hasNextInt() || sc.nextInt() < 2) {
-                throw new InputMismatchException();
-            }
-        } catch (InputMismatchException e) {
-            System.out.println("Please type integer value bigger then 1");
-            sc.nextLine();
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Please type integer value bigger then 1");
-            sc.nextLine();
-        }
     }
 }
