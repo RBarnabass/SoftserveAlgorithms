@@ -17,7 +17,6 @@ public class WaysToSumToNUsingArrayElementsWithRepetition implements IAlgorithmS
      * @param arr    Input array, elements in the array will be counting
      * @param number Input number which has to be represented
      * @return count[number] of possible ways we have to represent one number with a given array of numbers
-     * @author Ostap Vdovychyn
      */
     public static int waysToCount(int arr[], int number) {
         int count[] = new int[number + 1];
@@ -33,10 +32,11 @@ public class WaysToSumToNUsingArrayElementsWithRepetition implements IAlgorithmS
         return count[number];
     }
 
-    public void execute(Scanner scanner) {
-
+    public void execute() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number which has to be represented: ");
-        int number = scanner.nextInt();
+        System.out.println("The number must be non-negative");
+        int number = nonNegativeNumber(scanner);
         System.out.println("Enter array which will be counting ");
         int[] array = writeArray(scanner);
         int ways = waysToCount(array, number);
@@ -45,6 +45,27 @@ public class WaysToSumToNUsingArrayElementsWithRepetition implements IAlgorithmS
                 .append(" ways we have to represent one number with a given array of numbers ");
 
         System.out.println(result);
+    }
+
+    /**
+     * Return non negative number
+     *
+     * @param scanner Input value from scanner
+     * @return non negative number
+     */
+    private int nonNegativeNumber(Scanner scanner) {
+          final int nonNegativeNumber = 0;
+        int number;
+        while (true) {
+            if (scanner.nextInt() < nonNegativeNumber) {
+                System.out.print("please input positive number ");
+            } else {
+                number = scanner.nextInt();
+                break;
+            }
+
+        }
+        return number;
     }
 
 }

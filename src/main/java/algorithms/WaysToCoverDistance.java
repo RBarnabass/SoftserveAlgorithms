@@ -2,6 +2,7 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -14,13 +15,13 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
     /**
      * Runner method for execution of algorithm.
      *
-     * @param sc scanner provided for user input
      */
-    public void execute(Scanner sc) {
+    public void execute() {
 
         System.out.println("Enter distance to cover: ");
 
-        int distance = sc.nextInt();
+        int distance = getUserInput();
+
         int ways = calculateWays(distance);
 
         StringBuilder result = new StringBuilder()
@@ -28,6 +29,32 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
                 .append(" number of ways for covering given distance.");
 
         System.out.println(result);
+    }
+
+    /**
+     * Get correct input from user.
+     *
+     * @return distance from user input
+     */
+    private int getUserInput() {
+
+        Scanner sc = new Scanner(System.in);
+
+        int distance = -1;
+
+        try {
+            distance = sc.nextInt();
+
+            if(distance < 1) {
+                throw new InputMismatchException();
+            }
+        } catch (InputMismatchException e) {
+
+            System.out.println("Incorrect input. Please, provide integer value that bigger than 0");
+            getUserInput();
+        }
+
+        return distance;
     }
 
     /**

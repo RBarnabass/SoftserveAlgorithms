@@ -14,9 +14,10 @@ public class FriendPairs implements IAlgorithmStrategy {
     /**
      * Runner method for execution of algorithm.
      *
-     * @param sc scanner provided for user input
      */
-    public void execute(Scanner sc) {
+    public void execute() {
+
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter amount of friends: ");
 

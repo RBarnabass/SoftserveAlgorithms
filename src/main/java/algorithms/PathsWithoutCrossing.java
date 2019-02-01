@@ -14,10 +14,10 @@ public class PathsWithoutCrossing implements IAlgorithmStrategy {
 
     /**
      * Runner method for execution of algorithm.
-     *
-     * @param sc scanner provided for user input
      */
-    public void execute(Scanner sc) {
+    public void execute() {
+
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter number of points on circle: ");
 
