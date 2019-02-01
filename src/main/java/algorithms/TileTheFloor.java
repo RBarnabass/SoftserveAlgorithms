@@ -1,6 +1,7 @@
 package algorithms;
 
 import strategy.IAlgorithmStrategy;
+import utilities.UserInputValidator;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -40,12 +41,10 @@ public class TileTheFloor implements IAlgorithmStrategy {
     public void execute() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter n: ");
-        numberBiggerThenOne(sc);
-        int n = sc.nextInt();
+        int n = sc.nextInt(UserInputValidator.getUserInput(1, Integer.MAX_VALUE, "Please type integer value bigger then 1"));
 
         System.out.print("Enter m: ");
-        numberBiggerThenOne(sc);
-        int m = sc.nextInt();
+        int m = sc.nextInt(UserInputValidator.getUserInput(1, Integer.MAX_VALUE, "Please type integer value bigger then 1"));
 
         System.out.println("Number of ways = " + countWays(n, m));
     }
