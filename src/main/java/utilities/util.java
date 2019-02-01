@@ -36,6 +36,7 @@ public class util {
     public static int lengthOfArray() {
         System.out.println("How much elements? ");
         int length = enterPositiveNumber();
+        System.out.println("The length of your array is " + length);
         return length;
     }
 
