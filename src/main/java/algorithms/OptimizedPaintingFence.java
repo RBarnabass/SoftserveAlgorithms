@@ -34,10 +34,11 @@ public class OptimizedPaintingFence implements IAlgorithmStrategy {
         return total;
     }
 
-    public void execute(Scanner sc) {
+    public void execute() {
 
         int n;
         int k;
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter numbers of posts");
         n = sc.nextInt();
