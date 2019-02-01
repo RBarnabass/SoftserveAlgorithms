@@ -41,7 +41,7 @@ public class FriendPairs implements IAlgorithmStrategy {
 
         Scanner sc = new Scanner(System.in);
 
-        int friendsCount = -1;
+        int friendsCount;
 
         try {
             friendsCount = sc.nextInt();
