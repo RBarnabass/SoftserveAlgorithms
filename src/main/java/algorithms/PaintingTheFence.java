@@ -2,7 +2,7 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
-import java.util.Scanner;
+import static utilities.util.enterPositiveNumber;
 
 /**
  * Class that realized logic of the ways for painting the fence
@@ -39,22 +39,14 @@ public class PaintingTheFence implements IAlgorithmStrategy {
     }
 
     public void execute() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number of posts: ");
-        while(!sc.hasNextInt()){
-            System.out.println("Integer, please!");
-            sc.nextLine();
-        }
-        int posts = sc.nextInt();
 
-        System.out.print("Enter the number of colors: ");
-        while(!sc.hasNextInt()){
-            System.out.println("Integer, please!");
-            sc.nextLine();
-        }
-        int colors = sc.nextInt();
+        System.out.println("Enter the count of posts:");
+        int posts = enterPositiveNumber();
 
-        System.out.println("Different ways for painting the fence: " + paintingTheFence(posts, colors));
-        sc.close();
+        System.out.println("Enter the count of colors:");
+        int colors = enterPositiveNumber();
+
+        System.out.println("The different ways for painting the fence: " + PaintingTheFence.paintingTheFence(posts, colors));
+
     }
 }
