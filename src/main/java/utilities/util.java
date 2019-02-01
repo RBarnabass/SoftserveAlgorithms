@@ -67,7 +67,6 @@ public class util {
 
         }
         System.out.println("Your array: " + Arrays.toString(array));
-        scanner.close();
         return array;
     }
 }
