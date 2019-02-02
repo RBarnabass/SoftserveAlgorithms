@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static utilities.Util.writeArray;
+import static utilities.Util.userInputArray;
 
 /**
  * Class that sorts the array by an algorithm of Counter Sort
@@ -69,7 +69,7 @@ public class CoutingSort implements IAlgorithmStrategy {
     }
 
     public void execute() {
-        int[] array = writeArray();
+        int[] array = userInputArray();
         array = countingSort(array);
         System.out.println("Your array after Counter Sort: " + Arrays.toString(array));
 

@@ -4,7 +4,7 @@ import strategy.IAlgorithmStrategy;
 
 import java.util.Arrays;
 
-import static utilities.Util.writeArray;
+import static utilities.Util.userInputArray;
 
 /**
  * Class that sorts the array by an algorithm Merge Sort
@@ -88,7 +88,7 @@ public class MergeSort implements IAlgorithmStrategy {
     }
 
     public void execute() {
-        int[] array = writeArray();
+        int[] array = userInputArray();
         array = mergeSort(array);
         System.out.println("Your array after sorting: " + Arrays.toString(array));
 
