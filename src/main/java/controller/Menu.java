@@ -1,6 +1,6 @@
-package main;
+package controller;
 
-import static main.Controller.EXIT_CODE;
+import static controller.Controller.EXIT_CODE;
 
 /**
  * Class holds view part of program
@@ -53,8 +53,7 @@ public class Menu {
             }
             System.out.print(aChar + " ");
         }
-
-        System.out.println();
+        System.out.println("\n");
     }
 
     /**

@@ -1,4 +1,4 @@
-package main;
+package controller;
 
 /**
  * Enum with all algorithms.

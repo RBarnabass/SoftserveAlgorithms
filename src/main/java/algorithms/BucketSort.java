@@ -1,9 +1,8 @@
 package algorithms;
 
 import strategy.IAlgorithmStrategy;
-import utilities.util;
-
 import java.util.*;
+import static utilities.Util.writeArray;
 
 /**
  * This class is designed for sorting an integer array by bucket method.
@@ -24,7 +23,7 @@ public class BucketSort implements IAlgorithmStrategy {
     private int max;
 
     /**
-     * This method provide main sorting logic.
+     * This method provide controller sorting logic.
      *
      * @param array this is the incoming array of integer unsorted numbers.
      * @return      sorted array.
@@ -150,7 +149,7 @@ public class BucketSort implements IAlgorithmStrategy {
      */
     @Override
     public void execute() {
-        int[] array = util.writeArray();
+        int[] array = writeArray();
         System.out.println("Sorted array - " + Arrays.toString(bucketSort(array)));
     }
 

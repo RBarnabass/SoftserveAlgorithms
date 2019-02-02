@@ -1,10 +1,10 @@
-package main;
+package controller;
 
 import strategy.AlgorithmRunner;
 import java.util.Scanner;
 
 /**
- * This class provides main program logic
+ * This class provides controller program logic
  * and control all behavior.
  *
  * @version 1.0
@@ -22,11 +22,6 @@ public class Controller {
      * This is a constant value of algorithms.
      */
     private static final int ALGORITHM_LIST_LENGTH = 19;
-
-    /**
-     * This is a constant value of wrong input.
-     */
-    private static final int WRONG_INPUT = -1;
 
     /**
      * This is a final value of input provider.
@@ -97,16 +92,14 @@ public class Controller {
      */
     private int getInput() {
 
-        input = WRONG_INPUT;
-
         try {
             if (scan.hasNextLine()) {
                 input = Integer.parseInt(scan.nextLine());
                 if (input < EXIT_CODE || input > ALGORITHM_LIST_LENGTH) {
-                    throw new IllegalArgumentException();
+                    throw new NumberFormatException();
                 }
             }
-        } catch (IllegalArgumentException e) {
+        } catch (NumberFormatException e) {
             System.out.println("\n" + "Wrong input, try again please!");
             System.out.print("Type here please: ");
             getInput();

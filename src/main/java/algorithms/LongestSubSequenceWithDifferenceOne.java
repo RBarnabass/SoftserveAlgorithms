@@ -1,7 +1,7 @@
 package algorithms;
 
 import strategy.IAlgorithmStrategy;
-import utilities.util;
+import utilities.Util;
 
 /**
  * This class search the longest sequence difference one in the maximum sub sequence.
@@ -22,7 +22,7 @@ public class LongestSubSequenceWithDifferenceOne implements IAlgorithmStrategy {
     private int[] array;
 
     /**
-     * This method provides the main logic.
+     * This method provides the controller logic.
      *
      * @param rowArray this is a given array.
      * @return         length of the greatest sequence.
@@ -95,7 +95,7 @@ public class LongestSubSequenceWithDifferenceOne implements IAlgorithmStrategy {
      */
     @Override
     public void execute() {
-        int[] array = util.writeArray();
+        int[] array = Util.writeArray();
         System.out.println("This is the longest sub sequence - " + getTheLongestOne(array));
     }
 }
