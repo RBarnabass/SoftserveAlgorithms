@@ -34,45 +34,34 @@ public class Util {
     }
 
     /**
-     * Return the length of the array
-     *
-     * @return The length of the array
-     * @author Valentyn Yarmoshyk
-     */
-    public static int lengthOfArray() {
-        System.out.println("How much elements? ");
-        int length = enterPositiveNumber();
-        System.out.println("The length of your array is " + length);
-        return length;
-    }
-
-    /**
      * Return the array that you entered
      *
      * @return An array
      * @author Valentyn Yarmoshyk
      */
-    public static int[] writeArray() {
+    public static int[] userInputArray(){
+
         Scanner scanner = new Scanner(System.in);
-        int length = lengthOfArray();
 
-        int[] array = new int[length];
-        int i = 0;
+        System.out.print("Enter array of Integer space-separated numbers: ");
+        String string = scanner.nextLine().trim().replaceAll("\\s+", " ");
+        System.out.println(string);
 
-        while (i < array.length) {
+        int[] intArray;
 
-            System.out.print("Enter the " + i + " element: ");
-
-            while (!scanner.hasNextInt()) {
-                System.out.println("Int, please!");
-                scanner.nextLine();
+        try{
+            String[] stringArray = string.split(" ");
+            intArray = new int[stringArray.length];
+            for(int i = 0; i < intArray.length; i++){
+                intArray[i] = Integer.parseInt(stringArray[i].trim());
             }
-
-            array[i] = scanner.nextInt();
-            i++;
+            System.out.println("Your array is: " + Arrays.toString(intArray));
+        }catch(NumberFormatException e){
+            System.out.println("You entered the invalid symbol. Try one more time");s
+            intArray = userInputArray();
 
         }
-        System.out.println("Your array: " + Arrays.toString(array));
-        return array;
+
+        return intArray;
     }
 }
