@@ -96,6 +96,6 @@ public class LongestSubSequenceWithDifferenceOne implements IAlgorithmStrategy {
     @Override
     public void execute() {
         int[] array = Util.writeArray();
-        System.out.println("This is the longest sub sequence - " + getTheLongestOne(array));
+        System.out.println("This is the longest sub sequence - " + getTheLongestOne(array) + "\n");
     }
 }

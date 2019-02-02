@@ -150,7 +150,7 @@ public class BucketSort implements IAlgorithmStrategy {
     @Override
     public void execute() {
         int[] array = writeArray();
-        System.out.println("Sorted array - " + Arrays.toString(bucketSort(array)));
+        System.out.println("Sorted array - " + Arrays.toString(bucketSort(array)) + "\n");
     }
 
     /**

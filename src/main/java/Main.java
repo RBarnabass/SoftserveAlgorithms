@@ -1,4 +1,4 @@
-import main.Controller;
+import controller.Controller;
 
 /**
  * This class starts an application
@@ -9,7 +9,7 @@ import main.Controller;
 public class Main {
 
     /**
-     * The main method starts an application
+     * The controller method starts an application
      *
      * @param args input data
      */

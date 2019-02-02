@@ -26,12 +26,12 @@ public class Initializer {
     }
 
     /**
-     * This is get method for algorithm map.
+     * This is getAlgorithm method for algorithm map.
      *
      * @param key enum field.
      * @return    algorithm instance.
      */
-    public static IAlgorithmStrategy get(Algorithm key) {
+    public IAlgorithmStrategy getAlgorithm(Algorithm key) {
 
         return algorithms.get(key);
     }

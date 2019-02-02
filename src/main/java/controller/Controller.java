@@ -2,6 +2,7 @@ package controller;
 
 import strategy.AlgorithmRunner;
 import java.util.Scanner;
+import static controller.Algorithm.getAlgorithmName;
 
 /**
  * This class provides controller program logic
@@ -34,6 +35,11 @@ public class Controller {
     private final AlgorithmRunner runner = new AlgorithmRunner();
 
     /**
+     * This is a final instance of all algorithms.
+     */
+    private final Initializer initializer = new Initializer();
+
+    /**
      * This variable holds user or constant input value.
      */
     private int input;
@@ -44,7 +50,6 @@ public class Controller {
     public void start() {
 
         boolean playing = true;
-        new Initializer();
         Menu menu = new Menu();
         menu.printWelcome();
 
@@ -80,8 +85,8 @@ public class Controller {
      */
     private void getStrategy(int input) {
 
-        Algorithm name = Algorithm.getAlgorithmName(input);
-        runner.changeStrategy(Initializer.get(name));
+        Algorithm name = getAlgorithmName(input);
+        runner.changeStrategy(initializer.getAlgorithm(name));
         runner.run();
     }
 
