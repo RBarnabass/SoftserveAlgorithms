@@ -57,7 +57,7 @@ public class Util {
             }
             System.out.println("Your array is: " + Arrays.toString(intArray));
         }catch(NumberFormatException e){
-            System.out.println("You entered the invalid symbol. Try one more time");s
+            System.out.println("You entered the invalid symbol. Try one more time");
             intArray = userInputArray();
 
         }
