@@ -1,5 +1,12 @@
 package main;
 
+/**
+ * Enum with all algorithms.
+ *
+ * @version 1.0
+ * @author Oleh Volchkov
+ * @author Roman Berezhnov
+ */
 public enum Algorithm {
 
     EXIT,
@@ -23,6 +30,12 @@ public enum Algorithm {
     WAYS_TO_COVER_DISTANCE,
     WAYS_TO_SUM_TO_N;
 
+    /**
+     * This method return Enum field.
+     *
+     * @param index ordinal by enum field.
+     * @return enum field.
+     */
     public static Algorithm getAlgorithmName(int index) {
 
         for (Algorithm algorithms: Algorithm.values()) {

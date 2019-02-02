@@ -1,4 +1,4 @@
-import main.Starter;
+import main.Controller;
 
 /**
  * This class starts an application
@@ -15,6 +15,6 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        new Starter().start();
+        new Controller().start();
     }
 }

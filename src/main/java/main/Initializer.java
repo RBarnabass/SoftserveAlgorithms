@@ -2,23 +2,43 @@ package main;
 
 import algorithms.*;
 import strategy.IAlgorithmStrategy;
-
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * This class initialize all algorithms.
+ *
+ * @version 1.0
+ * @author Roman Berezhnov
+ */
 public class Initializer {
 
+    /**
+     * This map holds all algorithms
+     */
     private static final Map<Algorithm, IAlgorithmStrategy> algorithms = new HashMap<>();
 
+    /**
+     * This is a constructor witch starts init method.
+     */
     public Initializer() {
         init();
     }
 
+    /**
+     * This is get method for algorithm map.
+     *
+     * @param key enum field.
+     * @return    algorithm instance.
+     */
     public static IAlgorithmStrategy get(Algorithm key) {
 
         return algorithms.get(key);
     }
 
+    /**
+     * This method provide initialization for all algorithms.
+     */
     private void init() {
 
         algorithms.put(Algorithm.BUCKET_SORT, new BucketSort());

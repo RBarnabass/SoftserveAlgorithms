@@ -3,19 +3,15 @@ package algorithms;
 import strategy.IAlgorithmStrategy;
 import utilities.util;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * This class is designed for sorting an integer array by bucket method.
+ *
  * @version 1.0
  * @author Roman Berezhnov
  */
 public class BucketSort implements IAlgorithmStrategy {
-
-    private final Scanner scanner = new Scanner(System.in);
 
     /**
      * The smallest element of the array.
@@ -29,8 +25,9 @@ public class BucketSort implements IAlgorithmStrategy {
 
     /**
      * This method provide main sorting logic.
+     *
      * @param array this is the incoming array of integer unsorted numbers.
-     * @return sorted array.
+     * @return      sorted array.
      */
     public int[] bucketSort(int[] array) {
 
@@ -49,6 +46,7 @@ public class BucketSort implements IAlgorithmStrategy {
     /**
      * This method is searching for minimum and maximum value.
      * And, initializes them.
+     *
      * @param array this is the incoming array of integer unsorted numbers.
      */
     private void minMaxInitialization(int[] array) {
@@ -63,9 +61,10 @@ public class BucketSort implements IAlgorithmStrategy {
 
     /**
      * This method spreads out array elements to the buckets.
+     *
      * @param buckets this is an arrays for holding presorting elements.
      * @param array   this is the incoming array of integer unsorted numbers.
-     * @return buckets with presorting elements.
+     * @return        buckets with presorting elements.
      */
     private Bucket[] assignToBuckets(Bucket[] buckets, int[] array) {
         int bucketIndex;
@@ -85,6 +84,7 @@ public class BucketSort implements IAlgorithmStrategy {
 
     /**
      * This method sorts buckets elements.
+     *
      * @param buckets this is an arrays for holding presorting elements.
      */
     private void sortUsedBuckets(Bucket[] buckets) {
@@ -97,9 +97,10 @@ public class BucketSort implements IAlgorithmStrategy {
 
     /**
      * This method builds result from all buckets to initial array.
+     *
      * @param sortedBuckets this is an arrays with sorted elements.
      * @param length        this is the length of incoming array.
-     * @return sorted array.
+     * @return              sorted array.
      */
     private int[] buildResult(Bucket[] sortedBuckets, int length) {
         int resultArrayIndex = 0;
@@ -115,9 +116,10 @@ public class BucketSort implements IAlgorithmStrategy {
 
     /**
      * This method count special coefficient which defines a number of presorting bucked.
+     *
      * @param current this is the current element from an unsorted array.
      * @param length  this is the length of unsorted array.
-     * @return coefficient for presorting
+     * @return        coefficient for presorting
      */
     private int getBucketIndex(int current, int length) {
         double denominator = max - min + 1;
@@ -127,9 +129,10 @@ public class BucketSort implements IAlgorithmStrategy {
 
     /**
      * This method deletes all buckets which weren't used.
+     *
      * @param buckets          this is an arrays for holding presorting elements.
      * @param countUsedBuckets this is number of used buckets.
-     * @return used buckets array.
+     * @return                 used buckets array.
      */
     private Bucket[] deleteEmptyBuckets(Bucket[] buckets, int countUsedBuckets) {
         Bucket[] rebuttedBuckets = new Bucket[countUsedBuckets];
@@ -142,10 +145,13 @@ public class BucketSort implements IAlgorithmStrategy {
         return rebuttedBuckets;
     }
 
+    /**
+     * Runner method for execution of algorithm.
+     */
     @Override
     public void execute() {
         int[] array = util.writeArray();
-        bucketSort(array);
+        System.out.println("Sorted array - " + Arrays.toString(bucketSort(array)));
     }
 
     /**

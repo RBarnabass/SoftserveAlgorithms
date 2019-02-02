@@ -5,6 +5,7 @@ import utilities.util;
 
 /**
  * This class search the longest sequence difference one in the maximum sub sequence.
+ *
  * @version 1.0
  * @author Roman Berezhnov
  */
@@ -22,6 +23,7 @@ public class LongestSubSequenceWithDifferenceOne implements IAlgorithmStrategy {
 
     /**
      * This method provides the main logic.
+     *
      * @param rowArray this is a given array.
      * @return         length of the greatest sequence.
      */
@@ -40,6 +42,7 @@ public class LongestSubSequenceWithDifferenceOne implements IAlgorithmStrategy {
 
     /**
      * This method search for the greatest sequence.
+     *
      * @return length of the greatest sequence.
      */
     private int getResult() {
@@ -58,8 +61,9 @@ public class LongestSubSequenceWithDifferenceOne implements IAlgorithmStrategy {
     /**
      * This method initializes all array with an initial number.
      * Single element will be one sequence.
+     *
      * @param length length of given array.
-     * @return initialized array.
+     * @return       initialized array.
      */
     private int[] sequencesArrayInitialization(int length) {
 
@@ -86,9 +90,12 @@ public class LongestSubSequenceWithDifferenceOne implements IAlgorithmStrategy {
         }
     }
 
+    /**
+     * Runner method for execution of algorithm.
+     */
     @Override
     public void execute() {
         int[] array = util.writeArray();
-        getTheLongestOne(array);
+        System.out.println("This is the longest sub sequence - " + getTheLongestOne(array));
     }
 }
