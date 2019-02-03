@@ -4,7 +4,7 @@ import strategy.IAlgorithmStrategy;
 
 import java.util.Arrays;
 
-import static utilities.util.writeArray;
+import static utilities.Util.userInputArray;
 
 /**
  * QuickSort algorithm for array of numbers
@@ -18,7 +18,7 @@ public class QuickSort implements IAlgorithmStrategy {
      * Execute current class
      */
     public void execute() {
-        int[] array = writeArray();
+        int[] array = userInputArray();
         array = quickSort(array);
         System.out.println("Your array after sorting: " + Arrays.toString(array));
     }
