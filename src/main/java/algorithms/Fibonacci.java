@@ -28,14 +28,19 @@ public class Fibonacci implements IAlgorithmStrategy {
         return fibonacciArray[number];
     }
 
+    /**
+     * Runner method for execution of algorithm.
+     */
     public void execute() {
         while (true) {
             try {
                 Scanner sc = new Scanner(System.in);
-                System.out.println("Please enter a position for a number in Fibonacci sequence you want to know");
+                System.out.println("Please enter a position for a number in Fibonacci sequence you want to know or enter \"999\" for exit");
                 int number = sc.nextInt();
-                if (number > 0 && number<=45) {
+                if (number > 0 && number <= 45) {
                     System.out.println(findFibonacciMember(number));
+                } else if (number == 999) {
+                    break;
                 } else {
                     System.out.println("Please enter number that >0 and <=45");
                 }
