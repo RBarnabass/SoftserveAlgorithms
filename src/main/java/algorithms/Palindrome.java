@@ -1,13 +1,19 @@
 package algorithms;
 
-import strategy.IAlgorithmStrategy;
-
 import java.util.Scanner;
 
-public class Palindrome implements IAlgorithmStrategy {
+import strategy.IAlgorithmStrategy;
 
+/**
+ * The  Palindrome class that implements algorithm of calculating the longest
+ * palindromic subsequence in a sequence.
+ *
+ * @author Iryna Shturyn
+ * @version 1.0
+ */
+public class Palindrome implements IAlgorithmStrategy {
     /**
-     * Returns the length of the longest palindromic subsequence of a sequence.
+     * Returns the length of the longest palindromic subsequence in a sequence.
      *
      * @param input     String not more than 100 symbols
      * @param firstChar the index of the first char of the input
@@ -41,9 +47,7 @@ public class Palindrome implements IAlgorithmStrategy {
 
     /**
      * Asks user to enter string and prints result
-     *
      */
-
     public void execute() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please, enter String with length no more than 100: ");
@@ -52,8 +56,6 @@ public class Palindrome implements IAlgorithmStrategy {
         int palindromeLength = getLongestPalindrome(input, 0, input.length() - 1);
         System.out.println("The length of the longest palindrome subsequence is: " + palindromeLength);
     }
-
-
 }
 
 
