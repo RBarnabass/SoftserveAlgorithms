@@ -2,7 +2,7 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 import java.util.*;
-import static utilities.Util.writeArray;
+import static utilities.Util.userInputArray;
 
 /**
  * This class is designed for sorting an integer array by bucket method.
@@ -149,7 +149,7 @@ public class BucketSort implements IAlgorithmStrategy {
      */
     @Override
     public void execute() {
-        int[] array = writeArray();
+        int[] array = userInputArray();
         System.out.println("Sorted array - " + Arrays.toString(bucketSort(array)) + "\n");
     }
 
