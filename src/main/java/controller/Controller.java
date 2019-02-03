@@ -37,7 +37,7 @@ public class Controller {
     /**
      * This is a final instance of all algorithms.
      */
-    private final Initializer initializer = new Initializer();
+    private final InstanceManager instanceManager = new InstanceController();
 
     /**
      * This variable holds user or constant input value.
@@ -86,7 +86,7 @@ public class Controller {
     private void getStrategy(int input) {
 
         Algorithm name = getAlgorithmName(input);
-        runner.changeStrategy(initializer.getAlgorithm(name));
+        runner.changeStrategy(instanceManager.getAlgorithm(name));
         runner.run();
     }
 
