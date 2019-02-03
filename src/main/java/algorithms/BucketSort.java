@@ -49,6 +49,7 @@ public class BucketSort implements IAlgorithmStrategy {
      * @param array this is the incoming array of integer unsorted numbers.
      */
     private void minMaxInitialization(int[] array) {
+
         for (int currentElement : array) {
             if (currentElement > max) {
                 max = currentElement;
@@ -66,6 +67,7 @@ public class BucketSort implements IAlgorithmStrategy {
      * @return        buckets with presorting elements.
      */
     private Bucket[] assignToBuckets(Bucket[] buckets, int[] array) {
+
         int bucketIndex;
         int countUsedBuckets = 0;
         for (int currentIndex : array) {
@@ -87,6 +89,7 @@ public class BucketSort implements IAlgorithmStrategy {
      * @param buckets this is an arrays for holding presorting elements.
      */
     private void sortUsedBuckets(Bucket[] buckets) {
+
         for (Bucket currentBucket : buckets) {
             if (currentBucket.list.size() > 1) {
                 Collections.sort(currentBucket.list);
@@ -121,6 +124,7 @@ public class BucketSort implements IAlgorithmStrategy {
      * @return        coefficient for presorting
      */
     private int getBucketIndex(int current, int length) {
+
         double denominator = max - min + 1;
         double factor = (current - min) / denominator;
         return (int) (factor * length);
@@ -134,6 +138,7 @@ public class BucketSort implements IAlgorithmStrategy {
      * @return                 used buckets array.
      */
     private Bucket[] deleteEmptyBuckets(Bucket[] buckets, int countUsedBuckets) {
+
         Bucket[] rebuttedBuckets = new Bucket[countUsedBuckets];
         int rebuttedBucketIndex = 0;
         for (Bucket bucket : buckets) {
@@ -149,6 +154,7 @@ public class BucketSort implements IAlgorithmStrategy {
      */
     @Override
     public void execute() {
+
         int[] array = userInputArray();
         System.out.println("Sorted array - " + Arrays.toString(bucketSort(array)) + "\n");
     }
@@ -157,6 +163,7 @@ public class BucketSort implements IAlgorithmStrategy {
      * This inner class is some entity wrapper for ArrayList.
      */
     private class Bucket {
+
         List<Integer> list = new ArrayList<>();
     }
 }
