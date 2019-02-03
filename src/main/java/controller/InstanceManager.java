@@ -4,6 +4,9 @@ import strategy.IAlgorithmStrategy;
 
 /**
  * This is the interface for instance managing strategy.
+ *
+ * @version 1.0
+ * @author Roman Berezhnov
  */
 public interface InstanceManager {
 
