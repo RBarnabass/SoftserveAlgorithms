@@ -2,8 +2,6 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
-import java.util.Arrays;
-
 import static utilities.Util.userInputArray;
 
 /**
@@ -36,8 +34,6 @@ public class InsertionSort implements IAlgorithmStrategy {
     @Override
     public void execute() {
         int[] array = userInputArray();
-        array = doInsertionSort(array);
-        System.out.println("Your array after Insertion Sort: " + Arrays.toString(array));
-
+        doInsertionSort(array);
     }
 }

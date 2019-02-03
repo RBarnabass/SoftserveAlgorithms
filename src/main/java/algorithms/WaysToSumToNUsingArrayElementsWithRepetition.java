@@ -2,8 +2,7 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
-import java.util.Scanner;
-
+import static utilities.Util.enterPositiveNumber;
 import static utilities.Util.userInputArray;
 
 
@@ -40,38 +39,16 @@ public class WaysToSumToNUsingArrayElementsWithRepetition implements IAlgorithmS
 
     @Override
     public void execute() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number which has to be represented: ");
         System.out.println("The number must be non-negative");
-        int number = nonNegativeNumber(scanner);
+        int number = enterPositiveNumber();
         System.out.println("Enter array which will be counting ");
         int[] array = userInputArray();
         int ways = waysToCount(array, number);
         StringBuilder result = new StringBuilder()
                 .append("There is ").append(ways)
                 .append(" ways we have to represent one number with a given array of numbers ");
-
         System.out.println(result);
-    }
-
-    /**
-     * Return non negative number.
-     *
-     * @param scanner Input value from scanner
-     * @return non negative number
-     */
-    private int nonNegativeNumber(Scanner scanner) {
-        int number;
-        while (true) {
-            if (scanner.nextInt() < NON_NEGATIVE_NUMBER) {
-                System.out.print("please input positive number ");
-            } else {
-                number = scanner.nextInt();
-                break;
-            }
-
-        }
-        return number;
     }
 
 }
