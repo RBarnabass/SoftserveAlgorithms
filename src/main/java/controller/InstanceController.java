@@ -11,66 +11,58 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * This class initialize all algorithms.
+ * This class initialize requirement algorithm and hold it by a constant time.
  *
  * @version 1.0
  * @author Roman Berezhnov
  */
-public class Initializer {
+public class InstanceController implements InstanceManager {
 
     /**
      * This map holds all algorithms
      */
     private static final Map<Algorithm, IAlgorithmStrategy> algorithms = new HashMap<>();
+
+    /**
+     * This map holds algorithm name and time of its last use.
+     */
     private final Map<Algorithm, Long> timer = new HashMap<>();
+
+    /**
+     * The constant time of algorithm instance life.
+     */
+    private static final long INSTANCE_LIFE_TIME = 10_000;
+
+    /**
+     * Variable hold requirement strategy.
+     */
     private IAlgorithmStrategy strategy;
 
     /**
      * This is a constructor witch starts init method.
      */
-    public Initializer() {
+    public InstanceController() {
         //init();
     }
 
     /**
      * This is getAlgorithm method for algorithm map.
      *
-     * @param key enum field.
+     * @param name enum field.
      * @return    algorithm instance.
      */
-    public IAlgorithmStrategy getAlgorithm(Algorithm key) {
+    public IAlgorithmStrategy getAlgorithm(Algorithm name) {
 
-        checker(key);
-        //return algorithms.get(key);
-        return algorithms.get(key) != null ? algorithms.get(key) : intellijInitialize(key);
+        checker(name);
+        return algorithms.get(name) != null ? algorithms.get(name) : intellijInitialize(name);
     }
 
     /**
-     * This method provide initialization for all algorithms.
+     * This method return instance of an algorithm by name.
+     *
+     * @param algorithmName algorithm name.
+     * @return              instance of algorithm
      */
-    private void init() {
-
-        algorithms.put(Algorithm.BUCKET_SORT, new BucketSort());
-        algorithms.put(Algorithm.COUNT_WAYS_OF_SUM, new CountWaysOfSum());
-        algorithms.put(Algorithm.COUNTING_SORT, new CoutingSort());
-        algorithms.put(Algorithm.FIBONACCI, new Fibonacci());
-        algorithms.put(Algorithm.FRIEND_PAIRS, new FriendPairs());
-        algorithms.put(Algorithm.HIGH_LOW_EFFORTS, new HighLowEfforts());
-        algorithms.put(Algorithm.INSERTION_SORTS, new InsertionSort());
-        algorithms.put(Algorithm.INTERESTING_ROW, new InterestingRow());
-        algorithms.put(Algorithm.LONGEST_SUB_SEQUENCE, new LongestSubSequenceWithDifferenceOne());
-        algorithms.put(Algorithm.MERGE_SORT, new MergeSort());
-        algorithms.put(Algorithm.MODIFICATION_FIBONACCI, new ModificationFibonacci());
-        algorithms.put(Algorithm.OPTIMIZED_PAINTING_FENCE, new OptimizedPaintingFence());
-        algorithms.put(Algorithm.PAINTING_THE_FENCE, new PaintingTheFence());
-        algorithms.put(Algorithm.PALINDROME, new Palindrome());
-        algorithms.put(Algorithm.PATHS_WITHOUT_CROSSING, new PathsWithoutCrossing());
-        algorithms.put(Algorithm.QUICK_SORT, new QuickSort());
-        algorithms.put(Algorithm.TILE_THE_FLOOR, new TileTheFloor());
-        algorithms.put(Algorithm.WAYS_TO_COVER_DISTANCE, new WaysToCoverDistance());
-        algorithms.put(Algorithm.WAYS_TO_SUM_TO_N, new WaysToSumToNUsingArrayElementsWithRepetition());
-    }
-
     private IAlgorithmStrategy intellijInitialize(Algorithm algorithmName) {
 
         switch (algorithmName) {
@@ -153,27 +145,38 @@ public class Initializer {
             }
         }
 
-        timer.put(algorithmName, new Date().getTime());
         algorithms.put(algorithmName, strategy);
         return strategy;
     }
 
+    /**
+     * This method checks lifetime of existence algorithm instances
+     * and removes them if they had been used for a long time.
+     *
+     * @param name algorithm name.
+     */
     private void checker(Algorithm name) {
 
-        long k;
+        long instanceLifeTime;
+
         for (int i = 1; i < Algorithm.values().length; i++) {
 
             Algorithm algorithm = Algorithm.getAlgorithmName(i);
 
             if (timer.containsKey(algorithm) && !name.equals(algorithm)) {
 
-                k = new Date().getTime() - timer.get(algorithm);
-                System.out.println(" --- time - " + k);
+                instanceLifeTime = new Date().getTime() - timer.get(algorithm);
 
-                if (k > 10000) {
+                if (instanceLifeTime > INSTANCE_LIFE_TIME) {
+
                     algorithms.remove(algorithm);
+                    timer.remove(algorithm);
                     System.out.println(" --- Removed - " + algorithm + " instance!");
                 }
+
+            } else if (name.equals(algorithm)) {
+
+                timer.put(algorithm, new Date().getTime());
             }
         }
     }
