@@ -3,9 +3,6 @@ package controller;
 import algorithms.*;
 import strategy.IAlgorithmStrategy;
 
-import javax.swing.*;
-import java.sql.Timestamp;
-import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +10,6 @@ import java.util.Map;
 /**
  * This class initialize requirement algorithm and hold it by a constant time.
  *
- * @version 1.0
  * @author Roman Berezhnov
  */
 public class InstanceController implements InstanceManager {
@@ -100,7 +96,7 @@ public class InstanceController implements InstanceManager {
                 break;
             }
             case LONGEST_SUB_SEQUENCE: {
-                strategy = new LongestSubSequenceWithDifferenceOne();
+                strategy = new LongestSubSequence();
                 break;
             }
             case MERGE_SORT: {
@@ -136,7 +132,7 @@ public class InstanceController implements InstanceManager {
                 break;
             }
             case WAYS_TO_SUM_TO_N: {
-                strategy = new WaysToSumToNUsingArrayElementsWithRepetition();
+                strategy = new WaysToSumToN();
                 break;
             }
             case OPTIMIZED_PAINTING_FENCE: {

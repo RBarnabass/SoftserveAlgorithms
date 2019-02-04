@@ -3,7 +3,6 @@ package controller;
 /**
  * Enum with all algorithms.
  *
- * @version 1.0
  * @author Oleh Volchkov
  * @author Roman Berezhnov
  */
@@ -31,9 +30,9 @@ public enum Algorithm {
     WAYS_TO_SUM_TO_N;
 
     /**
-     * This method return Enum field.
+     * Returns Enum field.
      *
-     * @param index ordinal by enum field.
+     * @param index index of enum field.
      * @return enum field.
      */
     public static Algorithm getAlgorithmName(int index) {

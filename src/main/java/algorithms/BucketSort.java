@@ -1,13 +1,14 @@
 package algorithms;
 
 import strategy.IAlgorithmStrategy;
+
 import java.util.*;
+
 import static utilities.Util.userInputArray;
 
 /**
  * This class is designed for sorting an integer array by bucket method.
  *
- * @version 1.0
  * @author Roman Berezhnov
  */
 public class BucketSort implements IAlgorithmStrategy {
@@ -23,12 +24,12 @@ public class BucketSort implements IAlgorithmStrategy {
     private int max;
 
     /**
-     * This method provide controller sorting logic.
+     * Returns sorted array.
      *
-     * @param array this is the incoming array of integer unsorted numbers.
-     * @return      sorted array.
+     * @param array array of integers.
+     * @return sorted array.
      */
-    public int[] bucketSort(int[] array) {
+    int[] bucketSort(int[] array) {
 
         if (array == null
                 || array.length == 0
@@ -43,10 +44,9 @@ public class BucketSort implements IAlgorithmStrategy {
     }
 
     /**
-     * This method is searching for minimum and maximum value.
-     * And, initializes them.
+     * Searching for minimum and maximum value and initializing them.
      *
-     * @param array this is the incoming array of integer unsorted numbers.
+     * @param array array of integers.
      */
     private void minMaxInitialization(int[] array) {
 
@@ -60,11 +60,11 @@ public class BucketSort implements IAlgorithmStrategy {
     }
 
     /**
-     * This method spreads out array elements to the buckets.
+     * Spreads out array elements to the buckets.
      *
-     * @param buckets this is an arrays for holding presorting elements.
-     * @param array   this is the incoming array of integer unsorted numbers.
-     * @return        buckets with presorting elements.
+     * @param buckets arrays for holding presorting elements.
+     * @param array   array of integers.
+     * @return buckets with presorting elements.
      */
     private Bucket[] assignToBuckets(Bucket[] buckets, int[] array) {
 
@@ -82,11 +82,12 @@ public class BucketSort implements IAlgorithmStrategy {
         }
         return deleteEmptyBuckets(buckets, countUsedBuckets);
     }
+//TODO
 
     /**
-     * This method sorts buckets elements.
+     * Sorts buckets elements.
      *
-     * @param buckets this is an arrays for holding presorting elements.
+     * @param buckets arrays for holding presorting elements.
      */
     private void sortUsedBuckets(Bucket[] buckets) {
 
@@ -98,11 +99,11 @@ public class BucketSort implements IAlgorithmStrategy {
     }
 
     /**
-     * This method builds result from all buckets to initial array.
+     * Builds result from all buckets to initial array.
      *
-     * @param sortedBuckets this is an arrays with sorted elements.
-     * @param length        this is the length of incoming array.
-     * @return              sorted array.
+     * @param sortedBuckets arrays with sorted elements.
+     * @param length        length of incoming array.
+     * @return sorted array.
      */
     private int[] buildResult(Bucket[] sortedBuckets, int length) {
         int resultArrayIndex = 0;
@@ -117,11 +118,11 @@ public class BucketSort implements IAlgorithmStrategy {
     }
 
     /**
-     * This method count special coefficient which defines a number of presorting bucked.
+     * Counts special coefficient which defines a number of presorting bucked.
      *
-     * @param current this is the current element from an unsorted array.
-     * @param length  this is the length of unsorted array.
-     * @return        coefficient for presorting
+     * @param current current element from an unsorted array.
+     * @param length  length of unsorted array.
+     * @return coefficient for presorting.
      */
     private int getBucketIndex(int current, int length) {
 
@@ -131,11 +132,11 @@ public class BucketSort implements IAlgorithmStrategy {
     }
 
     /**
-     * This method deletes all buckets which weren't used.
+     * Deletes all buckets which weren't used.
      *
-     * @param buckets          this is an arrays for holding presorting elements.
-     * @param countUsedBuckets this is number of used buckets.
-     * @return                 used buckets array.
+     * @param buckets          arrays for holding presorting elements.
+     * @param countUsedBuckets number of used buckets.
+     * @return buckets array.
      */
     private Bucket[] deleteEmptyBuckets(Bucket[] buckets, int countUsedBuckets) {
 

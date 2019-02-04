@@ -12,9 +12,7 @@ import static utilities.Util.userInputArray;
  * @author Ostap Vdovychyn
  * @version 1.0
  */
-public class WaysToSumToNUsingArrayElementsWithRepetition implements IAlgorithmStrategy {
-
-    public static final int NON_NEGATIVE_NUMBER = 0;
+public class WaysToSumToN implements IAlgorithmStrategy {
 
     /**
      * Return number which show how many ways we have to represent one number with a given array of numbers.
