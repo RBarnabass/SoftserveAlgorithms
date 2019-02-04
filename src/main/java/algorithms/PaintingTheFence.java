@@ -19,7 +19,7 @@ public class PaintingTheFence implements IAlgorithmStrategy {
      * @param k The number of colors you have
      * @return The number of the ways for painting the fence
      */
-    public static long paintingTheFence(int n, int k) {
+    public long paintingTheFence(int n, int k) {
 
         long[] variant = new long[n];
 
@@ -48,7 +48,7 @@ public class PaintingTheFence implements IAlgorithmStrategy {
         int colors = getUserInput(0, Integer.MAX_VALUE, incorrectInputMessage);
 
         System.out.println("The different ways for painting the fence: "
-                + PaintingTheFence.paintingTheFence(posts, colors));
+                + paintingTheFence(posts, colors));
 
     }
 }

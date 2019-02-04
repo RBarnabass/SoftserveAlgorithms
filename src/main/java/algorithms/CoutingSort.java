@@ -22,7 +22,7 @@ public class CoutingSort implements IAlgorithmStrategy {
      * @param array An array you want to sort
      * @return Sorted array
      */
-    public static int[] countingSort(int[] array) {
+    public int[] countingSort(int[] array) {
 
         int min = array[0];
         int max = array[0];
