@@ -17,7 +17,7 @@ public class InterestingRow implements IAlgorithmStrategy {
      * @param number position in interesting row
      * @return member of position in interesting row sequence
      */
-    public static int findIntrestingRowMember(int number) {
+    public int findIntrestingRowMember(int number) {
         int[] interestingRowArray = new int[number + 2];
         interestingRowArray[1] = 1;
         interestingRowArray[2] = 1;
@@ -30,6 +30,7 @@ public class InterestingRow implements IAlgorithmStrategy {
     /**
      * Runner method for execution of algorithm.
      */
+    @Override
     public void execute() {
         System.out.println("Please enter a position for a number in Interesting Row sequence you want to know");
         int minNumber = 0;
