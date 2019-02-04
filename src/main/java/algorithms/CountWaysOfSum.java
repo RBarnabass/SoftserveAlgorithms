@@ -18,7 +18,7 @@ public class CountWaysOfSum implements IAlgorithmStrategy {
      * @param n positive integer
      * @return count of ways
      */
-    public int countWays(int n) {
+    int countWays(int n) {
         int[] ways = new int[n + 1];
         ways[0] = 1;
         for (int i = 1; i < n; i++) {

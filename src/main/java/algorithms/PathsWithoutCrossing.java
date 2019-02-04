@@ -1,10 +1,7 @@
 package algorithms;
 
-
 import strategy.IAlgorithmStrategy;
 import utilities.UserInputValidator;
-
-import java.util.Scanner;
 
 /**
  * Counting number of possible paths through 2 points without crossings using dynamic programming.
@@ -13,18 +10,15 @@ import java.util.Scanner;
  */
 public class PathsWithoutCrossing implements IAlgorithmStrategy {
 
-    /**
-     * Runner method for execution of algorithm.
-     */
+    @Override
     public void execute() {
-
-        Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter number of points on circle: ");
 
         int minimalFriendsCount = 1;
         String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
-        int numberOfPoints = UserInputValidator.getUserInput(minimalFriendsCount, Integer.MAX_VALUE, incorrectInputMessage);
+        int numberOfPoints = UserInputValidator.getUserInput(minimalFriendsCount, Integer.MAX_VALUE,
+                incorrectInputMessage);
         int paths = countPaths(numberOfPoints);
 
         StringBuilder result = new StringBuilder()
@@ -40,7 +34,7 @@ public class PathsWithoutCrossing implements IAlgorithmStrategy {
      * @param numberOfPoints number of points on circle; must be even, otherwise method will return 0
      * @return number of possible paths without crossings
      */
-    public static int countPaths(int numberOfPoints) {
+    static int countPaths(int numberOfPoints) {
 
         if (numberOfPoints % 2 != 0) {
 
@@ -56,7 +50,7 @@ public class PathsWithoutCrossing implements IAlgorithmStrategy {
      * @param n sequence number of Catalan number we need to calculate
      * @return n-th Catalan number
      */
-    public static int catalanNumber(int n) {
+    static int catalanNumber(int n) {
 
         int[] catalan = new int[n + 1];
 

@@ -4,7 +4,8 @@ import strategy.IAlgorithmStrategy;
 
 import java.util.Arrays;
 
-import static utilities.Util.userInputArray;
+import static utilities.InputArrayParser.userInputArray;
+
 
 /**
  * QuickSort algorithm for array of numbers.
