@@ -1,12 +1,24 @@
 package algorithms;
 
-import algorithms.ModificationFibonacci;
-
-import java.util.Scanner;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ModificationFibonacciTest {
+
+    private static ModificationFibonacci modificationFibonacci;
+
+
+    @BeforeAll
+    public static void initTest() {
+        modificationFibonacci = new ModificationFibonacci();
+    }
+
+    @AfterAll
+    public static void afterTest() {
+        modificationFibonacci = null;
+    }
 
     @org.junit.jupiter.api.Test
     void modificationFibonacciTest() {
@@ -20,9 +32,9 @@ class ModificationFibonacciTest {
         int testInputC = 7;
         int testOutputC = 6;
 
-        assertEquals(testOutputA, ModificationFibonacci.modificationFibonacci(testInputA));
-        assertEquals(testOutputB, ModificationFibonacci.modificationFibonacci(testInputB));
-        assertEquals(testOutputC, ModificationFibonacci.modificationFibonacci(testInputC));
+        assertEquals(testOutputA, modificationFibonacci.modificationFibonacci(testInputA));
+        assertEquals(testOutputB, modificationFibonacci.modificationFibonacci(testInputB));
+        assertEquals(testOutputC, modificationFibonacci.modificationFibonacci(testInputC));
     }
 
 }

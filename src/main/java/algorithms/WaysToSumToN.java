@@ -10,7 +10,6 @@ import static utilities.UserInputValidator.getUserInput;
  * Calculating how many ways we have to represent one number with a given array of numbers using dynamic programming.
  *
  * @author Ostap Vdovychyn
- * @version 1.0
  */
 public class WaysToSumToN implements IAlgorithmStrategy {
 
@@ -40,7 +39,8 @@ public class WaysToSumToN implements IAlgorithmStrategy {
         System.out.println("Enter the number which has to be represented: ");
         System.out.println("The number must be non-negative");
         String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
-        int number = getUserInput(0, Integer.MAX_VALUE, incorrectInputMessage);;
+        int number = getUserInput(0, Integer.MAX_VALUE, incorrectInputMessage);
+        ;
         System.out.println("Enter array which will be counting ");
         int[] array = userInputArray();
         int ways = waysToCount(array, number);
