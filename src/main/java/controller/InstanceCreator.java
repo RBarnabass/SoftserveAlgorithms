@@ -11,17 +11,17 @@ import java.util.Map;
  * @version 1.0
  * @author Roman Berezhnov
  */
-public class InstanceHolder implements InstanceManager {
+public class InstanceCreator implements InstanceManager {
 
     /**
-     * This map holds all algorithms
+     * Map that contain all algorithms
      */
     private static final Map<Algorithm, IAlgorithmStrategy> algorithms = new HashMap<>();
 
     /**
      * This is a constructor witch starts init method.
      */
-    public InstanceHolder() {
+     InstanceCreator() {
         init();
     }
 
@@ -37,7 +37,7 @@ public class InstanceHolder implements InstanceManager {
     }
 
     /**
-     * This method provide initialization for all algorithms.
+     * Provide initialization for all algorithms.
      */
     private void init() {
 
@@ -49,7 +49,7 @@ public class InstanceHolder implements InstanceManager {
         algorithms.put(Algorithm.HIGH_LOW_EFFORTS, new HighLowEfforts());
         algorithms.put(Algorithm.INSERTION_SORTS, new InsertionSort());
         algorithms.put(Algorithm.INTERESTING_ROW, new InterestingRow());
-        algorithms.put(Algorithm.LONGEST_SUB_SEQUENCE, new LongestSubSequenceWithDifferenceOne());
+        algorithms.put(Algorithm.LONGEST_SUB_SEQUENCE, new LongestSubSequence());
         algorithms.put(Algorithm.MERGE_SORT, new MergeSort());
         algorithms.put(Algorithm.MODIFICATION_FIBONACCI, new ModificationFibonacci());
         algorithms.put(Algorithm.OPTIMIZED_PAINTING_FENCE, new OptimizedPaintingFence());
