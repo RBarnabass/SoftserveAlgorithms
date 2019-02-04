@@ -22,6 +22,7 @@ import algorithms.WaysToSumToN;
 import strategy.IAlgorithmStrategy;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 /**
  * This class provides initialization for all algorithms and hold them all the time.
@@ -58,24 +59,26 @@ public class InstanceCreator implements InstanceManager {
      */
     private void init() {
 
+        final Scanner sc = new Scanner(System.in);
+
         algorithms.put(Algorithm.BUCKET_SORT, new BucketSort());
-        algorithms.put(Algorithm.COUNT_WAYS_OF_SUM, new CountWaysOfSum());
+        algorithms.put(Algorithm.COUNT_WAYS_OF_SUM, new CountWaysOfSum(sc));
         algorithms.put(Algorithm.COUNTING_SORT, new CountingSort());
-        algorithms.put(Algorithm.FIBONACCI, new Fibonacci());
-        algorithms.put(Algorithm.FRIEND_PAIRS, new FriendPairs());
-        algorithms.put(Algorithm.HIGH_LOW_EFFORTS, new HighLowEfforts());
+        algorithms.put(Algorithm.FIBONACCI, new Fibonacci(sc));
+        algorithms.put(Algorithm.FRIEND_PAIRS, new FriendPairs(sc));
+        algorithms.put(Algorithm.HIGH_LOW_EFFORTS, new HighLowEfforts(sc));
         algorithms.put(Algorithm.INSERTION_SORTS, new InsertionSort());
-        algorithms.put(Algorithm.INTERESTING_ROW, new InterestingRow());
+        algorithms.put(Algorithm.INTERESTING_ROW, new InterestingRow(sc));
         algorithms.put(Algorithm.LONGEST_SUB_SEQUENCE, new LongestSubSequence());
         algorithms.put(Algorithm.MERGE_SORT, new MergeSort());
-        algorithms.put(Algorithm.MODIFICATION_FIBONACCI, new ModificationFibonacci());
-        algorithms.put(Algorithm.OPTIMIZED_PAINTING_FENCE, new OptimizedPaintingFence());
-        algorithms.put(Algorithm.PAINTING_THE_FENCE, new PaintingTheFence());
+        algorithms.put(Algorithm.MODIFICATION_FIBONACCI, new ModificationFibonacci(sc));
+        algorithms.put(Algorithm.OPTIMIZED_PAINTING_FENCE, new OptimizedPaintingFence(sc));
+        algorithms.put(Algorithm.PAINTING_THE_FENCE, new PaintingTheFence(sc));
         algorithms.put(Algorithm.PALINDROME, new Palindrome());
-        algorithms.put(Algorithm.PATHS_WITHOUT_CROSSING, new PathsWithoutCrossing());
+        algorithms.put(Algorithm.PATHS_WITHOUT_CROSSING, new PathsWithoutCrossing(sc));
         algorithms.put(Algorithm.QUICK_SORT, new QuickSort());
-        algorithms.put(Algorithm.TILE_THE_FLOOR, new TileTheFloor());
-        algorithms.put(Algorithm.WAYS_TO_COVER_DISTANCE, new WaysToCoverDistance());
-        algorithms.put(Algorithm.WAYS_TO_SUM_TO_N, new WaysToSumToN());
+        algorithms.put(Algorithm.TILE_THE_FLOOR, new TileTheFloor(sc));
+        algorithms.put(Algorithm.WAYS_TO_COVER_DISTANCE, new WaysToCoverDistance(sc));
+        algorithms.put(Algorithm.WAYS_TO_SUM_TO_N, new WaysToSumToN(sc));
     }
 }
