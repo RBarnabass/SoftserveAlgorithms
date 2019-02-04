@@ -28,22 +28,27 @@ class TileTheFloorTest {
         int m4 = 4;
         int numOfWays4 = 5;
 
-        int n5 = -1;
-        int m5 = 1;
+        TileTheFloor tileTheFloor = new TileTheFloor();
 
-        assertEquals(numOfWays1, TileTheFloor.countWays(n1, m1));
-        assertEquals(numOfWays2, TileTheFloor.countWays(n2, m2));
-        assertEquals(numOfWays3, TileTheFloor.countWays(n3, m3));
-        assertEquals(numOfWays4, TileTheFloor.countWays(n4, m4));
+        assertEquals(numOfWays1, tileTheFloor.countWays(n1, m1));
+        assertEquals(numOfWays2, tileTheFloor.countWays(n2, m2));
+        assertEquals(numOfWays3, tileTheFloor.countWays(n3, m3));
+        assertEquals(numOfWays4, tileTheFloor.countWays(n4, m4));
     }
 
     @Test
     void inputMismatchTest(){
-        assertThrows(InputMismatchException.class, () -> TileTheFloor.countWays(0, -1));
+        int n = -1;
+        int m = -4;
+        TileTheFloor tileTheFloor = new TileTheFloor();
+        assertThrows(InputMismatchException.class, () -> tileTheFloor.countWays(n, m));
     }
 
     @Test
     void arrayOutOfBound(){
-        assertThrows(ArrayIndexOutOfBoundsException.class, () -> TileTheFloor.countWays(-1, -1));
+        TileTheFloor tileTheFloor = new TileTheFloor();
+        int n = -1;
+        int m= -4;
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> tileTheFloor.countWays(n, m));
     }
 }
