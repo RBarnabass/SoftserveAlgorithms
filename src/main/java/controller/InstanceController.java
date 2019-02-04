@@ -3,9 +3,6 @@ package controller;
 import algorithms.*;
 import strategy.IAlgorithmStrategy;
 
-import javax.swing.*;
-import java.sql.Timestamp;
-import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -100,7 +97,7 @@ public class InstanceController implements InstanceManager {
                 break;
             }
             case LONGEST_SUB_SEQUENCE: {
-                strategy = new LongestSubSequenceWithDifferenceOne();
+                strategy = new LongestSubSequence();
                 break;
             }
             case MERGE_SORT: {
