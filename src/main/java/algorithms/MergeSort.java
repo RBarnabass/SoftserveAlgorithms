@@ -7,7 +7,7 @@ import java.util.Arrays;
 import static utilities.InputArrayParser.userInputArray;
 
 /**
- * Class that sorts the array by an algorithm Merge Sort
+ * Class that sorts the array by an algorithm Merge Sort.
  *
  * @version 1.0
  * @author Valentyn Yarmoshyk
@@ -15,7 +15,7 @@ import static utilities.InputArrayParser.userInputArray;
 public class MergeSort implements IAlgorithmStrategy {
 
     /**
-     * Realise the merge sort
+     * Realise the merge sort.
      *
      * @param array An array you want to sort
      * @return Sorted array
@@ -87,6 +87,7 @@ public class MergeSort implements IAlgorithmStrategy {
 
     }
 
+    @Override
     public void execute() {
         int[] array = userInputArray();
         array = mergeSort(array);
