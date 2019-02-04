@@ -1,6 +1,6 @@
 package algorithms;
 
-import static utilities.Util.enterPositiveNumber;
+import static utilities.UserInputValidator.getUserInput;
 
 import strategy.IAlgorithmStrategy;
 
@@ -33,7 +33,10 @@ public class CountWaysOfSum implements IAlgorithmStrategy {
      * Asks user to enter positive integer and prints result
      */
     public void execute() {
-        int n = enterPositiveNumber();
+
+        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
+        int n = getUserInput(0, Integer.MAX_VALUE, incorrectInputMessage);
+        
         int result = countWays(n);
         if (n == 1) {
             System.out.println("There no possible way to calculate " + n + " with positive integers.");
