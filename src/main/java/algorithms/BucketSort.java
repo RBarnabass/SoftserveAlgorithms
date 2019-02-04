@@ -10,7 +10,6 @@ import static utilities.Util.userInputArray;
  * This class is designed for sorting an integer array by bucket method.
  *
  * @author Roman Berezhnov
- * @version 1.0
  */
 public class BucketSort implements IAlgorithmStrategy {
 
