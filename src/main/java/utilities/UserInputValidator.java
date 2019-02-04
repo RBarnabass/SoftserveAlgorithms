@@ -3,9 +3,11 @@ package utilities;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-// todo: author notation
+
 /**
  * Get correct input from user.
+ *
+ * @author Oleh Volchkov
  */
 public class UserInputValidator {
 

@@ -1,9 +1,9 @@
 package strategy;
 
-// todo: author notation
-
 /**
  * Algorithm execution sequence.
+ *
+ * @author Oleh Volchkov
  */
 public class AlgorithmRunner {
 
