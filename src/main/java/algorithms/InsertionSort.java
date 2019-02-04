@@ -8,7 +8,6 @@ import static utilities.InputArrayParser.userInputArray;
  * Class that sorts the array by an algorithm Insertion Sort.
  *
  * @author Ostap Vdovychyn
- * @version 1.0
  */
 public class InsertionSort implements IAlgorithmStrategy {
     /**
