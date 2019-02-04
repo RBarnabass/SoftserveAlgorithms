@@ -5,14 +5,14 @@ import strategy.IAlgorithmStrategy;
 import static utilities.UserInputValidator.getUserInput;
 
 /**
- * Class that returns member of position in Fibonacci sequence
+ * Class that returns member of position in Fibonacci sequence.
  *
  * @author Nazar Mavko
  */
 public class Fibonacci implements IAlgorithmStrategy {
 
     /**
-     * Returns the member of position in Fibonacci sequence
+     * Returns the member of position in Fibonacci sequence.
      *
      * @param number position in Fibonacci sequenc
      * @return member of position in Fibonacci sequence
