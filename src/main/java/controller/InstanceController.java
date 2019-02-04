@@ -3,9 +3,6 @@ package controller;
 import algorithms.*;
 import strategy.IAlgorithmStrategy;
 
-import javax.swing.*;
-import java.sql.Timestamp;
-import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -136,7 +133,7 @@ public class InstanceController implements InstanceManager {
                 break;
             }
             case WAYS_TO_SUM_TO_N: {
-                strategy = new WaysToSumToNUsingArrayElementsWithRepetition();
+                strategy = new WaysToSumToN();
                 break;
             }
             case OPTIMIZED_PAINTING_FENCE: {
