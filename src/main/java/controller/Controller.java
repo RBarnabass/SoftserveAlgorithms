@@ -11,7 +11,6 @@ import static controller.Algorithm.getAlgorithmName;
  *
  * @author Roman Berezhnov
  * @author Oleh Volchkov
- * @version 1.0
  */
 public class Controller {
 
