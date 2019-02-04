@@ -28,9 +28,6 @@ class TileTheFloorTest {
         int m4 = 4;
         int numOfWays4 = 5;
 
-        int n5 = -1;
-        int m5 = 1;
-
         TileTheFloor tileTheFloor = new TileTheFloor();
 
         assertEquals(numOfWays1, tileTheFloor.countWays(n1, m1));
