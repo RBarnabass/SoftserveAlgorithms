@@ -5,20 +5,27 @@ import java.util.Scanner;
 
 /**
  * Get correct input from user.
- *
- * @return final and correct user input
  */
 public class UserInputValidator {
-    public static int getUserInput(int lowerBound, int upperBound, String errorMessage) {
 
-        Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
+
+    /**
+     * Continuously asking user for integer input while it won't accord with given bounds and returns it.
+     *
+     * @param lowerBound minimal allowed value for user input
+     * @param upperBound maximal allowed value for user input
+     * @param errorMessage message which prints to user when he enters incorrect value
+     * @return final input which remains in given min-max values range
+     */
+    public static int getUserInput(int lowerBound, int upperBound, String errorMessage) {
 
         int input;
 
         try {
             input = sc.nextInt();
 
-            if(input < lowerBound || input > upperBound) {
+            if (input < lowerBound || input > upperBound) {
                 throw new InputMismatchException();
             }
         } catch (InputMismatchException e) {
