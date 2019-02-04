@@ -10,7 +10,6 @@ import static utilities.UserInputValidator.getUserInput;
  * is possible to calculate n with positive integers.
  *
  * @author Iryna Shturyn
- * @version 1.0
  */
 public class CountWaysOfSum implements IAlgorithmStrategy {
     /**
@@ -30,12 +29,12 @@ public class CountWaysOfSum implements IAlgorithmStrategy {
         return ways[n];
     }
 
-    /**
-     * Asks user to enter positive integer and prints result.
-     */
+    @Override
     public void execute() {
+        String incorrectInputMessage = "Incorrect input. Please, provide integer bigger than 0";
 
-        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
+        System.out.println("Please, enter positive integer: ");
+
         int n = getUserInput(0, Integer.MAX_VALUE, incorrectInputMessage);
 
         int result = countWays(n);
