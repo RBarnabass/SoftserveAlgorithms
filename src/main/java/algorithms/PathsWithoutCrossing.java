@@ -10,25 +10,6 @@ import utilities.UserInputValidator;
  */
 public class PathsWithoutCrossing implements IAlgorithmStrategy {
 
-    // todo: move to end
-    @Override
-    public void execute() {
-
-        System.out.println("Enter number of points on circle: ");
-
-        int minimalFriendsCount = 1;
-        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
-        int numberOfPoints = UserInputValidator.getUserInput(minimalFriendsCount, Integer.MAX_VALUE,
-                incorrectInputMessage);
-        int paths = countPaths(numberOfPoints);
-
-        StringBuilder result = new StringBuilder()
-                .append("There is ").append(paths)
-                .append(" number of possible paths through two points without crossings.");
-
-        System.out.println(result);
-    }
-
     /**
      * Returns number of possible paths through two points without crossings.
      *
@@ -66,5 +47,23 @@ public class PathsWithoutCrossing implements IAlgorithmStrategy {
         }
 
         return catalan[n];
+    }
+
+    @Override
+    public void execute() {
+
+        System.out.println("Enter number of points on circle: ");
+
+        int minimalFriendsCount = 1;
+        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
+        int numberOfPoints = UserInputValidator.getUserInput(minimalFriendsCount, Integer.MAX_VALUE,
+                incorrectInputMessage);
+        int paths = countPaths(numberOfPoints);
+
+        StringBuilder result = new StringBuilder()
+                .append("There is ").append(paths)
+                .append(" number of possible paths through two points without crossings.");
+
+        System.out.println(result);
     }
 }
