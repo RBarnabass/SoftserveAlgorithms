@@ -24,7 +24,7 @@ class ModificationFibonacciTest {
         assertEquals(testOutputB, ModificationFibonacci.modificationFibonacci(testInputB));
         assertEquals(testOutputC, ModificationFibonacci.modificationFibonacci(testInputC));
 
-        assertEquals(testOutputA, ModificationFibonacci.mmodificationFibonacci(testInputA));
+        assertEquals(testOutputA, ModificationFibonacci.modificationFibonacci(testInputA));
         assertEquals(testOutputB, ModificationFibonacci.modificationFibonacci(testInputB));
         assertEquals(testOutputC, ModificationFibonacci.modificationFibonacci(testInputC));
     }
