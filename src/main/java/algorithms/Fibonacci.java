@@ -1,8 +1,10 @@
 package algorithms;
 
 import strategy.IAlgorithmStrategy;
+import utilities.UserInputValidator;
 
-import static utilities.UserInputValidator.getUserInput;
+import java.util.Scanner;
+
 
 /**
  * Class that returns member of position in Fibonacci sequence.
@@ -10,6 +12,13 @@ import static utilities.UserInputValidator.getUserInput;
  * @author Nazar Mavko
  */
 public class Fibonacci implements IAlgorithmStrategy {
+
+    private UserInputValidator userInput;
+
+    Fibonacci(Scanner sc) {
+
+        userInput = new UserInputValidator(sc);
+    }
 
     /**
      * Returns the member of position in Fibonacci sequence.
@@ -36,7 +45,7 @@ public class Fibonacci implements IAlgorithmStrategy {
         int minNumber = 0;
         int maxNumber = 45;
         String incorrectInputMessage = "\"Please enter number that >0 and <=45\"";
-        int number = getUserInput(minNumber, maxNumber, incorrectInputMessage);
+        int number = userInput.getUserInput(minNumber, maxNumber, incorrectInputMessage);
         System.out.println(findFibonacciMember(number));
     }
 }

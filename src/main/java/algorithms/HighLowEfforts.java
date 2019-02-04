@@ -3,6 +3,8 @@ package algorithms;
 import strategy.IAlgorithmStrategy;
 import utilities.UserInputValidator;
 
+import java.util.Scanner;
+
 import static utilities.InputArrayParser.userInputArray;
 
 /**
@@ -11,6 +13,13 @@ import static utilities.InputArrayParser.userInputArray;
  * @author Nazar Mavko
  */
 public class HighLowEfforts implements IAlgorithmStrategy {
+
+    private UserInputValidator userInput;
+
+    HighLowEfforts(Scanner sc) {
+
+        userInput = new UserInputValidator(sc);
+    }
 
     /**
      * Returns maximum amount of cost you can perform.
@@ -36,7 +45,7 @@ public class HighLowEfforts implements IAlgorithmStrategy {
         System.out.println("Please enter number of days");
         int minimalDaysCountValue = 0;
         String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
-        int numberOfDays = UserInputValidator.getUserInput(minimalDaysCountValue,
+        int numberOfDays = userInput.getUserInput(minimalDaysCountValue,
                 Integer.MAX_VALUE, incorrectInputMessage);
 
         System.out.println("Enter high array");
