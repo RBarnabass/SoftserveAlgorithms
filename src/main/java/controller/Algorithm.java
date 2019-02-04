@@ -3,7 +3,6 @@ package controller;
 /**
  * Enum with all algorithms.
  *
- * @version 1.0
  * @author Oleh Volchkov
  * @author Roman Berezhnov
  */
