@@ -1,8 +1,9 @@
 package algorithms;
 
 import strategy.IAlgorithmStrategy;
+import utilities.UserInputValidator;
 
-import static utilities.UserInputValidator.getUserInput;
+import java.util.Scanner;
 
 
 /**
@@ -13,6 +14,14 @@ import static utilities.UserInputValidator.getUserInput;
  * @version 1.0
  */
 public class CountWaysOfSum implements IAlgorithmStrategy {
+
+    private UserInputValidator userInput;
+
+    CountWaysOfSum(Scanner sc) {
+
+        userInput = new UserInputValidator(sc);
+    }
+
     /**
      * Returns how many ways is possible to calculate n with positive integers.
      *
@@ -36,7 +45,7 @@ public class CountWaysOfSum implements IAlgorithmStrategy {
     public void execute() {
 
         String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
-        int n = getUserInput(0, Integer.MAX_VALUE, incorrectInputMessage);
+        int n = userInput.getUserInput(0, Integer.MAX_VALUE, incorrectInputMessage);
 
         int result = countWays(n);
         if (n == 1) {
