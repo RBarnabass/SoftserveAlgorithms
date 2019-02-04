@@ -15,7 +15,7 @@ public class InterestingRow implements IAlgorithmStrategy {
 
     private UserInputValidator userInput;
 
-    InterestingRow(Scanner sc) {
+    public InterestingRow(Scanner sc) {
 
         userInput = new UserInputValidator(sc);
     }

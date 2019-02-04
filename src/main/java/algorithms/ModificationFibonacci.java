@@ -14,7 +14,7 @@ public class ModificationFibonacci implements IAlgorithmStrategy {
 
     private UserInputValidator userInput;
 
-    ModificationFibonacci(Scanner sc) {
+    public ModificationFibonacci(Scanner sc) {
 
         userInput = new UserInputValidator(sc);
     }

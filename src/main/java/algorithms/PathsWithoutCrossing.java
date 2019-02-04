@@ -14,7 +14,7 @@ public class PathsWithoutCrossing implements IAlgorithmStrategy {
 
     private UserInputValidator userInput;
 
-    PathsWithoutCrossing(Scanner sc) {
+    public PathsWithoutCrossing(Scanner sc) {
 
         userInput = new UserInputValidator(sc);
     }

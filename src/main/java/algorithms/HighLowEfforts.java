@@ -16,7 +16,7 @@ public class HighLowEfforts implements IAlgorithmStrategy {
 
     private UserInputValidator userInput;
 
-    HighLowEfforts(Scanner sc) {
+    public HighLowEfforts(Scanner sc) {
 
         userInput = new UserInputValidator(sc);
     }

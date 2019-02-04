@@ -17,7 +17,7 @@ public class WaysToSumToN implements IAlgorithmStrategy {
 
     private UserInputValidator userInput;
 
-    WaysToSumToN(Scanner sc) {
+    public WaysToSumToN(Scanner sc) {
 
         userInput = new UserInputValidator(sc);
     }

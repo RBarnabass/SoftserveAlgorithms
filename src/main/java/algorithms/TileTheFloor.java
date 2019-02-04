@@ -15,7 +15,7 @@ public class TileTheFloor implements IAlgorithmStrategy {
 
     private UserInputValidator userInput;
 
-    TileTheFloor(Scanner sc) {
+    public TileTheFloor(Scanner sc) {
 
         userInput = new UserInputValidator(sc);
     }

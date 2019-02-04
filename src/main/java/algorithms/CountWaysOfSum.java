@@ -17,7 +17,7 @@ public class CountWaysOfSum implements IAlgorithmStrategy {
 
     private UserInputValidator userInput;
 
-    CountWaysOfSum(Scanner sc) {
+    public CountWaysOfSum(Scanner sc) {
 
         userInput = new UserInputValidator(sc);
     }

@@ -14,7 +14,7 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
 
     private UserInputValidator userInput;
 
-    WaysToCoverDistance(Scanner sc) {
+    public WaysToCoverDistance(Scanner sc) {
 
         userInput = new UserInputValidator(sc);
     }

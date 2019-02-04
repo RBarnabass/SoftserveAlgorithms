@@ -14,7 +14,7 @@ public class FriendPairs implements IAlgorithmStrategy {
 
     private UserInputValidator userInput;
 
-    FriendPairs(Scanner sc) {
+    public FriendPairs(Scanner sc) {
 
         userInput = new UserInputValidator(sc);
     }

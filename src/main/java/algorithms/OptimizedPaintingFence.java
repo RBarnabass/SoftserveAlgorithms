@@ -15,7 +15,7 @@ public class OptimizedPaintingFence implements IAlgorithmStrategy {
 
     private UserInputValidator userInput;
 
-    OptimizedPaintingFence(Scanner sc) {
+    public OptimizedPaintingFence(Scanner sc) {
 
         userInput = new UserInputValidator(sc);
     }
