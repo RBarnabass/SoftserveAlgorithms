@@ -1,9 +1,11 @@
 package algorithms;
 
 import strategy.IAlgorithmStrategy;
+import utilities.UserInputValidator;
+
+import java.util.Scanner;
 
 import static utilities.InputArrayParser.userInputArray;
-import static utilities.UserInputValidator.getUserInput;
 
 
 /**
@@ -12,6 +14,13 @@ import static utilities.UserInputValidator.getUserInput;
  * @author Ostap Vdovychyn
  */
 public class WaysToSumToN implements IAlgorithmStrategy {
+
+    private UserInputValidator userInput;
+
+    WaysToSumToN(Scanner sc) {
+
+        userInput = new UserInputValidator(sc);
+    }
 
     /**
      * Return number which show how many ways we have to represent one number with a given array of numbers.
@@ -41,7 +50,7 @@ public class WaysToSumToN implements IAlgorithmStrategy {
         System.out.println("Enter the number which has to be represented: ");
         System.out.println("The number must be non-negative");
         String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
-        int number = getUserInput(0, Integer.MAX_VALUE, incorrectInputMessage);
+        int number = userInput.getUserInput(0, Integer.MAX_VALUE, incorrectInputMessage);
         ;
         System.out.println("Enter array which will be counting ");
         int[] array = userInputArray();
