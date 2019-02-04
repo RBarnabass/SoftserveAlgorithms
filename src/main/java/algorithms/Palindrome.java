@@ -1,8 +1,8 @@
 package algorithms;
 
-import java.util.Scanner;
-
 import strategy.IAlgorithmStrategy;
+
+import java.util.Scanner;
 
 /**
  * The  Palindrome class that implements algorithm of calculating the longest
@@ -31,7 +31,8 @@ public class Palindrome implements IAlgorithmStrategy {
         if (input.charAt(firstChar) == input.charAt(lastChar)) {
             return getLongestPalindrome(input, firstChar + 1, lastChar - 1) + 2;
         }
-        return getMaxNumber(getLongestPalindrome(input, firstChar, lastChar - 1), getLongestPalindrome(input, firstChar + 1, lastChar));
+        return getMaxNumber(getLongestPalindrome(input, firstChar, lastChar - 1),
+                getLongestPalindrome(input, firstChar + 1, lastChar));
     }
 
     /**
@@ -46,7 +47,7 @@ public class Palindrome implements IAlgorithmStrategy {
     }
 
     /**
-     * Asks user to enter string and prints result
+     * Asks user to enter string and prints result.
      */
     public void execute() {
         Scanner sc = new Scanner(System.in);
