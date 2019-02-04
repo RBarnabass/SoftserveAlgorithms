@@ -20,8 +20,6 @@ public class WaysToSumToN implements IAlgorithmStrategy {
      * @param number Input number which has to be represented
      * @return count[number] of possible ways we have to represent one number with a given array of numbers
      */
-
-    //todo:structurize
     public int waysToCount(int[] arr, int number) {
         int[] count = new int[number + 1];
         count[0] = 1;
@@ -42,7 +40,6 @@ public class WaysToSumToN implements IAlgorithmStrategy {
         System.out.println("The number must be non-negative");
         String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
         int number = getUserInput(0, Integer.MAX_VALUE, incorrectInputMessage);
-        ;
         System.out.println("Enter array which will be counting ");
         int[] array = userInputArray();
         int ways = waysToCount(array, number);
