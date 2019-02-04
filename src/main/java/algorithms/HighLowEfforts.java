@@ -13,7 +13,7 @@ import static utilities.Util.userInputArray;
 public class HighLowEfforts implements IAlgorithmStrategy {
 
     /**
-     * Returns the member of position in Fibonacci sequence
+     * Returns maximum amount of cost you can perform
      *
      * @param numberOfDays The number of days which is integer
      * @param low          the cost of low effort work

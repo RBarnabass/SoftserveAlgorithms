@@ -5,13 +5,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class LongestSubSequenceWithDifferenceOneTest {
+public class LongestSubSequenceTest {
 
-    private static LongestSubSequenceWithDifferenceOne sequence;
+    private static LongestSubSequence sequence;
     private int[] test;
 
     @BeforeAll public static void initTest() {
-        sequence = new LongestSubSequenceWithDifferenceOne();
+        sequence = new LongestSubSequence();
     }
 
     @AfterAll public static void afterTest() {

@@ -5,7 +5,6 @@ import static controller.Controller.EXIT_CODE;
 /**
  * Class holds view part of program
  *
- * @version 1.0
  * @author Roman Berezhnov
  */
 public class Menu {

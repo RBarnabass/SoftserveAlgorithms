@@ -5,12 +5,12 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class InstanceHolderTest {
+public class InstanceCreatorTest {
 
-    private static InstanceHolder init;
+    private static InstanceCreator init;
 
     @BeforeAll public static void before() {
-        init = new InstanceHolder();
+        init = new InstanceCreator();
     }
 
     @AfterAll public static void after() {
