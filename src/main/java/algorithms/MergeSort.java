@@ -9,7 +9,6 @@ import static utilities.InputArrayParser.userInputArray;
 /**
  * Class that sorts the array by an algorithm Merge Sort.
  *
- * @version 1.0
  * @author Valentyn Yarmoshyk
  */
 public class MergeSort implements IAlgorithmStrategy {

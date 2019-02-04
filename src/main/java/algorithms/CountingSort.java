@@ -11,10 +11,9 @@ import static utilities.InputArrayParser.userInputArray;
 /**
  * Class that sorts the array by an algorithm of Counter Sort.
  *
- * @version 1.0
  * @author Valentyn Yarmoshyk
  */
-public class CoutingSort implements IAlgorithmStrategy {
+public class CountingSort implements IAlgorithmStrategy {
 
     /**
      * Realise Counter Sort.

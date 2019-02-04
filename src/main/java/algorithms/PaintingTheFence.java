@@ -8,7 +8,6 @@ import static utilities.UserInputValidator.getUserInput;
  * Class that realized logic of the ways for painting the fence.
  *
  * @author Valentyn Yarmoshyk
- * @version 1.0
  */
 public class PaintingTheFence implements IAlgorithmStrategy {
 

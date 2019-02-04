@@ -2,7 +2,7 @@ package controller;
 
 import algorithms.BucketSort;
 import algorithms.CountWaysOfSum;
-import algorithms.CoutingSort;
+import algorithms.CountingSort;
 import algorithms.Fibonacci;
 import algorithms.FriendPairs;
 import algorithms.HighLowEfforts;
@@ -60,7 +60,7 @@ public class InstanceCreator implements InstanceManager {
 
         algorithms.put(Algorithm.BUCKET_SORT, new BucketSort());
         algorithms.put(Algorithm.COUNT_WAYS_OF_SUM, new CountWaysOfSum());
-        algorithms.put(Algorithm.COUNTING_SORT, new CoutingSort());
+        algorithms.put(Algorithm.COUNTING_SORT, new CountingSort());
         algorithms.put(Algorithm.FIBONACCI, new Fibonacci());
         algorithms.put(Algorithm.FRIEND_PAIRS, new FriendPairs());
         algorithms.put(Algorithm.HIGH_LOW_EFFORTS, new HighLowEfforts());
