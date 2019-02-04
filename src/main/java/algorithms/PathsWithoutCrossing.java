@@ -3,12 +3,21 @@ package algorithms;
 import strategy.IAlgorithmStrategy;
 import utilities.UserInputValidator;
 
+import java.util.Scanner;
+
 /**
  * Counting number of possible paths through 2 points without crossings using dynamic programming.
  *
  * @author Oleh Volchkov
  */
 public class PathsWithoutCrossing implements IAlgorithmStrategy {
+
+    private UserInputValidator userInput;
+
+    PathsWithoutCrossing(Scanner sc) {
+
+        userInput = new UserInputValidator(sc);
+    }
 
     /**
      * Returns number of possible paths through two points without crossings.
@@ -56,7 +65,7 @@ public class PathsWithoutCrossing implements IAlgorithmStrategy {
 
         int minimalFriendsCount = 1;
         String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
-        int numberOfPoints = UserInputValidator.getUserInput(minimalFriendsCount, Integer.MAX_VALUE,
+        int numberOfPoints = userInput.getUserInput(minimalFriendsCount, Integer.MAX_VALUE,
                 incorrectInputMessage);
         int paths = countPaths(numberOfPoints);
 
