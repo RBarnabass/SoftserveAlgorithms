@@ -37,7 +37,7 @@ class TileTheFloorTest {
     }
 
     @Test
-    void inputMismatchTest(){
+    void inputMismatchTest() {
         int n = -1;
         int m = -4;
         TileTheFloor tileTheFloor = new TileTheFloor();
@@ -45,10 +45,10 @@ class TileTheFloorTest {
     }
 
     @Test
-    void arrayOutOfBound(){
+    void arrayOutOfBound() {
         TileTheFloor tileTheFloor = new TileTheFloor();
         int n = -1;
-        int m= -4;
+        int m = -4;
         assertThrows(ArrayIndexOutOfBoundsException.class, () -> tileTheFloor.countWays(n, m));
     }
 }
