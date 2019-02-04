@@ -34,7 +34,7 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
      * @param distance distance to cover
      * @return number of possible ways to cover the distance
      */
-    static int calculateWays(int distance) {
+    int calculateWays(int distance) {
 
         if (distance < 0) {
             return 0;
