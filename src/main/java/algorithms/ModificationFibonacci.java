@@ -1,8 +1,9 @@
 package algorithms;
 
 import strategy.IAlgorithmStrategy;
+import utilities.UserInputValidator;
 
-import static utilities.UserInputValidator.getUserInput;
+import java.util.Scanner;
 
 /**
  * Modification Fibonacci sequence.
@@ -10,6 +11,13 @@ import static utilities.UserInputValidator.getUserInput;
  * @author Andrii Senchakevych
  */
 public class ModificationFibonacci implements IAlgorithmStrategy {
+
+    private UserInputValidator userInput;
+
+    ModificationFibonacci(Scanner sc) {
+
+        userInput = new UserInputValidator(sc);
+    }
 
     /**
      * Finds which is the member of position n in Modification Fibonacci sequence.
@@ -19,7 +27,7 @@ public class ModificationFibonacci implements IAlgorithmStrategy {
      * @return the member of position n in Modification Fibonacci sequence
      * @author Andrii Senchakevych
      */
-    public int modificationFibonacci(int n) {
+    int modificationFibonacci(int n) {
 
         int[] mfib = new int[n + 4];
 
@@ -46,7 +54,7 @@ public class ModificationFibonacci implements IAlgorithmStrategy {
                 + "Or input value is too long, try again!";
         int lowerBound = 1;
         int upperBound = 200;
-        n = getUserInput(lowerBound, upperBound, errorMessage);
+        n = userInput.getUserInput(lowerBound, upperBound, errorMessage);
         System.out.println("Member Modification Fibonacci sequence of position " + n + " is "
                 + modificationFibonacci(n));
     }
