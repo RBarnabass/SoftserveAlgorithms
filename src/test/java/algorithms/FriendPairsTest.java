@@ -2,17 +2,18 @@ package algorithms;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FriendPairsTest {
+class FriendPairsTest {
 
     private FriendPairs friendPairs;
 
-    // TODO:
-    void before() {
+    private void before() {
         this.friendPairs = new FriendPairs();
     }
 
     @org.junit.jupiter.api.Test
     void countWaysToPairTest() {
+
+        before();
 
         int testInputA = 3;
         int expectedOutputA = 4;
