@@ -35,7 +35,7 @@ public class InterestingRow implements IAlgorithmStrategy {
         System.out.println("Please enter a position for a number in Interesting Row sequence you want to know");
         int minNumber = 0;
         int maxNumber = 32;
-        String incorrectInputMessage = "\"Please enter number that >0 and <=45\"";
+        String incorrectInputMessage = "\"Please enter number that >0 and <=32\"";
         int number = getUserInput(minNumber, maxNumber, incorrectInputMessage);
         System.out.println(findIntrestingRowMember(number));
     }
