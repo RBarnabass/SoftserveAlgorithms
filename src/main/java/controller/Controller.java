@@ -1,51 +1,52 @@
 package controller;
 
 import strategy.AlgorithmRunner;
+
 import java.util.Scanner;
+
 import static controller.Algorithm.getAlgorithmName;
 
 /**
- * This class provides controller program logic
- * and control all behavior.
+ * Handles user interaction with a program.
  *
- * @version 1.0
  * @author Roman Berezhnov
  * @author Oleh Volchkov
+ * @version 1.0
  */
 public class Controller {
 
     /**
-     * This is a constant value of exit input code.
+     * Constant value of exit input code.
      */
-    protected static final int EXIT_CODE = 0;
+    static final int EXIT_CODE = 0;
 
     /**
-     * This is a constant value of algorithms.
+     * Constant value of algorithms.
      */
     private static final int ALGORITHM_LIST_LENGTH = 19;
 
     /**
-     * This is a final value of input provider.
+     * Final value of input provider.
      */
     private final Scanner scan = new Scanner(System.in);
 
     /**
-     * This is a final instance of strategy runner.
+     * Final instance of strategy runner.
      */
     private final AlgorithmRunner runner = new AlgorithmRunner();
 
     /**
-     * This is a final instance of all algorithms.
+     * Final instance of all algorithms.
      */
-    private final InstanceManager instanceManager = new InstanceController();
+    private final InstanceManager instanceManager = new InstanceCreator();
 
     /**
-     * This variable holds user or constant input value.
+     * User or constant input value.
      */
     private int input;
 
     /**
-     * This method starts a program and hold it lifecycle.
+     * Starts a program and holds it lifecycle.
      */
     public void start() {
 
@@ -61,10 +62,9 @@ public class Controller {
     }
 
     /**
-     * This method resolve user wish to continue
-     * or to leave the program.
+     * Resolves user wish to continue or to leave the program.
      *
-     * @return result of user wish to continue.
+     * @return result of user wish.
      */
     private boolean isContinue() {
 
@@ -79,9 +79,9 @@ public class Controller {
     }
 
     /**
-     * This method runs a strategy.
+     * Runs a strategy.
      *
-     * @param input number of strategy.
+     * @param input index of strategy.
      */
     private void getStrategy(int input) {
 
