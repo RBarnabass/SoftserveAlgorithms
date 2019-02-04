@@ -2,25 +2,22 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
-import java.util.Arrays;
-
-import static utilities.util.lengthOfArray;
-import static utilities.util.writeArray;
+import static utilities.Util.userInputArray;
 
 /**
- * Class that sorts the array by an algorithm Insertion Sort
+ * Class that sorts the array by an algorithm Insertion Sort.
  *
  * @author Ostap Vdovychyn
  * @version 1.0
  */
 public class InsertionSort implements IAlgorithmStrategy {
     /**
-     * Realise Insertion sort
+     * Realise Insertion sort.
      *
      * @param array expected array
      * @return sorted array
      */
-    public static int[] doInsertionSort(int[] array) {
+    public int[] doInsertionSort(int[] array) {
         int temp;
         for (int i = 1; i < array.length; i++) {
             for (int j = i; j > 0; j--) {
@@ -34,11 +31,9 @@ public class InsertionSort implements IAlgorithmStrategy {
         return array;
     }
 
+    @Override
     public void execute() {
-        lengthOfArray();
-        int[] array = writeArray();
-        array = doInsertionSort(array);
-        System.out.println("Your array after Insertion Sort: " + Arrays.toString(array));
-
+        int[] array = userInputArray();
+        doInsertionSort(array);
     }
 }

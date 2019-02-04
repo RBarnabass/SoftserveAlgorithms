@@ -2,11 +2,8 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
-import java.util.Arrays;
-import java.util.Scanner;
-
 import static utilities.Util.enterPositiveNumber;
-import static utilities.Util.writeArray;
+import static utilities.Util.userInputArray;
 
 /**
  * Class that returns maximum amount of cost you can perform
@@ -29,20 +26,19 @@ public class HighLowEfforts implements IAlgorithmStrategy {
         return Math.max(high[numberOfDays - 1] + findMaximumAmount(high, low, (numberOfDays - 2)), low[numberOfDays - 1] + findMaximumAmount(high, low, (numberOfDays - 1)));
     }
 
-
+    /**
+     * Runner method for execution of algorithm.
+     */
     public void execute() {
-        Scanner scanner = new Scanner(System.in);
-
-
         System.out.println("Please enter number of days");
         int numberOfDays = enterPositiveNumber();
+
         System.out.println("Enter high array");
-        int[] high = writeArray();
+        int[] high = userInputArray();
 
         System.out.println("Enter low array");
-        int[] low = writeArray();
+        int[] low = userInputArray();
 
         System.out.println(findMaximumAmount(high, low, numberOfDays));
-
     }
 }
