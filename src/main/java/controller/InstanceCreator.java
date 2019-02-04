@@ -59,6 +59,6 @@ public class InstanceCreator implements InstanceManager {
         algorithms.put(Algorithm.QUICK_SORT, new QuickSort());
         algorithms.put(Algorithm.TILE_THE_FLOOR, new TileTheFloor());
         algorithms.put(Algorithm.WAYS_TO_COVER_DISTANCE, new WaysToCoverDistance());
-        algorithms.put(Algorithm.WAYS_TO_SUM_TO_N, new WaysToSumToNUsingArrayElementsWithRepetition());
+        algorithms.put(Algorithm.WAYS_TO_SUM_TO_N, new WaysToSumToN());
     }
 }

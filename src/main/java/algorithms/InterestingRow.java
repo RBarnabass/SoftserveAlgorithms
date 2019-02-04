@@ -2,8 +2,7 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import static utilities.UserInputValidator.getUserInput;
 
 /**
  * Class that returns member of position in Interesting Row sequence
@@ -13,7 +12,7 @@ import java.util.Scanner;
 public class InterestingRow implements IAlgorithmStrategy {
 
     /**
-     * Returns the member of position in Fibonacci sequence
+     * Returns the member of position in Interesting Row sequence
      *
      * @param number position in interesting row
      * @return member of position in interesting row sequence
@@ -32,23 +31,11 @@ public class InterestingRow implements IAlgorithmStrategy {
      * Runner method for execution of algorithm.
      */
     public void execute() {
-        while (true) {
-            try {
-                Scanner sc = new Scanner(System.in);
-                System.out.println("Please enter a position for a number in Fibonacci sequence you want to know or enter \"999\" for exit");
-                int number = sc.nextInt();
-                if (number > 0 && number <= 32) {
-                    System.out.println(findIntrestingRowMember(number));
-                } else if (number == 999) {
-                    break;
-                } else {
-                    System.out.println("Please enter number that >0 and <=32");
-                }
-            } catch (InputMismatchException e) {
-                System.out.println(e);
-                System.out.println("Wrong type of input.Please use int type!");
-            }
-        }
+        System.out.println("Please enter a position for a number in Interesting Row sequence you want to know");
+        int minNumber = 0;
+        int maxNumber = 32;
+        String incorrectInputMessage = "\"Please enter number that >0 and <=45\"";
+        int number = getUserInput(minNumber, maxNumber, incorrectInputMessage);
+        System.out.println(findIntrestingRowMember(number));
     }
 }
-
