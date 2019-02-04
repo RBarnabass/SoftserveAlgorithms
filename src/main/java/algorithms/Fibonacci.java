@@ -2,8 +2,7 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import static utilities.UserInputValidator.getUserInput;
 
 /**
  * Class that returns member of position in Fibonacci sequence
@@ -32,22 +31,11 @@ public class Fibonacci implements IAlgorithmStrategy {
      * Runner method for execution of algorithm.
      */
     public void execute() {
-        while (true) {
-            try {
-                Scanner sc = new Scanner(System.in);
-                System.out.println("Please enter a position for a number in Fibonacci sequence you want to know or enter \"999\" for exit");
-                int number = sc.nextInt();
-                if (number > 0 && number <= 45) {
-                    System.out.println(findFibonacciMember(number));
-                } else if (number == 999) {
-                    break;
-                } else {
-                    System.out.println("Please enter number that >0 and <=45");
-                }
-            } catch (InputMismatchException e) {
-                System.out.println(e);
-                System.out.println("Wrong type of input.Please use int type!");
-            }
-        }
+        System.out.println("Please enter a position for a number in Fibonacci sequence you want to know");
+        int minNumber = 0;
+        int maxNumber = 45;
+        String incorrectInputMessage = "\"Please enter number that >0 and <=45\"";
+        int number = getUserInput(minNumber, maxNumber, incorrectInputMessage);
+        System.out.println(findFibonacciMember(number));
     }
 }
