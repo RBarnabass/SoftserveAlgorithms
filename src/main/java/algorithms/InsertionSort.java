@@ -17,7 +17,7 @@ public class InsertionSort implements IAlgorithmStrategy {
      * @param array expected array
      * @return sorted array
      */
-    public int[] doInsertionSort(int[] array) {
+    public static int[] doInsertionSort(int[] array) {
         int temp;
         for (int i = 1; i < array.length; i++) {
             for (int j = i; j > 0; j--) {
