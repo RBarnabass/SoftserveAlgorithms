@@ -1,15 +1,14 @@
 import controller.Controller;
 
 /**
- * This class starts an application
+ * This class starts an application.
  *
- * @version 1.0
  * @author Roman Berezhnov
  */
 public class Main {
 
     /**
-     * The controller method starts an application
+     * The controller method starts an application.
      *
      * @param args input data
      */
