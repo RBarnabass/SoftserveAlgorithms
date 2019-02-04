@@ -2,11 +2,13 @@ package algorithms;
 
 import algorithms.HighLowEfforts;
 
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class HighLowEffortsTest {
 
-    private HighLowEfforts highLowEfforts = new HighLowEfforts();
+    private HighLowEfforts highLowEfforts = new HighLowEfforts(new Scanner(System.in));
 
     @org.junit.jupiter.api.Test
     void findMaximumAmountTest() {

@@ -3,6 +3,8 @@ package algorithms;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class OptimizedPaintingFenceTest {
@@ -12,7 +14,7 @@ public class OptimizedPaintingFenceTest {
 
     @BeforeAll
     public static void initTest() {
-        optimizedPaintingFence = new OptimizedPaintingFence();
+        optimizedPaintingFence = new OptimizedPaintingFence(new Scanner(System.in));
     }
 
     @AfterAll

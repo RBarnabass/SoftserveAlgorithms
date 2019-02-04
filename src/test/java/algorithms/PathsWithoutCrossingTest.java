@@ -1,5 +1,7 @@
 package algorithms;
 
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PathsWithoutCrossingTest {
@@ -7,7 +9,7 @@ class PathsWithoutCrossingTest {
     private PathsWithoutCrossing pathsWithoutCrossing;
 
     void before() {
-        this.pathsWithoutCrossing = new PathsWithoutCrossing();
+        this.pathsWithoutCrossing = new PathsWithoutCrossing(new Scanner(System.in));
     }
 
     void after() {

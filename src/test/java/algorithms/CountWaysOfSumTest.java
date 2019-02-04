@@ -2,10 +2,12 @@ package algorithms;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CountWaysOfSumTest {
-    private CountWaysOfSum countWaysOfSum = new CountWaysOfSum();
+    private CountWaysOfSum countWaysOfSum = new CountWaysOfSum(new Scanner(System.in));
 
     @Test
     void testN_IsOne() {

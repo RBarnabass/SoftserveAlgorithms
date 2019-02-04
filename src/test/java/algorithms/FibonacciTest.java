@@ -2,11 +2,13 @@ package algorithms;
 
 import algorithms.Fibonacci;
 
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class FibonacciTest {
 
-    private Fibonacci fibonacci = new Fibonacci();
+    private Fibonacci fibonacci = new Fibonacci(new Scanner(System.in));
 
     @org.junit.jupiter.api.Test
     void findFibonacciMemberTest() {

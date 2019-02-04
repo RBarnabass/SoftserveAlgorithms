@@ -1,5 +1,7 @@
 package algorithms;
 
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class WaysToCoverDistanceTest {
@@ -7,7 +9,7 @@ class WaysToCoverDistanceTest {
     private WaysToCoverDistance waysToCoverDistance;
 
     void before() {
-        this.waysToCoverDistance = new WaysToCoverDistance();
+        this.waysToCoverDistance = new WaysToCoverDistance(new Scanner(System.in));
     }
 
     void after() {

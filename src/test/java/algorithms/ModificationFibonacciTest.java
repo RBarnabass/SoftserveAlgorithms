@@ -3,6 +3,8 @@ package algorithms;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ModificationFibonacciTest {
@@ -12,7 +14,7 @@ class ModificationFibonacciTest {
 
     @BeforeAll
     public static void initTest() {
-        modificationFibonacci = new ModificationFibonacci();
+        modificationFibonacci = new ModificationFibonacci(new Scanner(System.in));
     }
 
     @AfterAll

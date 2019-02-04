@@ -3,6 +3,8 @@ package algorithms;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class WaysToSumToNTest {
@@ -12,7 +14,7 @@ class WaysToSumToNTest {
 
     @BeforeAll
     public static void initTest() {
-        waysToSumToN = new WaysToSumToN();
+        waysToSumToN = new WaysToSumToN(new Scanner(System.in));
     }
 
     @AfterAll

@@ -2,11 +2,13 @@ package algorithms;
 
 import algorithms.InterestingRow;
 
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class InterestingRowTest {
 
-    private InterestingRow interestingRow = new InterestingRow();
+    private InterestingRow interestingRow = new InterestingRow(new Scanner(System.in));
 
     @org.junit.jupiter.api.Test
     void findInterestingRowMemberTest() {

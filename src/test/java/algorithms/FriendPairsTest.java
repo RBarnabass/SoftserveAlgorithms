@@ -1,5 +1,7 @@
 package algorithms;
 
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FriendPairsTest {
@@ -7,7 +9,7 @@ class FriendPairsTest {
     private FriendPairs friendPairs;
 
     private void before() {
-        this.friendPairs = new FriendPairs();
+        this.friendPairs = new FriendPairs(new Scanner(System.in));
     }
 
     private void after() {
