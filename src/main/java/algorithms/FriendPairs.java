@@ -3,12 +3,21 @@ package algorithms;
 import strategy.IAlgorithmStrategy;
 import utilities.UserInputValidator;
 
+import java.util.Scanner;
+
 /**
  * Counting number of possible ways to pair for given amount of friends using dynamic programming.
  *
  * @author Oleh Volchkov
  */
 public class FriendPairs implements IAlgorithmStrategy {
+
+    private UserInputValidator userInput;
+
+    FriendPairs(Scanner sc) {
+
+        userInput = new UserInputValidator(sc);
+    }
 
     /**
      * Returns count of possible ways to pair/stay alone for given amount of friends.
@@ -39,7 +48,7 @@ public class FriendPairs implements IAlgorithmStrategy {
 
         int minimalFriendsCount = 1;
         String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than -1";
-        int friendsCount = UserInputValidator.getUserInput(minimalFriendsCount, Integer.MAX_VALUE,
+        int friendsCount = userInput.getUserInput(minimalFriendsCount, Integer.MAX_VALUE,
                 incorrectInputMessage);
         int ways = countWaysToPair(friendsCount);
 
