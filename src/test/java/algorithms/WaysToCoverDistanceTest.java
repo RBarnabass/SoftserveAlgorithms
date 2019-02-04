@@ -4,6 +4,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class WaysToCoverDistanceTest {
 
+    private WaysToCoverDistance waysToCoverDistance;
+
+    void before() {
+        this.waysToCoverDistance = new WaysToCoverDistance();
+    }
+
     @org.junit.jupiter.api.Test
     void calculateWaysTest() {
 
@@ -16,8 +22,8 @@ class WaysToCoverDistanceTest {
         int testInputC = 6;
         int testOutputC = 24;
 
-        assertEquals(testOutputA, WaysToCoverDistance.calculateWays(testInputA));
-        assertEquals(testOutputB, WaysToCoverDistance.calculateWays(testInputB));
-        assertEquals(testOutputC, WaysToCoverDistance.calculateWays(testInputC));
+        assertEquals(testOutputA, this.waysToCoverDistance.calculateWays(testInputA));
+        assertEquals(testOutputB, this.waysToCoverDistance.calculateWays(testInputB));
+        assertEquals(testOutputC, this.waysToCoverDistance.calculateWays(testInputC));
     }
 }
