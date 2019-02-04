@@ -6,6 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FriendPairsTest {
 
+    private FriendPairs friendPairs;
+
+    void before() {
+        this.friendPairs = new FriendPairs();
+    }
+
     @org.junit.jupiter.api.Test
     void countWaysToPairTest() {
 
@@ -18,8 +24,8 @@ public class FriendPairsTest {
         int testInputC = 1;
         int expectedOutputC = 1;
 
-        assertEquals(expectedOutputA, FriendPairs.countWaysToPair(testInputA));
-        assertEquals(expectedOutputB, FriendPairs.countWaysToPair(testInputB));
-        assertEquals(expectedOutputC, FriendPairs.countWaysToPair(testInputC));
+        assertEquals(expectedOutputA, this.friendPairs.countWaysToPair(testInputA));
+        assertEquals(expectedOutputB, this.friendPairs.countWaysToPair(testInputB));
+        assertEquals(expectedOutputC, this.friendPairs.countWaysToPair(testInputC));
     }
 }
