@@ -20,7 +20,7 @@ public class MergeSort implements IAlgorithmStrategy {
      * @param array An array you want to sort
      * @return Sorted array
      */
-    public static int[] mergeSort(int[] array) {
+    public int[] mergeSort(int[] array) {
 
         if (array.length <= 1) {
             return array;
@@ -53,7 +53,7 @@ public class MergeSort implements IAlgorithmStrategy {
         return result;
     }
 
-    private static int[] merge(int[] left, int[] right) {
+    private int[] merge(int[] left, int[] right) {
 
         int[] result = new int[left.length + right.length];
         int leftPointer = 0;
