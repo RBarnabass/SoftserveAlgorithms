@@ -2,10 +2,8 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
-import java.util.Scanner;
-
 import static utilities.UserInputValidator.getUserInput;
-import static utilities.util.enterPositiveNumber;
+
 
 /**
  * Optimized painting fence algorithm with one variable instead of a table
