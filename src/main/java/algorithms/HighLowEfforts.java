@@ -1,9 +1,9 @@
 package algorithms;
 
 import strategy.IAlgorithmStrategy;
+import utilities.UserInputValidator;
 
-import static utilities.Util.enterPositiveNumber;
-import static utilities.Util.userInputArray;
+import static utilities.InputArrayParser.userInputArray;
 
 /**
  * Class that returns maximum amount of cost you can perform
@@ -31,7 +31,9 @@ public class HighLowEfforts implements IAlgorithmStrategy {
      */
     public void execute() {
         System.out.println("Please enter number of days");
-        int numberOfDays = enterPositiveNumber();
+        int minimalDaysCountValue = 0;
+        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
+        int numberOfDays = UserInputValidator.getUserInput(minimalDaysCountValue, Integer.MAX_VALUE, incorrectInputMessage);
 
         System.out.println("Enter high array");
         int[] high = userInputArray();
