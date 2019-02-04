@@ -23,6 +23,5 @@ class QuickSortTest {
         assertArrayEquals(outputArray1, quickSort.quickSort(inputArray1));
         assertArrayEquals(outputArray2, quickSort.quickSort(inputArray2));
         assertArrayEquals(outputArray3, quickSort.quickSort(inputArray3));
-
     }
 }
