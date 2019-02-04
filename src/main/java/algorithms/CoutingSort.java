@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static utilities.Util.userInputArray;
+import static utilities.InputArrayParser.userInputArray;
 
 /**
- * Class that sorts the array by an algorithm of Counter Sort
+ * Class that sorts the array by an algorithm of Counter Sort.
  *
  * @version 1.0
  * @author Valentyn Yarmoshyk
@@ -17,12 +17,12 @@ import static utilities.Util.userInputArray;
 public class CoutingSort implements IAlgorithmStrategy {
 
     /**
-     * Realise Counter Sort
+     * Realise Counter Sort.
      *
      * @param array An array you want to sort
      * @return Sorted array
      */
-    public static int[] countingSort(int[] array) {
+    public int[] countingSort(int[] array) {
 
         int min = array[0];
         int max = array[0];
@@ -68,6 +68,7 @@ public class CoutingSort implements IAlgorithmStrategy {
         return resultArray;
     }
 
+    @Override
     public void execute() {
         int[] array = userInputArray();
         array = countingSort(array);

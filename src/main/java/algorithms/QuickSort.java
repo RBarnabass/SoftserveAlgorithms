@@ -7,16 +7,14 @@ import java.util.Arrays;
 import static utilities.Util.userInputArray;
 
 /**
- * QuickSort algorithm for array of numbers
+ * QuickSort algorithm for array of numbers.
  *
  * @author Arsen Markiv
  */
 public class QuickSort implements IAlgorithmStrategy {
 
 
-    /**
-     * Execute current class
-     */
+    @Override
     public void execute() {
         int[] array = userInputArray();
         array = quickSort(array);
@@ -24,12 +22,12 @@ public class QuickSort implements IAlgorithmStrategy {
     }
 
     /**
-     * Returns array sorted by Quick Sort algorithm
+     * Returns array sorted by Quick Sort algorithm.
      *
      * @param array array of numbers to sort
      * @return sorted array
      */
-    static int[] quickSort(int[] array) {
+    int[] quickSort(int[] array) {
         if (array == null) {
             return null;
         }
@@ -38,13 +36,13 @@ public class QuickSort implements IAlgorithmStrategy {
     }
 
     /**
-     * Recursive function which sort an array
+     * Recursive function which sort an array.
      *
      * @param array array of numbers to sort
      * @param left  first element of array ( array[0] )
      * @param right last element of array ( array[n-1] )
      */
-    private static void sort(int[] array, int left, int right) {
+    private void sort(int[] array, int left, int right) {
         if (left < right) {
             int p = getPivot(array, left, right);
 
@@ -55,12 +53,14 @@ public class QuickSort implements IAlgorithmStrategy {
 
 
     /**
+     * Return the pivot item of array.
+     *
      * @param array array of numbers to sort
      * @param left  first element of array ( array[0] )
      * @param right last element of array ( array[n-1] )
      * @return return partition element
      */
-    private static int getPivot(int[] array, int left, int right) {
+    private int getPivot(int[] array, int left, int right) {
         int pivot = array[right];
         int i = left;
 
