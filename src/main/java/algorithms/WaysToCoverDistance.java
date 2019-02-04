@@ -3,12 +3,21 @@ package algorithms;
 import strategy.IAlgorithmStrategy;
 import utilities.UserInputValidator;
 
+import java.util.Scanner;
+
 /**
  * Counting possible ways of covering given distance in 3 steps using dynamic programming.
  *
  * @author Oleh Volchkov
  */
 public class WaysToCoverDistance implements IAlgorithmStrategy {
+
+    private UserInputValidator userInput;
+
+    WaysToCoverDistance(Scanner sc) {
+
+        userInput  = new UserInputValidator(sc);
+    }
 
     /**
      * Returns number of ways for covering given distance.
@@ -38,7 +47,7 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
 
         int minimalDistanceValue = 1;
         String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
-        int distance = UserInputValidator.getUserInput(minimalDistanceValue, Integer.MAX_VALUE, incorrectInputMessage);
+        int distance = userInput.getUserInput(minimalDistanceValue, Integer.MAX_VALUE, incorrectInputMessage);
 
         int ways = calculateWays(distance);
 
