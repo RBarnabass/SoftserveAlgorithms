@@ -5,14 +5,14 @@ import strategy.IAlgorithmStrategy;
 import static utilities.UserInputValidator.getUserInput;
 
 /**
- * Class that returns member of position in Interesting Row sequence
+ * Class that returns member of position in Interesting Row sequence.
  *
  * @author Nazar Mavko
  */
 public class InterestingRow implements IAlgorithmStrategy {
 
     /**
-     * Returns the member of position in Interesting Row sequence
+     * Returns the member of position in Interesting Row sequence.
      *
      * @param number position in interesting row
      * @return member of position in interesting row sequence
