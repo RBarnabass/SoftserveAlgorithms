@@ -11,16 +11,6 @@ import static utilities.Util.userInputArray;
 public class LongestSubSequence implements IAlgorithmStrategy {
 
     /**
-     * Array of integer.
-     */
-    private int[] sequences;
-
-    /**
-     * This is a given array.
-     */
-    private int[] array;
-
-    /**
      * This method provides the controller logic.
      *
      * @param rawArray  array of integers.
@@ -32,11 +22,10 @@ public class LongestSubSequence implements IAlgorithmStrategy {
             return 0;
         }
 
-        array = rawArray;
-        sequences = sequencesArrayInitialization(array.length);
-        searchSequences();
+        int[] sequences = sequencesArrayInitialization(rawArray.length);
+        int[] filledSequences = searchSequences(rawArray, sequences);
 
-        return getResult();
+        return getResult(filledSequences);
     }
 
     /**
@@ -44,7 +33,7 @@ public class LongestSubSequence implements IAlgorithmStrategy {
      *
      * @return length of the greatest sequence.
      */
-    private int getResult() {
+    private int getResult(int[] sequences) {
 
         int result = 1;
 
@@ -77,7 +66,7 @@ public class LongestSubSequence implements IAlgorithmStrategy {
     /**
      * Searches sequences in integer array.
      */
-    private void searchSequences() {
+    private int[] searchSequences(int[] array, int[] sequences) {
 
         for (int i = 1; i < array.length; i++) {
             for (int j = 0; j < i; j++) {
@@ -86,11 +75,9 @@ public class LongestSubSequence implements IAlgorithmStrategy {
                 }
             }
         }
+        return sequences;
     }
 
-    /**
-     * Runner method for execution of algorithm.
-     */
     @Override
     public void execute() {
         int[] array = userInputArray();
