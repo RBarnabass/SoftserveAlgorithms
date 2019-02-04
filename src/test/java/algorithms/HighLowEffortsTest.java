@@ -14,7 +14,7 @@ class HighLowEffortsTest {
         int[] testInputHighA = {10, 10, 10, 10, 5};
         int[] testInputLowA = {1, 1, 1, 12, 1};
         int numberOfDaysA = 5;
-        int testOutputA = 32;
+        int testOutputA = 33;
 
         int[] testInputHighB = {5, 8, 6, 10};
         int[] testInputLowB = {3, 7, 8, 5};
