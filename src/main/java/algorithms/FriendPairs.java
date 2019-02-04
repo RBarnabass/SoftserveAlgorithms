@@ -34,7 +34,7 @@ public class FriendPairs implements IAlgorithmStrategy {
      * @param numberOfFriends amount of friends to cover
      * @return count of possible ways to pair
      */
-    static int countWaysToPair(int numberOfFriends) {
+    int countWaysToPair(int numberOfFriends) {
 
         int[] cachedWays = new int[numberOfFriends + 1];
 
