@@ -3,6 +3,8 @@ package algorithms;
 import strategy.IAlgorithmStrategy;
 import utilities.UserInputValidator;
 
+import java.util.Scanner;
+
 
 /**
  * Count ways to tile the floor with given measures.
@@ -10,6 +12,13 @@ import utilities.UserInputValidator;
  * @author Arsen
  */
 public class TileTheFloor implements IAlgorithmStrategy {
+
+    private UserInputValidator userInput;
+
+    TileTheFloor(Scanner sc) {
+
+        userInput = new UserInputValidator(sc);
+    }
 
     /**
      * Method for count ways to tile the floor.
@@ -40,10 +49,10 @@ public class TileTheFloor implements IAlgorithmStrategy {
         String errorMessage = "Please type integer value bigger then 1";
 
         System.out.print("Enter n: ");
-        int n = UserInputValidator.getUserInput(minValue, Integer.MAX_VALUE, errorMessage);
+        int n = userInput.getUserInput(minValue, Integer.MAX_VALUE, errorMessage);
 
         System.out.print("Enter m: ");
-        int m = UserInputValidator.getUserInput(minValue, Integer.MAX_VALUE, errorMessage);
+        int m = userInput.getUserInput(minValue, Integer.MAX_VALUE, errorMessage);
 
         System.out.println("Number of ways = " + countWays(n, m));
     }
