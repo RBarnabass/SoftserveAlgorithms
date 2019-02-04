@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class WaysToCoverDistanceTest {
 
     private WaysToCoverDistance waysToCoverDistance;
-    
+
     void before() {
         this.waysToCoverDistance = new WaysToCoverDistance();
     }
