@@ -10,25 +10,6 @@ import utilities.UserInputValidator;
  */
 public class WaysToCoverDistance implements IAlgorithmStrategy {
 
-    // todo: move to end
-    @Override
-    public void execute() {
-
-        System.out.println("Enter distance to cover: ");
-
-        int minimalDistanceValue = 1;
-        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
-        int distance = UserInputValidator.getUserInput(minimalDistanceValue, Integer.MAX_VALUE, incorrectInputMessage);
-
-        int ways = calculateWays(distance);
-
-        StringBuilder result = new StringBuilder()
-                .append("There is ").append(ways)
-                .append(" number of ways for covering given distance.");
-
-        System.out.println(result);
-    }
-
     /**
      * Returns number of ways for covering given distance.
      *
@@ -48,5 +29,23 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
         return calculateWays(distance - 1)
                 + calculateWays(distance - 2)
                 + calculateWays(distance - 3);
+    }
+
+    @Override
+    public void execute() {
+
+        System.out.println("Enter distance to cover: ");
+
+        int minimalDistanceValue = 1;
+        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
+        int distance = UserInputValidator.getUserInput(minimalDistanceValue, Integer.MAX_VALUE, incorrectInputMessage);
+
+        int ways = calculateWays(distance);
+
+        StringBuilder result = new StringBuilder()
+                .append("There is ").append(ways)
+                .append(" number of ways for covering given distance.");
+
+        System.out.println(result);
     }
 }
