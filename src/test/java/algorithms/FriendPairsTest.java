@@ -1,13 +1,12 @@
 package algorithms;
 
-import algorithms.FriendPairs;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FriendPairsTest {
 
     private FriendPairs friendPairs;
 
+    // TODO:
     void before() {
         this.friendPairs = new FriendPairs();
     }

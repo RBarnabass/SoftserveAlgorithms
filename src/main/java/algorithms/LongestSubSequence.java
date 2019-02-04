@@ -33,6 +33,7 @@ public class LongestSubSequence implements IAlgorithmStrategy {
      *
      * @return length of the greatest sequence.
      */
+    //todo: rename
     private int getResult(int[] sequences) {
 
         int result = 1;

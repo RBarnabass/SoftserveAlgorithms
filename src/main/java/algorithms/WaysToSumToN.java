@@ -20,13 +20,15 @@ public class WaysToSumToN implements IAlgorithmStrategy {
      * @param number Input number which has to be represented
      * @return count[number] of possible ways we have to represent one number with a given array of numbers
      */
+
+    //todo:structurize
     public int waysToCount(int[] arr, int number) {
         int[] count = new int[number + 1];
         count[0] = 1;
         for (int i = 1; i <= number; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                if (i >= arr[j]) {
-                    count[i] += count[i - arr[j]];
+            for (int i1 : arr) {
+                if (i >= i1) {
+                    count[i] += count[i - i1];
                 }
             }
         }

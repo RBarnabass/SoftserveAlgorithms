@@ -6,6 +6,7 @@ class PathsWithoutCrossingTest {
 
     private PathsWithoutCrossing pathsWithoutCrossing;
 
+    // TODO:
     void before() {
         this.pathsWithoutCrossing = new PathsWithoutCrossing();
     }

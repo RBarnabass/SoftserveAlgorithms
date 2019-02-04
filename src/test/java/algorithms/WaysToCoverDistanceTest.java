@@ -6,6 +6,7 @@ class WaysToCoverDistanceTest {
 
     private WaysToCoverDistance waysToCoverDistance;
 
+    // TODO:
     void before() {
         this.waysToCoverDistance = new WaysToCoverDistance();
     }

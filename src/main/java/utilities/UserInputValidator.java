@@ -3,11 +3,14 @@ package utilities;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+// todo: author notation
 /**
  * Get correct input from user.
  */
 public class UserInputValidator {
 
+    // todo: final & javadoc
+    // todo: sc.nextLine()
     private static Scanner sc = new Scanner(System.in);
 
     /**
@@ -23,6 +26,7 @@ public class UserInputValidator {
         int input;
 
         try {
+
             input = sc.nextInt();
 
             if (input < lowerBound || input > upperBound) {

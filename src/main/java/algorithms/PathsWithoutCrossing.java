@@ -10,6 +10,7 @@ import utilities.UserInputValidator;
  */
 public class PathsWithoutCrossing implements IAlgorithmStrategy {
 
+    // todo: move to end
     @Override
     public void execute() {
 

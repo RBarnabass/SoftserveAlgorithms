@@ -63,6 +63,7 @@ class Menu {
      */
     private String getList() {
 
+        // todo: lower case capitalize
         StringBuilder builder = new StringBuilder();
         for (int i = 1; i < values.length; i++) {
 

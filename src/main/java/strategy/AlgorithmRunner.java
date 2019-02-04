@@ -1,10 +1,12 @@
 package strategy;
 
+// todo: author notation
 /**
  * Algorithm execution sequence.
  */
 public class AlgorithmRunner {
 
+    // todo: javadoc
     private IAlgorithmStrategy algorithm;
 
     /**

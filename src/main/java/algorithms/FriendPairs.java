@@ -10,6 +10,7 @@ import utilities.UserInputValidator;
  */
 public class FriendPairs implements IAlgorithmStrategy {
 
+    // todo: move to end
     @Override
     public void execute() {
 

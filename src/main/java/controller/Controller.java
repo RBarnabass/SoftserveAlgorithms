@@ -49,6 +49,7 @@ public class Controller {
      */
     public void start() {
 
+        //todo: change name
         boolean playing = true;
         Menu menu = new Menu();
         menu.printWelcome();
@@ -94,6 +95,7 @@ public class Controller {
      *
      * @return correct menu item.
      */
+    // todo: replace with UserInputValidator
     private int getInput() {
 
         try {
