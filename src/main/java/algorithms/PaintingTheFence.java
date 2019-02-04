@@ -2,7 +2,7 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
-import static utilities.Util.enterPositiveNumber;
+import static utilities.UserInputValidator.getUserInput;
 
 /**
  * Class that realized logic of the ways for painting the fence
@@ -39,12 +39,12 @@ public class PaintingTheFence implements IAlgorithmStrategy {
     }
 
     public void execute() {
-
+        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
         System.out.println("Enter the count of posts:");
-        int posts = enterPositiveNumber();
+        int posts = getUserInput(0, Integer.MAX_VALUE, incorrectInputMessage);
 
         System.out.println("Enter the count of colors:");
-        int colors = enterPositiveNumber();
+        int colors = getUserInput(0, Integer.MAX_VALUE, incorrectInputMessage);
 
         System.out.println("The different ways for painting the fence: " + PaintingTheFence.paintingTheFence(posts, colors));
 

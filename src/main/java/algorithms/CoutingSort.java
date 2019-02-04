@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static utilities.Util.userInputArray;
+import static utilities.InputArrayParser.userInputArray;
 
 /**
  * Class that sorts the array by an algorithm of Counter Sort

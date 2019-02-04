@@ -4,7 +4,7 @@ import strategy.IAlgorithmStrategy;
 
 import java.util.Arrays;
 
-import static utilities.Util.userInputArray;
+import static utilities.InputArrayParser.userInputArray;
 
 /**
  * Class that sorts the array by an algorithm Merge Sort
