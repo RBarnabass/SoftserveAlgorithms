@@ -3,35 +3,7 @@ package utilities;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Util {
-
-    /**
-     * Ipput a positive number
-     *
-     * @return A positive number
-     * @author Valentyn Yarmoshyk
-     */
-    public static int enterPositiveNumber() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Number must be Integer type and more than 0");
-        int number;
-        int counter = 0;
-        do {
-            if (counter > 0) {
-                System.out.println("Enter the correct value, please!");
-            }
-            counter++;
-            while (!scanner.hasNextInt()) {
-
-                System.out.println("Enter the correct value, please!");
-                scanner.next();
-
-            }
-            number = scanner.nextInt();
-        } while (number <= 0);
-
-        return number;
-    }
+public class InputArrayParser {
 
     /**
      * Return the array that you entered
