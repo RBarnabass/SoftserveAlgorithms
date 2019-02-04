@@ -27,7 +27,7 @@ public class QuickSort implements IAlgorithmStrategy {
      * @param array array of numbers to sort
      * @return sorted array
      */
-    private int[] quickSort(int[] array) {
+    int[] quickSort(int[] array) {
         if (array == null) {
             return null;
         }
