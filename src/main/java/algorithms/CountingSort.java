@@ -13,7 +13,6 @@ import static utilities.InputArrayParser.userInputArray;
  *
  * @author Valentyn Yarmoshyk
  */
-//TODO: розділити на сабметоди
 public class CountingSort implements IAlgorithmStrategy {
 
     /**
