@@ -8,7 +8,6 @@ import java.util.Map;
 /**
  * This class initialize all algorithms and hold them all the time.
  *
- * @version 1.0
  * @author Roman Berezhnov
  */
 public class InstanceCreator implements InstanceManager {
