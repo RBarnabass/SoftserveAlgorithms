@@ -18,9 +18,10 @@ class QuickSortTest {
         int[] outputArray3 = {-8, 1, 2, 3, 4, 5};
         int[] inputArray3 = {4, 3, 2, -8, 5, 1};
 
-        assertArrayEquals(outputArray1, QuickSort.quickSort(inputArray1));
-        assertArrayEquals(outputArray2, QuickSort.quickSort(inputArray2));
-        assertArrayEquals(outputArray3, QuickSort.quickSort(inputArray3));
+        QuickSort quickSort = new QuickSort();
 
+        assertArrayEquals(outputArray1, quickSort.quickSort(inputArray1));
+        assertArrayEquals(outputArray2, quickSort.quickSort(inputArray2));
+        assertArrayEquals(outputArray3, quickSort.quickSort(inputArray3));
     }
 }

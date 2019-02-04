@@ -21,7 +21,7 @@ public class WaysToSumToN implements IAlgorithmStrategy {
      * @param number Input number which has to be represented
      * @return count[number] of possible ways we have to represent one number with a given array of numbers
      */
-    public static int waysToCount(int[] arr, int number) {
+    public int waysToCount(int[] arr, int number) {
         int[] count = new int[number + 1];
         count[0] = 1;
         for (int i = 1; i <= number; i++) {

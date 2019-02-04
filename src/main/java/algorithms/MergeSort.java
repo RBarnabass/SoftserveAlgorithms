@@ -4,10 +4,10 @@ import strategy.IAlgorithmStrategy;
 
 import java.util.Arrays;
 
-import static utilities.Util.userInputArray;
+import static utilities.InputArrayParser.userInputArray;
 
 /**
- * Class that sorts the array by an algorithm Merge Sort
+ * Class that sorts the array by an algorithm Merge Sort.
  *
  * @version 1.0
  * @author Valentyn Yarmoshyk
@@ -15,12 +15,12 @@ import static utilities.Util.userInputArray;
 public class MergeSort implements IAlgorithmStrategy {
 
     /**
-     * Realise the merge sort
+     * Realise the merge sort.
      *
      * @param array An array you want to sort
      * @return Sorted array
      */
-    public static int[] mergeSort(int[] array) {
+    public int[] mergeSort(int[] array) {
 
         if (array.length <= 1) {
             return array;
@@ -53,7 +53,7 @@ public class MergeSort implements IAlgorithmStrategy {
         return result;
     }
 
-    private static int[] merge(int[] left, int[] right) {
+    private int[] merge(int[] left, int[] right) {
 
         int[] result = new int[left.length + right.length];
         int leftPointer = 0;
@@ -87,6 +87,7 @@ public class MergeSort implements IAlgorithmStrategy {
 
     }
 
+    @Override
     public void execute() {
         int[] array = userInputArray();
         array = mergeSort(array);
