@@ -10,6 +10,10 @@ class FriendPairsTest {
         this.friendPairs = new FriendPairs();
     }
 
+    private void after() {
+        this.friendPairs = null;
+    }
+
     @org.junit.jupiter.api.Test
     void countWaysToPairTest() {
 
@@ -27,5 +31,7 @@ class FriendPairsTest {
         assertEquals(expectedOutputA, this.friendPairs.countWaysToPair(testInputA));
         assertEquals(expectedOutputB, this.friendPairs.countWaysToPair(testInputB));
         assertEquals(expectedOutputC, this.friendPairs.countWaysToPair(testInputC));
+
+        after();
     }
 }
