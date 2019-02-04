@@ -1,10 +1,14 @@
 package algorithms;
 
-import algorithms.PathsWithoutCrossing;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class PathsWithoutCrossingTest {
+
+    private PathsWithoutCrossing pathsWithoutCrossing;
+
+    void before() {
+        this.pathsWithoutCrossing = new PathsWithoutCrossing();
+    }
 
     @org.junit.jupiter.api.Test
     void countPathsTest() {
@@ -15,8 +19,8 @@ class PathsWithoutCrossingTest {
         int testEvenInput = 4;
         int expectedEvenOutput = 2;
 
-        assertEquals(expectedOddOutput, PathsWithoutCrossing.countPaths(testOddInput));
-        assertEquals(expectedEvenOutput, PathsWithoutCrossing.countPaths(testEvenInput));
+        assertEquals(expectedOddOutput, this.pathsWithoutCrossing.countPaths(testOddInput));
+        assertEquals(expectedEvenOutput, this.pathsWithoutCrossing.countPaths(testEvenInput));
     }
 
     @org.junit.jupiter.api.Test
@@ -25,6 +29,6 @@ class PathsWithoutCrossingTest {
         int testInput = 9;
         int testOutput = 4862;
 
-        assertEquals(testOutput, PathsWithoutCrossing.catalanNumber(testInput));
+        assertEquals(testOutput, this.pathsWithoutCrossing.catalanNumber(testInput));
     }
 }
