@@ -2,7 +2,7 @@ package algorithms;
 
 import strategy.IAlgorithmStrategy;
 
-import static utilities.Util.userInputArray;
+import static utilities.InputArrayParser.userInputArray;
 
 /**
  * Class that sorts the array by an algorithm Insertion Sort.
