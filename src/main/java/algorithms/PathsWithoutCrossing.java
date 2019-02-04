@@ -34,7 +34,7 @@ public class PathsWithoutCrossing implements IAlgorithmStrategy {
      * @param numberOfPoints number of points on circle; must be even, otherwise method will return 0
      * @return number of possible paths without crossings
      */
-    static int countPaths(int numberOfPoints) {
+    int countPaths(int numberOfPoints) {
 
         if (numberOfPoints % 2 != 0) {
 
@@ -50,7 +50,7 @@ public class PathsWithoutCrossing implements IAlgorithmStrategy {
      * @param n sequence number of Catalan number we need to calculate
      * @return n-th Catalan number
      */
-    static int catalanNumber(int n) {
+    int catalanNumber(int n) {
 
         int[] catalan = new int[n + 1];
 
