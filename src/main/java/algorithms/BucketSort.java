@@ -14,16 +14,6 @@ import static utilities.Util.userInputArray;
 public class BucketSort implements IAlgorithmStrategy {
 
     /**
-     * The smallest element of the array.
-     */
-    private int min;
-
-    /**
-     * The biggest element of the array.
-     */
-    private int max;
-
-    /**
      * Returns sorted array.
      *
      * @param array array of integers.
@@ -37,10 +27,9 @@ public class BucketSort implements IAlgorithmStrategy {
             return array;
         }
 
-        minMaxInitialization(array);
-        Bucket[] buckets = assignToBuckets(new Bucket[array.length], array);
-        sortUsedBuckets(buckets);
-        return buildResult(buckets, array.length);
+        Map<String, Integer> map = minMaxInitialization(array);
+        Bucket[] buckets = assignToBuckets(new Bucket[array.length], array, map);
+        return buildResult(sortUsedBuckets(buckets), array.length);
     }
 
     /**
@@ -48,7 +37,10 @@ public class BucketSort implements IAlgorithmStrategy {
      *
      * @param array array of integers.
      */
-    private void minMaxInitialization(int[] array) {
+    private Map<String, Integer> minMaxInitialization(int[] array) {
+
+        int min = 0;
+        int max = 0;
 
         for (int currentElement : array) {
             if (currentElement > max) {
@@ -57,6 +49,12 @@ public class BucketSort implements IAlgorithmStrategy {
                 min = currentElement;
             }
         }
+
+        Map<String, Integer> map = new HashMap<>();
+        map.put("max", max);
+        map.put("min", min);
+
+        return map;
     }
 
     /**
@@ -66,12 +64,12 @@ public class BucketSort implements IAlgorithmStrategy {
      * @param array   array of integers.
      * @return buckets with presorting elements.
      */
-    private Bucket[] assignToBuckets(Bucket[] buckets, int[] array) {
+    private Bucket[] assignToBuckets(Bucket[] buckets, int[] array, Map<String, Integer> map) {
 
         int bucketIndex;
         int countUsedBuckets = 0;
         for (int currentIndex : array) {
-            bucketIndex = getBucketIndex(currentIndex, array.length);
+            bucketIndex = getBucketIndex(currentIndex, array.length, map);
             if (buckets[bucketIndex] != null) {
                 buckets[bucketIndex].list.add(currentIndex);
             } else {
@@ -82,20 +80,20 @@ public class BucketSort implements IAlgorithmStrategy {
         }
         return deleteEmptyBuckets(buckets, countUsedBuckets);
     }
-//TODO
 
     /**
      * Sorts buckets elements.
      *
      * @param buckets arrays for holding presorting elements.
      */
-    private void sortUsedBuckets(Bucket[] buckets) {
+    private Bucket[] sortUsedBuckets(Bucket[] buckets) {
 
         for (Bucket currentBucket : buckets) {
             if (currentBucket.list.size() > 1) {
                 Collections.sort(currentBucket.list);
             }
         }
+        return buckets;
     }
 
     /**
@@ -106,6 +104,7 @@ public class BucketSort implements IAlgorithmStrategy {
      * @return sorted array.
      */
     private int[] buildResult(Bucket[] sortedBuckets, int length) {
+
         int resultArrayIndex = 0;
         int[] resultArray = new int[length];
         for (Bucket bucket : sortedBuckets) {
@@ -124,10 +123,10 @@ public class BucketSort implements IAlgorithmStrategy {
      * @param length  length of unsorted array.
      * @return coefficient for presorting.
      */
-    private int getBucketIndex(int current, int length) {
+    private int getBucketIndex(int current, int length, Map<String, Integer> map) {
 
-        double denominator = max - min + 1;
-        double factor = (current - min) / denominator;
+        double denominator = map.get("max") - map.get("min") + 1;
+        double factor = (current - map.get("min")) / denominator;
         return (int) (factor * length);
     }
 
@@ -150,9 +149,6 @@ public class BucketSort implements IAlgorithmStrategy {
         return rebuttedBuckets;
     }
 
-    /**
-     * Runner method for execution of algorithm.
-     */
     @Override
     public void execute() {
 
