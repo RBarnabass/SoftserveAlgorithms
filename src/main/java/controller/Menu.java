@@ -3,7 +3,7 @@ package controller;
 import static controller.Controller.EXIT_CODE;
 
 /**
- * Class holds view part of program.
+ * Class that holds appearance of program.
  *
  * @author Roman Berezhnov
  */
@@ -15,12 +15,12 @@ class Menu {
     private final Algorithm[] values = Algorithm.values();
 
     /**
-     * The variable holds list of algorithms in appropriate way.
+     * List of algorithms in appropriate way.
      */
     private String list;
 
     /**
-     * This method shows menu.
+     * Method for shoving menu.
      */
     void printMenu() {
 
@@ -36,7 +36,7 @@ class Menu {
     }
 
     /**
-     * This method shows greetings.
+     * Method for shoving greetings.
      */
     void printWelcome() {
 
@@ -56,8 +56,7 @@ class Menu {
     }
 
     /**
-     * This method transform list of enum fields to string
-     * and give it appropriate look.
+     * Transforms list of enum fields to string and gives it appropriate look.
      *
      * @return list with algorithms names
      */

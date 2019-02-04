@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * This class initialize all algorithms and hold them all the time.
+ * This class provides initialization for all algorithms and hold them all the time.
  *
  * @author Roman Berezhnov
  */
@@ -36,14 +36,14 @@ public class InstanceCreator implements InstanceManager {
     private static final Map<Algorithm, IAlgorithmStrategy> algorithms = new HashMap<>();
 
     /**
-     * Constructor witch starts init method.
+     * Constructor which starts init method.
      */
     InstanceCreator() {
         init();
     }
 
     /**
-     * This is getAlgorithm method for algorithm map.
+     * Method for getting algorithm map.
      *
      * @param name enum field.
      * @return    algorithm instance.
@@ -54,7 +54,7 @@ public class InstanceCreator implements InstanceManager {
     }
 
     /**
-     * Provide initialization for all algorithms.
+     * Provides initialization for all algorithms.
      */
     private void init() {
 
