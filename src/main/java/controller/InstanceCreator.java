@@ -1,6 +1,24 @@
 package controller;
 
-import algorithms.*;
+import algorithms.BucketSort;
+import algorithms.CountWaysOfSum;
+import algorithms.CoutingSort;
+import algorithms.Fibonacci;
+import algorithms.FriendPairs;
+import algorithms.HighLowEfforts;
+import algorithms.InsertionSort;
+import algorithms.InterestingRow;
+import algorithms.LongestSubSequence;
+import algorithms.MergeSort;
+import algorithms.ModificationFibonacci;
+import algorithms.OptimizedPaintingFence;
+import algorithms.PaintingTheFence;
+import algorithms.Palindrome;
+import algorithms.PathsWithoutCrossing;
+import algorithms.QuickSort;
+import algorithms.TileTheFloor;
+import algorithms.WaysToCoverDistance;
+import algorithms.WaysToSumToN;
 import strategy.IAlgorithmStrategy;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,14 +31,14 @@ import java.util.Map;
 public class InstanceCreator implements InstanceManager {
 
     /**
-     * Map that contain all algorithms
+     * Map that contain all algorithms.
      */
     private static final Map<Algorithm, IAlgorithmStrategy> algorithms = new HashMap<>();
 
     /**
-     * This is a constructor witch starts init method.
+     * Constructor witch starts init method.
      */
-     InstanceCreator() {
+    InstanceCreator() {
         init();
     }
 
