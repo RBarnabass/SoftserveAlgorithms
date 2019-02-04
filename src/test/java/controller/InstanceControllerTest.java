@@ -21,7 +21,7 @@ public class InstanceControllerTest {
         assertNull(init.getAlgorithm(null));
     }
 
-    @Test public void ttt() {
+    @Test public void exitTest() {
         assertNull(init.getAlgorithm(Algorithm.EXIT));
     }
 }
