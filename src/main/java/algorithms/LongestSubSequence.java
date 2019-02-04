@@ -6,7 +6,6 @@ import static utilities.Util.userInputArray;
 /**
  * This class search the longest sequence difference one in the maximum sub sequence.
  *
- * @version 1.0
  * @author Roman Berezhnov
  */
 public class LongestSubSequence implements IAlgorithmStrategy {
