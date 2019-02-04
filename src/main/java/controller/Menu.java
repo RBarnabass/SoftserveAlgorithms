@@ -3,14 +3,14 @@ package controller;
 import static controller.Controller.EXIT_CODE;
 
 /**
- * Class holds view part of program
+ * Class holds view part of program.
  *
  * @author Roman Berezhnov
  */
-public class Menu {
+class Menu {
 
     /**
-     * Array of all enum fields
+     * Array of all enum fields.
      */
     private final Algorithm[] values = Algorithm.values();
 
@@ -22,7 +22,7 @@ public class Menu {
     /**
      * This method shows menu.
      */
-    public void printMenu() {
+    void printMenu() {
 
         System.out.println("Choose your algorithm please:");
 
@@ -38,19 +38,19 @@ public class Menu {
     /**
      * This method shows greetings.
      */
-    public void printWelcome() {
+    void printWelcome() {
 
         String hi = "WELCOME";
         char[] chars = hi.toCharArray();
 
-        for (char aChar : chars) {
+        for (char currentChar : chars) {
 
             try {
                 Thread.sleep(200);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.print(aChar + " ");
+            System.out.print(currentChar + " ");
         }
         System.out.println("\n");
     }
