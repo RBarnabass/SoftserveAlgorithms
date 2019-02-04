@@ -1,7 +1,8 @@
 package algorithms;
 
 import strategy.IAlgorithmStrategy;
-import static utilities.Util.userInputArray;
+
+import static utilities.InputArrayParser.userInputArray;
 
 /**
  * This class search the longest sequence difference one in the maximum sub sequence.
