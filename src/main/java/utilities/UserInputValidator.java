@@ -9,6 +9,12 @@ import java.util.Scanner;
  */
 public class UserInputValidator {
 
+    private Scanner sc;
+
+    UserInputValidator(Scanner sc) {
+        this.sc = sc;
+    }
+
     /**
      * Continuously asking user for integer input while it won't accord with given bounds and returns it.
      *
@@ -17,9 +23,7 @@ public class UserInputValidator {
      * @param errorMessage message which prints to user when he enters incorrect value
      * @return final input which remains in given min-max values range
      */
-    public static int getUserInput(int lowerBound, int upperBound, String errorMessage) {
-
-        Scanner sc = new Scanner(System.in);
+    public int getUserInput(int lowerBound, int upperBound, String errorMessage) {
 
         int input;
 
