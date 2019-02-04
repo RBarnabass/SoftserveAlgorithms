@@ -11,7 +11,7 @@ public class UserInputValidator {
 
     private Scanner sc;
 
-    UserInputValidator(Scanner sc) {
+    public UserInputValidator(Scanner sc) {
         this.sc = sc;
     }
 
