@@ -10,10 +10,7 @@ import utilities.UserInputValidator;
  */
 public class WaysToCoverDistance implements IAlgorithmStrategy {
 
-    /**
-     * Runner method for execution of algorithm.
-     *
-     */
+    @Override
     public void execute() {
 
         System.out.println("Enter distance to cover: ");
@@ -37,7 +34,7 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
      * @param distance distance to cover
      * @return number of possible ways to cover the distance
      */
-    public static int calculateWays(int distance) {
+    static int calculateWays(int distance) {
 
         if (distance < 0) {
             return 0;
@@ -47,8 +44,8 @@ public class WaysToCoverDistance implements IAlgorithmStrategy {
             return 1;
         }
 
-        return calculateWays(distance - 1) +
-                calculateWays(distance - 2) +
-                calculateWays(distance - 3);
+        return calculateWays(distance - 1)
+                + calculateWays(distance - 2)
+                + calculateWays(distance - 3);
     }
 }
