@@ -9,10 +9,6 @@ import java.util.Scanner;
  */
 public class UserInputValidator {
 
-    // todo: final & javadoc
-    // todo: sc.nextLine()
-    private static Scanner sc = new Scanner(System.in);
-
     /**
      * Continuously asking user for integer input while it won't accord with given bounds and returns it.
      *
@@ -23,16 +19,18 @@ public class UserInputValidator {
      */
     public static int getUserInput(int lowerBound, int upperBound, String errorMessage) {
 
+        Scanner sc = new Scanner(System.in);
+
         int input;
 
         try {
 
-            input = sc.nextInt();
+            input = Integer.parseInt(sc.nextLine());
 
             if (input < lowerBound || input > upperBound) {
                 throw new InputMismatchException();
             }
-        } catch (InputMismatchException e) {
+        } catch (InputMismatchException | NumberFormatException e) {
 
             System.out.println(errorMessage);
             input = getUserInput(lowerBound, upperBound, errorMessage);
