@@ -1,14 +1,25 @@
 package strategy;
 
+/**
+ * Algorithm execution sequence.
+ */
 public class AlgorithmRunner {
 
-    private IAlgorithmStrategy strategy;
+    private IAlgorithmStrategy algorithm;
 
-    public void changeStrategy(IAlgorithmStrategy strategy) {
-        this.strategy = strategy;
+    /**
+     * Changes algorithm to execute.
+     *
+     * @param algorithm algorithm to execute
+     */
+    public void changeStrategy(IAlgorithmStrategy algorithm) {
+        this.algorithm = algorithm;
     }
 
+    /**
+     * Executes algorithm.
+     */
     public void run() {
-        strategy.execute();
+        algorithm.execute();
     }
 }
