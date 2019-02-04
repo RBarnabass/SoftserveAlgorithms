@@ -9,10 +9,10 @@ import static utilities.Util.userInputArray;
  * @version 1.0
  * @author Roman Berezhnov
  */
-public class LongestSubSequenceWithDifferenceOne implements IAlgorithmStrategy {
+public class LongestSubSequence implements IAlgorithmStrategy {
 
     /**
-     * This array holds all sequences.
+     * Array of integer.
      */
     private int[] sequences;
 
@@ -24,16 +24,16 @@ public class LongestSubSequenceWithDifferenceOne implements IAlgorithmStrategy {
     /**
      * This method provides the controller logic.
      *
-     * @param rowArray this is a given array.
+     * @param rawArray  array of integers.
      * @return         length of the greatest sequence.
      */
-    public int getTheLongestOne(int[] rowArray) {
+    int getTheLongestOne(int[] rawArray) {
 
-        if (rowArray == null) {
+        if (rawArray == null) {
             return 0;
         }
 
-        array = rowArray;
+        array = rawArray;
         sequences = sequencesArrayInitialization(array.length);
         searchSequences();
 
@@ -41,7 +41,7 @@ public class LongestSubSequenceWithDifferenceOne implements IAlgorithmStrategy {
     }
 
     /**
-     * This method search for the greatest sequence.
+     * Returns length of the greatest sequence.
      *
      * @return length of the greatest sequence.
      */
@@ -59,10 +59,9 @@ public class LongestSubSequenceWithDifferenceOne implements IAlgorithmStrategy {
     }
 
     /**
-     * This method initializes all array with an initial number.
-     * Single element will be one sequence.
+     * Initializes all array elements as one.
      *
-     * @param length length of given array.
+     * @param length length of integer array.
      * @return       initialized array.
      */
     private int[] sequencesArrayInitialization(int length) {
@@ -77,7 +76,7 @@ public class LongestSubSequenceWithDifferenceOne implements IAlgorithmStrategy {
     }
 
     /**
-     * This method search sequences in a given array.
+     * Searches sequences in integer array.
      */
     private void searchSequences() {
 
