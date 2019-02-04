@@ -10,7 +10,6 @@ import java.util.Map;
 /**
  * This class initialize requirement algorithm and hold it by a constant time.
  *
- * @version 1.0
  * @author Roman Berezhnov
  */
 public class InstanceController implements InstanceManager {
