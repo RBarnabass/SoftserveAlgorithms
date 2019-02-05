@@ -2,9 +2,8 @@ package controller;
 
 import strategy.AlgorithmRunner;
 
-import java.util.Scanner;
-
-import static controller.Algorithm.getAlgorithmName;
+import static controller.AlgorithmName.getAlgorithmName;
+import static utilities.UserInputValidator.getUserInput;
 
 /**
  * Handles user interaction with a program.
@@ -25,9 +24,9 @@ public class Controller {
     private static final int ALGORITHM_LIST_LENGTH = 19;
 
     /**
-     * Final value of input provider.
+     * Constant value of error message.
      */
-    private final Scanner scan = new Scanner(System.in);
+    private static final String ERROR_MESSAGE = "Wrong input, try again please!";
 
     /**
      * Final instance of strategy runner.
@@ -67,7 +66,7 @@ public class Controller {
      */
     private boolean isContinue() {
 
-        input = getInput();
+        input = getUserInput(EXIT_CODE, ALGORITHM_LIST_LENGTH, ERROR_MESSAGE);
 
         if (input == EXIT_CODE) {
             return false;
@@ -84,32 +83,8 @@ public class Controller {
      */
     private void getStrategy(int input) {
 
-        Algorithm name = getAlgorithmName(input);
+        AlgorithmName name = getAlgorithmName(input);
         runner.changeStrategy(instanceManager.getAlgorithm(name));
         runner.run();
-    }
-
-    /**
-     * This method controls the conformity of input.
-     *
-     * @return correct menu item.
-     */
-    // todo: replace with UserInputValidator
-    private int getInput() {
-
-        try {
-            if (scan.hasNextLine()) {
-                input = Integer.parseInt(scan.nextLine());
-                if (input < EXIT_CODE || input > ALGORITHM_LIST_LENGTH) {
-                    throw new NumberFormatException();
-                }
-            }
-        } catch (NumberFormatException e) {
-            System.out.println("\n" + "Wrong input, try again please!");
-            System.out.print("Type here please: ");
-            getInput();
-        }
-
-        return input;
     }
 }
