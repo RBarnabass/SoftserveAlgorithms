@@ -6,13 +6,17 @@ class PathsWithoutCrossingTest {
 
     private PathsWithoutCrossing pathsWithoutCrossing;
 
-    // TODO:
     void before() {
         this.pathsWithoutCrossing = new PathsWithoutCrossing();
     }
 
+    void after() {
+        this.pathsWithoutCrossing = null;
+    }
+
     @org.junit.jupiter.api.Test
     void countPathsTest() {
+        before();
 
         int testOddInput = 1;
         int expectedOddOutput = 0;
@@ -22,14 +26,19 @@ class PathsWithoutCrossingTest {
 
         assertEquals(expectedOddOutput, this.pathsWithoutCrossing.countPaths(testOddInput));
         assertEquals(expectedEvenOutput, this.pathsWithoutCrossing.countPaths(testEvenInput));
+
+        after();
     }
 
     @org.junit.jupiter.api.Test
     void catalanNumberTest() {
+        before();
 
         int testInput = 9;
         int testOutput = 4862;
 
         assertEquals(testOutput, this.pathsWithoutCrossing.catalanNumber(testInput));
+
+        after();
     }
 }

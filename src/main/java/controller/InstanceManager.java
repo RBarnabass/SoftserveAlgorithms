@@ -3,17 +3,17 @@ package controller;
 import strategy.IAlgorithmStrategy;
 
 /**
- * This is the interface for instance managing strategy.
+ * Interface for instance managing strategy.
  *
  * @author Roman Berezhnov
  */
 public interface InstanceManager {
 
     /**
-     * This method should return algorithm instance by its name.
+     * Method that returns algorithm instance by it's name.
      *
      * @param name algorithm name.
      * @return     algorithm instance.
      */
-    IAlgorithmStrategy getAlgorithm(Algorithm name);
+    IAlgorithmStrategy getAlgorithm(AlgorithmName name);
 }

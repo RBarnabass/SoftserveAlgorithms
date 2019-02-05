@@ -19,6 +19,7 @@ public class TileTheFloor implements IAlgorithmStrategy {
      * @return return count of ways to tile the floor
      */
     public int countWays(int n, int m) {
+
         int[] count = new int[n + 1];
         count[0] = 0;
 

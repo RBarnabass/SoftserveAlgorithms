@@ -1,12 +1,15 @@
 package strategy;
 
-// todo: author notation
 /**
- * Algorithm execution sequence.
+ * AlgorithmName execution sequence.
+ *
+ * @author Oleh Volchkov
  */
 public class AlgorithmRunner {
 
-    // todo: javadoc
+    /**
+     * Instance of algorithm.
+     */
     private IAlgorithmStrategy algorithm;
 
     /**

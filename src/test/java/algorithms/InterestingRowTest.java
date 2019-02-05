@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class InterestingRowTest {
 
+    private InterestingRow interestingRow = new InterestingRow();
+
     @org.junit.jupiter.api.Test
     void findInterestingRowMemberTest() {
 
@@ -18,8 +20,8 @@ class InterestingRowTest {
         int testInputC = 6;
         int testOutputC = 21;
 
-        assertEquals(testOutputA, InterestingRow.findIntrestingRowMember(testInputA));
-        assertEquals(testOutputB, InterestingRow.findIntrestingRowMember(testInputB));
-        assertEquals(testOutputC, InterestingRow.findIntrestingRowMember(testInputC));
+        assertEquals(testOutputA, this.interestingRow.findIntrestingRowMember(testInputA));
+        assertEquals(testOutputB, this.interestingRow.findIntrestingRowMember(testInputB));
+        assertEquals(testOutputC, this.interestingRow.findIntrestingRowMember(testInputC));
     }
 }

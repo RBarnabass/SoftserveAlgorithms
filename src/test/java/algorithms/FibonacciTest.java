@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FibonacciTest {
 
+    private Fibonacci fibonacci = new Fibonacci();
+
     @org.junit.jupiter.api.Test
     void findFibonacciMemberTest() {
 
@@ -18,8 +20,8 @@ class FibonacciTest {
         int testInputC = 10;
         int testOutputC = 89;
 
-        assertEquals(testOutputA, Fibonacci.findFibonacciMember(testInputA));
-        assertEquals(testOutputB, Fibonacci.findFibonacciMember(testInputB));
-        assertEquals(testOutputC, Fibonacci.findFibonacciMember(testInputC));
+        assertEquals(testOutputA, this.fibonacci.findFibonacciMember(testInputA));
+        assertEquals(testOutputB, this.fibonacci.findFibonacciMember(testInputB));
+        assertEquals(testOutputC, this.fibonacci.findFibonacciMember(testInputC));
     }
 }

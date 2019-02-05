@@ -26,6 +26,6 @@ class InstanceCreatorTest {
 
     @Test
     void exitTest() {
-        assertNull(init.getAlgorithm(Algorithm.EXIT));
+        assertNull(init.getAlgorithm(AlgorithmName.EXIT));
     }
 }
