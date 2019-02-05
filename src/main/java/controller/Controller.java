@@ -49,14 +49,14 @@ public class Controller {
      */
     public void start() {
 
-        boolean playing = true;
+        boolean running = true;
         Menu menu = new Menu();
         menu.printWelcome();
 
-        while (playing) {
+        while (running) {
 
             menu.printMenu();
-            playing = isContinue();
+            running = isContinue();
         }
     }
 
