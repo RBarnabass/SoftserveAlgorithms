@@ -2,7 +2,6 @@ package algorithms;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.InputMismatchException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -34,14 +33,6 @@ class TileTheFloorTest {
         assertEquals(numOfWays2, tileTheFloor.countWays(n2, m2));
         assertEquals(numOfWays3, tileTheFloor.countWays(n3, m3));
         assertEquals(numOfWays4, tileTheFloor.countWays(n4, m4));
-    }
-
-    @Test
-    void inputMismatchTest() {
-        int n = -1;
-        int m = -4;
-        TileTheFloor tileTheFloor = new TileTheFloor();
-        assertThrows(InputMismatchException.class, () -> tileTheFloor.countWays(n, m));
     }
 
     @Test

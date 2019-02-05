@@ -6,13 +6,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class HighLowEffortsTest {
 
+    private HighLowEfforts highLowEfforts = new HighLowEfforts();
+
     @org.junit.jupiter.api.Test
     void findMaximumAmountTest() {
 
         int[] testInputHighA = {10, 10, 10, 10, 5};
         int[] testInputLowA = {1, 1, 1, 12, 1};
         int numberOfDaysA = 5;
-        int testOutputA = 32;
+        int testOutputA = 33;
 
         int[] testInputHighB = {5, 8, 6, 10};
         int[] testInputLowB = {3, 7, 8, 5};
@@ -24,8 +26,8 @@ class HighLowEffortsTest {
         int numberOfDaysC = 6;
         int testOutputC = 21;
 
-        assertEquals(testOutputA, HighLowEfforts.findMaximumAmount(testInputHighA, testInputLowA, numberOfDaysA));
-        assertEquals(testOutputB, HighLowEfforts.findMaximumAmount(testInputHighB, testInputLowB, numberOfDaysB));
-        assertEquals(testOutputC, HighLowEfforts.findMaximumAmount(testInputHighC, testInputLowC, numberOfDaysC));
+        assertEquals(testOutputA, this.highLowEfforts.findMaximumAmount(testInputHighA, testInputLowA, numberOfDaysA));
+        assertEquals(testOutputB, this.highLowEfforts.findMaximumAmount(testInputHighB, testInputLowB, numberOfDaysB));
+        assertEquals(testOutputC, this.highLowEfforts.findMaximumAmount(testInputHighC, testInputLowC, numberOfDaysC));
     }
 }

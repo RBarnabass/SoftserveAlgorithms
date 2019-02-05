@@ -2,9 +2,14 @@ package strategy;
 
 /**
  * Algorithm execution sequence.
+ *
+ * @author Oleh Volchkov
  */
 public class AlgorithmRunner {
 
+    /**
+     * Instance of algorithm.
+     */
     private IAlgorithmStrategy algorithm;
 
     /**

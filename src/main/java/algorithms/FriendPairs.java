@@ -10,24 +10,6 @@ import utilities.UserInputValidator;
  */
 public class FriendPairs implements IAlgorithmStrategy {
 
-    @Override
-    public void execute() {
-
-        System.out.println("Enter amount of friends: ");
-
-        int minimalFriendsCount = 1;
-        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than -1";
-        int friendsCount = UserInputValidator.getUserInput(minimalFriendsCount, Integer.MAX_VALUE,
-                incorrectInputMessage);
-        int ways = countWaysToPair(friendsCount);
-
-        StringBuilder result = new StringBuilder()
-                .append("There is ").append(ways)
-                .append(" number of ways to pair for given amount of friends.");
-
-        System.out.println(result);
-    }
-
     /**
      * Returns count of possible ways to pair/stay alone for given amount of friends.
      *
@@ -48,6 +30,24 @@ public class FriendPairs implements IAlgorithmStrategy {
         }
 
         return cachedWays[numberOfFriends];
+    }
+
+    @Override
+    public void execute() {
+
+        System.out.println("Enter amount of friends: ");
+
+        int minimalFriendsCount = 1;
+        String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than -1";
+        int friendsCount = UserInputValidator.getUserInput(minimalFriendsCount, Integer.MAX_VALUE,
+                incorrectInputMessage);
+        int ways = countWaysToPair(friendsCount);
+
+        StringBuilder result = new StringBuilder()
+                .append("There is ").append(ways)
+                .append(" number of ways to pair for given amount of friends.");
+
+        System.out.println(result);
     }
 }
 

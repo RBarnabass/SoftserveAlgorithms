@@ -17,7 +17,7 @@ public class Fibonacci implements IAlgorithmStrategy {
      * @param number position in Fibonacci sequenc
      * @return member of position in Fibonacci sequence
      */
-    public static int findFibonacciMember(int number) {
+    public int findFibonacciMember(int number) {
         int[] fibonacciArray = new int[number + 2];
         fibonacciArray[1] = 1;
         fibonacciArray[2] = 2;
@@ -30,6 +30,7 @@ public class Fibonacci implements IAlgorithmStrategy {
     /**
      * Runner method for execution of algorithm.
      */
+    @Override
     public void execute() {
         System.out.println("Please enter a position for a number in Fibonacci sequence you want to know");
         int minNumber = 0;

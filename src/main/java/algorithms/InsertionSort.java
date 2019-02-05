@@ -10,6 +10,7 @@ import static utilities.InputArrayParser.userInputArray;
  * @author Ostap Vdovychyn
  */
 public class InsertionSort implements IAlgorithmStrategy {
+
     /**
      * Realise Insertion sort.
      *
@@ -17,17 +18,29 @@ public class InsertionSort implements IAlgorithmStrategy {
      * @return sorted array
      */
     public int[] doInsertionSort(int[] array) {
-        int temp;
+
         for (int i = 1; i < array.length; i++) {
+
             for (int j = i; j > 0; j--) {
                 if (array[j] < array[j - 1]) {
-                    temp = array[j];
-                    array[j] = array[j - 1];
-                    array[j - 1] = temp;
+                    swap(array, j);
                 }
             }
         }
+
         return array;
+    }
+
+    /**
+     * Changes the index of the array.
+     *
+     * @param array array that is sorted
+     * @param j     index of array
+     */
+    private void swap(int[] array, int j) {
+        int temp = array[j];
+        array[j] = array[j - 1];
+        array[j - 1] = temp;
     }
 
     @Override

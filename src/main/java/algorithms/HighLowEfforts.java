@@ -20,7 +20,7 @@ public class HighLowEfforts implements IAlgorithmStrategy {
      * @param high         the cost of high effort work
      * @return maximum amount of cost you can perform
      */
-    public static int findMaximumAmount(int[] high, int[] low, int numberOfDays) {
+    public int findMaximumAmount(int[] high, int[] low, int numberOfDays) {
         if (numberOfDays <= 0) {
             return 0;
         }
@@ -31,6 +31,7 @@ public class HighLowEfforts implements IAlgorithmStrategy {
     /**
      * Runner method for execution of algorithm.
      */
+    @Override
     public void execute() {
         System.out.println("Please enter number of days");
         int minimalDaysCountValue = 0;

@@ -1,19 +1,23 @@
 package algorithms;
 
-import algorithms.FriendPairs;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-public class FriendPairsTest {
+class FriendPairsTest {
 
     private FriendPairs friendPairs;
 
-    void before() {
+    private void before() {
         this.friendPairs = new FriendPairs();
+    }
+
+    private void after() {
+        this.friendPairs = null;
     }
 
     @org.junit.jupiter.api.Test
     void countWaysToPairTest() {
+
+        before();
 
         int testInputA = 3;
         int expectedOutputA = 4;
@@ -27,5 +31,7 @@ public class FriendPairsTest {
         assertEquals(expectedOutputA, this.friendPairs.countWaysToPair(testInputA));
         assertEquals(expectedOutputB, this.friendPairs.countWaysToPair(testInputB));
         assertEquals(expectedOutputC, this.friendPairs.countWaysToPair(testInputC));
+
+        after();
     }
 }

@@ -11,10 +11,9 @@ import static utilities.InputArrayParser.userInputArray;
 /**
  * Class that sorts the array by an algorithm of Counter Sort.
  *
- * @version 1.0
  * @author Valentyn Yarmoshyk
  */
-public class CoutingSort implements IAlgorithmStrategy {
+public class CountingSort implements IAlgorithmStrategy {
 
     /**
      * Realise Counter Sort.
@@ -22,18 +21,18 @@ public class CoutingSort implements IAlgorithmStrategy {
      * @param array An array you want to sort
      * @return Sorted array
      */
-    public int[] countingSort(int[] array) {
+    int[] countingSort(int[] array) {
 
         int min = array[0];
         int max = array[0];
 
-        for (int i = 0; i < array.length; i++) {
+        for (int i1 : array) {
 
-            if (array[i] < min) {
-                min = array[i];
+            if (i1 < min) {
+                min = i1;
             }
-            if (array[i] > max) {
-                max = array[i];
+            if (i1 > max) {
+                max = i1;
             }
         }
 
@@ -43,28 +42,24 @@ public class CoutingSort implements IAlgorithmStrategy {
             countArray[i] = 0;
         }
 
-        for (int i = 0; i < array.length; i++) {
-            countArray[array[i] - min]++;
+        for (int i1 : array) {
+            countArray[i1 - min]++;
         }
 
-
-        List<Integer> list = new ArrayList<Integer>();
+        List<Integer> list = new ArrayList<>();
         for (int i = 0; i < countArray.length; i++) {
-
             if (countArray[i] != 0) {
-
                 for (int j = 0; j < countArray[i]; j++) {
                     list.add(i + min);
                 }
-
             }
-
         }
 
         int[] resultArray = new int[list.size()];
         for (int i = 0; i < list.size(); i++) {
             resultArray[i] = list.get(i);
         }
+
         return resultArray;
     }
 
@@ -72,7 +67,7 @@ public class CoutingSort implements IAlgorithmStrategy {
     public void execute() {
         int[] array = userInputArray();
         array = countingSort(array);
-        System.out.println("Your array after Counter Sort: " + Arrays.toString(array));
+        System.out.println("Your array after sorting: " + Arrays.toString(array));
 
     }
 }

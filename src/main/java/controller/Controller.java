@@ -94,6 +94,7 @@ public class Controller {
      *
      * @return correct menu item.
      */
+    // todo: replace with UserInputValidator
     private int getInput() {
 
         try {

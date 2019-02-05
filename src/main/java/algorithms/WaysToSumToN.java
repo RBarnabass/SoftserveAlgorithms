@@ -24,9 +24,9 @@ public class WaysToSumToN implements IAlgorithmStrategy {
         int[] count = new int[number + 1];
         count[0] = 1;
         for (int i = 1; i <= number; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                if (i >= arr[j]) {
-                    count[i] += count[i - arr[j]];
+            for (int i1 : arr) {
+                if (i >= i1) {
+                    count[i] += count[i - i1];
                 }
             }
         }
@@ -40,7 +40,6 @@ public class WaysToSumToN implements IAlgorithmStrategy {
         System.out.println("The number must be non-negative");
         String incorrectInputMessage = "Incorrect input. Please, provide integer value that bigger than 0";
         int number = getUserInput(0, Integer.MAX_VALUE, incorrectInputMessage);
-        ;
         System.out.println("Enter array which will be counting ");
         int[] array = userInputArray();
         int ways = waysToCount(array, number);

@@ -8,7 +8,6 @@ import static utilities.UserInputValidator.getUserInput;
  * Class that realized logic of the ways for painting the fence.
  *
  * @author Valentyn Yarmoshyk
- * @version 1.0
  */
 public class PaintingTheFence implements IAlgorithmStrategy {
 
@@ -19,13 +18,13 @@ public class PaintingTheFence implements IAlgorithmStrategy {
      * @param k The number of colors you have
      * @return The number of the ways for painting the fence
      */
-    public long paintingTheFence(int n, int k) {
+    long paintingTheFence(int n, int k) {
 
         long[] variant = new long[n];
 
         variant[0] = k;
         long different = k;
-        long same = 0;
+        long same;
 
         for (int i = 1; i < n; i++) {
 
