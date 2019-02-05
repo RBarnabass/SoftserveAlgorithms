@@ -1,7 +1,7 @@
 package strategy;
 
 /**
- * Algorithm execution sequence.
+ * AlgorithmName execution sequence.
  *
  * @author Oleh Volchkov
  */
