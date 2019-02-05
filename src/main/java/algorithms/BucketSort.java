@@ -22,7 +22,7 @@ public class BucketSort implements IAlgorithmStrategy {
      * @param array array of integers.
      * @return sorted array.
      */
-    public int[] bucketSort(int[] array) {
+    int[] bucketSort(int[] array) {
 
         if (array == null
                 || array.length == 0
