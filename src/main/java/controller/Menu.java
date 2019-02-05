@@ -12,7 +12,7 @@ class Menu {
     /**
      * Array of all enum fields.
      */
-    private final Algorithm[] values = Algorithm.values();
+    private final AlgorithmName[] values = AlgorithmName.values();
 
     /**
      * List of algorithms in appropriate way.
@@ -62,7 +62,6 @@ class Menu {
      */
     private String getList() {
 
-        // todo: lower case capitalize
         StringBuilder builder = new StringBuilder();
         for (int i = 1; i < values.length; i++) {
 
