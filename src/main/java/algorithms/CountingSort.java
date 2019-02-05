@@ -23,18 +23,9 @@ public class CountingSort implements IAlgorithmStrategy {
      */
     int[] countingSort(int[] array) {
 
-        int min = array[0];
-        int max = array[0];
-
-        for (int i1 : array) {
-
-            if (i1 < min) {
-                min = i1;
-            }
-            if (i1 > max) {
-                max = i1;
-            }
-        }
+        int[] minMaxArray = minMaxOfArray(array);
+        int min = minMaxArray[0];
+        int max = minMaxArray[1];
 
         int[] countArray = new int[max - min + 1];
 
@@ -61,6 +52,33 @@ public class CountingSort implements IAlgorithmStrategy {
         }
 
         return resultArray;
+    }
+
+    /**
+     * Find min and max in array that you entered.
+     *
+     * @param array Array of Integers numbers
+     * @return Min and max element of array
+     */
+    int[] minMaxOfArray(int[] array) {
+
+        int[] minMaxArray = new int[2];
+
+        minMaxArray[0] = array[0];   //min
+        minMaxArray[1] = array[0];   //max
+
+        for (int i1 : array) {
+
+            if (i1 < minMaxArray[0]) {
+                minMaxArray[0] = i1;
+            }
+            if (i1 > minMaxArray[1]) {
+                minMaxArray[1] = i1;
+            }
+        }
+
+        return minMaxArray;
+
     }
 
     @Override

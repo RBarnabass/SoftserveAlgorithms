@@ -3,7 +3,7 @@ package strategy;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
 
-class AlgorithmRunnerTest {
+class AlgorithmNameRunnerTest {
 
     private AlgorithmRunner runner = mock(AlgorithmRunner.class);
 
