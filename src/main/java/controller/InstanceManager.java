@@ -15,5 +15,5 @@ public interface InstanceManager {
      * @param name algorithm name.
      * @return     algorithm instance.
      */
-    IAlgorithmStrategy getAlgorithm(Algorithm name);
+    IAlgorithmStrategy getAlgorithm(AlgorithmName name);
 }
