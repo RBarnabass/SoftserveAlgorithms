@@ -6,7 +6,6 @@ package controller;
  * @author Oleh Volchkov
  * @author Roman Berezhnov
  */
-// todo: change name
 public enum AlgorithmName {
 
     EXIT,
