@@ -32,6 +32,7 @@ public class BucketSort implements IAlgorithmStrategy {
 
         Map<String, Integer> map = minMaxInitialization(array);
         Bucket[] buckets = assignToBuckets(new Bucket[array.length], array, map);
+
         return buildResult(sortUsedBuckets(buckets), array.length);
     }
 
@@ -87,8 +88,6 @@ public class BucketSort implements IAlgorithmStrategy {
                 countUsedBuckets++;
             }
         }
-        System.out.println("buck     - " + buckets.length);
-
         return deleteEmptyBuckets(buckets, countUsedBuckets);
     }
 
@@ -157,7 +156,6 @@ public class BucketSort implements IAlgorithmStrategy {
                 rebuttedBuckets[rebuttedBucketIndex++] = bucket;
             }
         }
-        System.out.println("reb - " + rebuttedBuckets.length);
         return rebuttedBuckets;
     }
 
