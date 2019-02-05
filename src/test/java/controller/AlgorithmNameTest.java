@@ -1,23 +1,23 @@
 package controller;
 
 import org.junit.jupiter.api.Test;
-import static controller.Algorithm.getAlgorithmName;
+import static controller.AlgorithmName.getAlgorithmName;
 import static org.junit.jupiter.api.Assertions.*;
 
-class AlgorithmTest {
+class AlgorithmNameTest {
 
     @Test
     void negativeTest() {
-        assertEquals(Algorithm.EXIT, getAlgorithmName(-1));
+        assertEquals(AlgorithmName.EXIT, getAlgorithmName(-1));
     }
 
     @Test
     void overTest() {
-        assertEquals(Algorithm.EXIT, getAlgorithmName(20));
+        assertEquals(AlgorithmName.EXIT, getAlgorithmName(20));
     }
 
     @Test
     void maxTest() {
-        assertEquals(Algorithm.EXIT, getAlgorithmName(Integer.MAX_VALUE));
+        assertEquals(AlgorithmName.EXIT, getAlgorithmName(Integer.MAX_VALUE));
     }
 }
