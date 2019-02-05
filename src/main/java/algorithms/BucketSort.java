@@ -7,7 +7,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import static utilities.InputArrayParser.userInputArray;
 
 /**
@@ -23,7 +22,7 @@ public class BucketSort implements IAlgorithmStrategy {
      * @param array array of integers.
      * @return sorted array.
      */
-    int[] bucketSort(int[] array) {
+    public int[] bucketSort(int[] array) {
 
         if (array == null
                 || array.length == 0
@@ -72,16 +71,24 @@ public class BucketSort implements IAlgorithmStrategy {
 
         int bucketIndex;
         int countUsedBuckets = 0;
+
         for (int currentIndex : array) {
+
             bucketIndex = getBucketIndex(currentIndex, array.length, map);
+
             if (buckets[bucketIndex] != null) {
+
                 buckets[bucketIndex].list.add(currentIndex);
+
             } else {
+
                 buckets[bucketIndex] = new Bucket();
                 buckets[bucketIndex].list.add(currentIndex);
                 countUsedBuckets++;
             }
         }
+        System.out.println("buck     - " + buckets.length);
+
         return deleteEmptyBuckets(buckets, countUsedBuckets);
     }
 
@@ -150,6 +157,7 @@ public class BucketSort implements IAlgorithmStrategy {
                 rebuttedBuckets[rebuttedBucketIndex++] = bucket;
             }
         }
+        System.out.println("reb - " + rebuttedBuckets.length);
         return rebuttedBuckets;
     }
 
