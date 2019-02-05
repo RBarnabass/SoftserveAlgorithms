@@ -25,7 +25,7 @@ public class LongestSubSequence implements IAlgorithmStrategy {
         int[] sequences = sequencesArrayInitialization(rawArray.length);
         int[] filledSequences = searchSequences(rawArray, sequences);
 
-        return getResult(filledSequences);
+        return findTheLongestSubSequence(filledSequences);
     }
 
     /**
@@ -33,8 +33,7 @@ public class LongestSubSequence implements IAlgorithmStrategy {
      *
      * @return length of the greatest sequence.
      */
-    //todo: rename
-    private int getResult(int[] sequences) {
+    private int findTheLongestSubSequence(int[] sequences) {
 
         int result = 1;
 
