@@ -7,7 +7,7 @@ package controller;
  * @author Roman Berezhnov
  */
 // todo: change name
-public enum Algorithm {
+public enum AlgorithmName {
 
     EXIT,
     BUCKET_SORT,
@@ -36,9 +36,9 @@ public enum Algorithm {
      * @param index index of enum field.
      * @return enum field.
      */
-    public static Algorithm getAlgorithmName(int index) {
+    public static AlgorithmName getAlgorithmName(int index) {
 
-        for (Algorithm algorithms: Algorithm.values()) {
+        for (AlgorithmName algorithms: AlgorithmName.values()) {
             if (index == (algorithms.ordinal())) {
                 return algorithms;
             }
